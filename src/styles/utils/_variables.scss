@@ -1,0 +1,74 @@
+// $orange: #d2691e;
+// $gray: #acabab;
+// $red: #C9453B;
+// $yellow: #FFC700;
+// $lime: #00ff00;
+
+// $socialColors: (
+// 	FB: darkslateblue,
+// 	insta: purple,
+// 	twitter: skyblue,
+// 	linkedin: black
+// );
+
+$colors: (
+	body-bg: white,
+	body-color: black,
+	// header-bg: none,
+	// header-color: white,
+	// header-bg_fixed: #d2691e,
+	// header-item-shadow: white,
+	// burger-bg: white,
+	// burger-bg_hovered: mix(white, lime, 70%),
+	// logo-bg: none,
+	// logo-color: inherit,
+	// logo-color_hovered: mix(white, lime, 70%),
+	// btn-bg: #C9453B,
+	// btn-color: white,
+	// footer-bg: #2694990a,
+	// footer-color: black,
+	// social-color: white
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+$fonts: (
+	poppins: ('Poppins', sans-serif),
+	roboto: ('Roboto', sans-serif),
+	gelasio: ('Gelasio', serif),
+	awesome: ("Font Awesome 5 Free"),
+	ribey: ('Ribeye', cursive)
+);
+
+@function font($key) {
+	@if map-has-key($fonts, $key) {
+	  @return map-get($fonts, $key);
+	}
+	@warn "Unknown `#{$key}` in $fonts.";
+	@return null;
+}
+
+$title-sizes: (
+	h1: 4.0625rem,
+	h2: 2.6875rem,
+	h3: 1.5rem,
+	h4: 1.25rem
+);
+
+@function title-size($key) {
+	@if map-has-key($title-sizes, $key) {
+	  @return map-get($title-sizes, $key);
+	}
+	@warn "Unknown `#{$key}` in $title-sizes";
+	@return null;
+}
+
+// $redUnderline: 0 2px 0 $red;
+// $grayShadow: 0 0 5px rgba(0, 0, 0, 0.25);
+

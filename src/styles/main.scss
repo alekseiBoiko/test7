@@ -1,0 +1,22 @@
+// @import '_variables';
+// @import '_widgets';
+// @import '_typography';
+// @import '_forms-and-buttons';
+// @import '_socialmedia';
+// 
+// @import '_welcome';
+// @import '_location';
+// @import '_offers';
+// @import '_blog';
+// @import '_footer';
+// @import '_media_query';
+
+
+@import 'utils/_module';  // глобальные миксины, функции, вспомогательные селекторы и т.д.
+@import 'base/_module'; //  глобальные стили, такие как сброс стилей, типография, цвета и т.д.
+// @import 'components/module'; //  отдельные компоненты с отдельным файлом .scss для каждого из них
+// @import 'layout/module'; //  стили для основных компонентов макета, таких как хедер, футер, навигация и т.д.
+// @import 'pages/module'; // стили, специфичные для отдельных страниц, если это необходимо
+// @import 'themes/module'; // стили для разных тем
+
+// @import 'vendors/module'; // стили, миксины и прочее от третьих сторон

@@ -1,0 +1,118 @@
+- 
+  var headerNavList = [
+    {
+      name: 'Home',
+      url: 'home.html'
+    }, 
+    {
+      name: 'women',
+      url: 'women.html'
+    }, 
+    {
+      name: 'men',
+      url: 'men.html'
+    }, 
+    {
+      name: 'kids',
+      url: 'kids.html'
+    }, 
+    {
+      name: 'jewellery',
+      url: 'jewellery.html'
+    },
+    {
+      name: 'accessories',
+      url: 'accessories.html'
+    }
+  ];
+
+- 
+  var informationList = [
+    {
+      name: 'Information',
+      url: '' 
+    }, 
+    {
+      name: 'Delivery Information',
+      url: 'Delivery.html' 
+    }, 
+    {
+      name: 'Discount',
+      url: 'Discount.html' 
+    }, 
+    {
+      name: 'Sitemap',
+      url: 'Sitemap.html' 
+    }, 
+    {
+      name: 'Privacy Policy',
+      url: 'Privacy.html' 
+    }, 
+    {
+      name: 'My Account',
+      url: 'Account.html'
+    },
+    {
+      url: 'accessories.html', 
+      name: 'accessories'
+    }
+  ];
+
+- 
+  var userAccountList = [
+    {
+      name: 'My account',
+      url: '' 
+    }, 
+    {
+      name: 'Sign in',
+      url: 'sign.html' 
+    }, 
+    {
+      name: 'View cart',
+      url: 'cart.html' 
+    }, 
+    {
+      name: 'My wishlist',
+      url: 'wishlist.html' 
+    }, 
+    {
+      name: 'Check out',
+      url: 'check.html' 
+    }, 
+    {
+      name: 'Track my order',
+      url: 'track.html'
+    }
+  ];
+
+- 
+  var helpList = [
+    {
+      name: 'help',
+      url: '' 
+    }, 
+    {
+      name: 'F.A.Q.',
+      url: 'faq.html' 
+    }, 
+    {
+      name: 'Shipping',
+      url: 'shipping.html' 
+    }, 
+    {
+      name: 'Contact Us',
+      url: 'contact.html' 
+    }, 
+    {
+      name: 'Privacy Policy',
+      url: 'privacy.html' 
+    }
+  ];
+
+
+mixin navList(navClass, navList = [])
+    ul(class=`${navClass}-nav-list`)
+        each i in navList
+            li(class=`${navClass}-nav-item`)
+                a(href=i.url, class=`${navClass}-nav__link`) #{i.name}

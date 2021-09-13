@@ -1,0 +1,35 @@
+-
+    var socialList = [
+        {
+            iconPrefix: 'facebook-f', 
+            mediaUrl: 'facebook.com', 
+            iconBackground: 'darkslateblue'
+        },
+        {
+            iconPrefix: 'twitter', 
+            mediaUrl: 'twitter.com', 
+            iconBackground: 'skyblue'
+        },
+        {
+            iconPrefix: 'instagram', 
+            mediaUrl: 'instagram.com', 
+            iconBackground: 'purple'
+        },
+        {
+            iconPrefix: 'linkedin-in', 
+            mediaUrl: 'linkedin.com', 
+            iconBackground: 'black'
+        },
+        {
+            iconPrefix: 'behance', 
+            mediaUrl: 'behance.com', 
+            iconBackground: 'black'
+        }
+    ]
+
+mixin socials(socialList = [])
+    ul.social-list
+        each i in socialList
+            li(class=`social-item`)
+                a.social-link(href=i.mediaUrl)
+                    i(class=`fab fa-${i.iconPrefix}`)

@@ -1,0 +1,32 @@
+- 
+    var contactList = [
+        {    
+            name: 'adress',
+            value:'1234 Your Address, Country.',
+            contactPrefix: 'globe',
+            contactUrl: 'https://maps.google.com'
+        },
+        { 
+            name:'tel',
+            value:'+1 234 5678 9999',
+            contactPrefix:'phone',
+            contactUrl:'tel:+1 234 5678 9999'
+        },
+        {
+            name:'mail',
+            value:'mail@domain.com',
+            contactPrefix:'envelope',
+            contactUrl:'mailto:mail@domain.com'
+        }
+    ]
+
+mixin contacts(navClass, contactData = [])
+    ul(class=`${navClass}-contact-list`)
+        each i in contactData
+            li(class=`${navClass}-contact-item`)
+                i(class=`fas fa-${i.iconPrefix}`)
+                a.contact__link(href=i.contactUrl) #{i.value}
+
+    //- <i class="fas fa-globe"></i>
+    //- <i class="fas fa-phone"></i>
+    //- <i class="fas fa-envelope"></i>

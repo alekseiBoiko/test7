@@ -1,0 +1,35 @@
+-
+    var paymentCardsList = [
+        {
+            name: 'visa', 
+            url: 'visa.com', 
+            imgNumber: '1'
+        },
+        {
+            name: 'paypal', 
+            url: 'paypal.com', 
+            imgNumber: '2'
+        },
+        {
+            name: 'amazon', 
+            url: 'amazon.com', 
+            imgNumber: '3'
+        },
+        {
+            name: 'maestro', 
+            url: 'maestro.com', 
+            imgNumber: '4'
+        },
+        {
+            name: 'amex', 
+            url: 'amex.com', 
+            imgNumber: '5'
+        }
+    ]
+
+mixin paymentCards(paymentCardsList  = [])
+    ul.payment-cards-list
+        each i in paymentCardsList
+            li.payment-cards-item
+                a.payment-cards-link(href=i.url)
+                    img.payment-cards-img(src=`../img/card${i.imgNumber}.png` alt=`${i.name}`)

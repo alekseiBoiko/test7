@@ -1,0 +1,13 @@
+-
+    var navBtnList = [
+        'shopping-cart',
+        'search', 
+        'bars'
+    ]
+
+mixin headerNavBtn(navBtnList = [])
+    ul.header-nav-btn-list
+        each i in navBtnList
+            li.header-nav-btn-item
+                btn(class=`header-nav-btn-${i}`)
+                    i(class=`fas fa-${i}`)
