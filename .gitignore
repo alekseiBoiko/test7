@@ -1,4 +1,2 @@
 node_modules/
 .stylelintignore
-*.json
-gulpfile.js
