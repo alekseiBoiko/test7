@@ -1,19 +1,20 @@
 .social {
     &-list {
-        margin-top: 1.5rem;
-        @include flex(unset, unset, left, unset);
+        width: 100%;
+
+        @include flex(unset, unset, space-between, unset);
     }
     &-item {
         width: 1.3rem;
         height: 1.3rem;
-        margin-right: 1.6rem;
+        // margin-right: 1.6rem;
         font-size: 0.8rem;
         color: color(social-color);
         border-radius: 3px;
-        @include flex(unset, unset, center, center);
-        @include transition(box-shadow);
+        // @include flex(unset, unset, center, center);
+        @include transition(color);
         &:hover {
-            box-shadow: 0 1px 4px black;
+            color: color(social-color_hovered);
         }
     }
     &-link {
@@ -23,10 +24,3 @@
     }
 }
 
-.background_colored {
-	@each $social, $color in $socialColors {
-		&-#{$color} {
-			background-color: $color;
-		}
-	}
-}

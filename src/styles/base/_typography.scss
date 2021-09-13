@@ -1,27 +1,17 @@
 html {
-    font-size: 16px;
+    font-size: font-size(1);
+    width: 1920px;
 }
 
 body {
+    width: 100%;
     font-family: font(poppins);
     color: color(body-color);
     background-color: color(body-bg);
     -webkit-font-smoothing: antialiased;
 }
 
-%edge {
-    height: 3.75rem;
-    @include flex(null,normal,space-between,center);
-}
 
-.edge_white {
-    @include edge-color(white);
-}
-
-.edge_black {
-    @include edge-color(black);
-    background-color: black;
-}
 
 b {
     font-weight: bold;
@@ -32,9 +22,9 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3 {
-    font-family: font(gelasio);
-}
+// h1, h2, h3 {
+//     font-family: font(gelasio);
+// }
 
 h2, h3, h4 {
     font-weight: 500;
@@ -57,47 +47,60 @@ h4 {
     font-size: title-size(h4);
 }
 
-.width-holder {
-    width: 1784px;
-    margin: 0 auto;
+.edge {
+    &_white {
+        @include edge-color(white);
+    }
+    &_black {
+        @include edge-color(black);
+    }
+}
 
+%with-holder {
+    height: 100%;
+    margin: 0 auto;
     @include flex(null,normal,space-between,center);
 }
 
-.information-holder {
-    width: 100%;
-    margin: 9.3rem 0;
-
-    @include flex(null,column,left,center);
+.holder {
+    &_main {
+        width: 92.917%;
+        @extend %with-holder;
+    }
+    &_short {
+        width: 61.0417%;
+        @extend %with-holder;
+    }
 }
 
-.title-text {
-    width: 100%;
-    min-height: 3.625rem;
-    margin: 2rem 0 2.8rem;
-    text-align: center;
-}
 
-.text-block {
-    font-size: 1.125rem;
-    line-height: 160%;
-}
+// .title-text {
+//     width: 100%;
+//     min-height: 3.625rem;
+//     margin: 2rem 0 2.8rem;
+//     text-align: center;
+// }
 
-.item-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+// .text-block {
+//     font-size: 1.125rem;
+//     line-height: 160%;
+// }
 
-.img_rounded {
-    @extend .item-img;
-    border-radius: 10px;
-}
+// .item-img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
 
-.mail__link {
-    // @include transition(box-shadow);
+// .img_rounded {
+//     @extend .item-img;
+//     border-radius: 10px;
+// }
 
-    // &:hover {
-    //     box-shadow: $redUnderline;
-    // }
-}
+// .mail__link {
+//     // @include transition(box-shadow);
+
+//     // &:hover {
+//     //     box-shadow: $redUnderline;
+//     // }
+// }

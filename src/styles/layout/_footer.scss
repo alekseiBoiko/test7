@@ -40,7 +40,7 @@
                         @include transition(box-shadow);
 
                         &:hover {
-                            box-shadow: $redUnderline;
+                            // box-shadow: $redUnderline;
                         }
                     }
                 }

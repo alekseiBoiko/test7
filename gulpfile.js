@@ -50,16 +50,16 @@ gulp.task('sass-compile', function() {
 })
 
 gulp.task('pug-compile', function() {
-    return gulp.src('./src/pug/pages/*.pug')
+    return gulp.src('./src/pug/*.pug')
       .pipe(pug({
         pretty: true
       }))
-      .pipe(gulp.dest('./build/pages'));
+      .pipe(gulp.dest('./build/'));
   });
 
 gulp.task('default', async function(){
     browserSync.init({
-        server: "./build/pages/"
+        server: "./build/"
     })
     gulp.watch('./src/styles/**/*.scss', gulp.series('sass-compile')).on('change', browserSync.reload)
     // gulp.watch('./build/pages/*.html').on('change', browserSync.reload)

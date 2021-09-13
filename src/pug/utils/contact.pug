@@ -3,19 +3,19 @@
         {    
             name: 'adress',
             value:'1234 Your Address, Country.',
-            contactPrefix: 'globe',
+            iconPrefix: 'globe',
             contactUrl: 'https://maps.google.com'
         },
         { 
             name:'tel',
             value:'+1 234 5678 9999',
-            contactPrefix:'phone',
+            iconPrefix:'phone',
             contactUrl:'tel:+1 234 5678 9999'
         },
         {
             name:'mail',
-            value:'mail@domain.com',
-            contactPrefix:'envelope',
+            value:'info@company.com',
+            iconPrefix:'envelope',
             contactUrl:'mailto:mail@domain.com'
         }
     ]
@@ -25,7 +25,7 @@ mixin contacts(navClass, contactData = [])
         each i in contactData
             li(class=`${navClass}-contact-item`)
                 i(class=`fas fa-${i.iconPrefix}`)
-                a.contact__link(href=i.contactUrl) #{i.value}
+                a(class=`${navClass}-contact__link` href=i.contactUrl) #{i.value}
 
     //- <i class="fas fa-globe"></i>
     //- <i class="fas fa-phone"></i>

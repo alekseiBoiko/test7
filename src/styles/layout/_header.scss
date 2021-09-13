@@ -1,70 +1,98 @@
-.logo {
-    font-family: font(ribey);
-    font-size: 24px;
-    line-height: 150%;
-    color: color(logo-color);
-    letter-spacing: 1px;
-    background-color: color(logo-bg);
-
-    @include transition(color);
-
-    &:hover {
-        color: color(logo-color_hovered);
-    }
-}
-
-.nav-block {
-    width: 50%;
-    height: 100%;
-    margin-left: 3rem;
-
-    .nav-list {
-        font-size: 1.125rem;
-
-        @include flex(wrap, unset, center, center);
-
-        .nav-item {
-            min-height: 2rem;
-            border-radius: 5px;
-
-            @include transition(box-shadow);
-            @include flex(unset, unset, center, center);
-
-            .nav-item__link {
-                width: 100%;
-                height: 100%;
-                padding: 0.2rem 1.45rem;
-            }
-
-            &:hover {
-                box-shadow: 0 0 0 3px color(header-item-shadow);
-            }
-        }
-    }
-}
-
 .header {
     width: 100%;
     color: color(header-color);
     background-color: color(header-bg);
+    height: 6.9375rem;
 
-    .header-holder {
-        width: 100%;
-        min-height: 7rem;
-        padding: 0.5rem 0;
-
-        @include flex(unset, unset, space-between, center);
-    }
-}
-
-.header_fixed {
+    &_fixed {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2000;
     background-color: color(header-bg_fixed);
-
-    .header-holder {
-        min-height: 5rem;
+    box-shadow: $main;
     }
+}
+
+.header-contact {
+    &-list {
+        font-family: font(roboto);
+        font-size: font-size(-1);
+        margin-right: -0.3rem;
+        width: 22%;
+        @include flex(unset, unset, space-between, center);
+    }
+
+    &-item {
+        margin-right: 0.3rem;
+        
+        &:first-child {
+            display: none;
+        }
+    }
+
+    &__link {
+        margin-left: 2.2rem;
+    }
+}
+
+.header-socials-holder {
+    width: 11.5rem;
+}
+
+.main-header-area {
+    height: 6.3rem;
+    
+    .logo {
+        font-family: inherit;
+        font-size: font-size(3);
+        // font-weight: 500;
+        color: color(logo-color);
+        background-color: color(logo-bg);
+        text-transform: uppercase;
+
+        @include transition(color);
+
+        &::after {
+            content:'bee';
+            color: color(body-color);
+        }
+
+        &:hover {
+            color: color(logo-color_hovered);
+            
+            &::after {
+                color: color(logo-color);
+            }
+        }
+    }
+}
+
+.header-nav {
+    
+    &-list {
+        width: 40rem;
+        margin-right: 4rem;
+        @include flex(wrap, unset, space-between, center);
+    }
+
+    &-item {
+        min-height: 2rem;
+        @include flex(unset, unset, center, center);
+    }
+    
+    &__link {
+        text-transform: uppercase;
+        font-weight: 500;
+        @include transition(color);
+        
+        &:hover {
+        color: $main;
+        }
+    }
+}
+
+.header-nav-btn-list {
+    width: 6.625rem;
+    @include flex(unset, unset, space-between, center);
 }

@@ -1,4 +1,4 @@
-// $orange: #d2691e;
+$main: #3cb878;
 // $gray: #acabab;
 // $red: #C9453B;
 // $yellow: #FFC700;
@@ -14,20 +14,20 @@
 $colors: (
 	body-bg: white,
 	body-color: black,
-	// header-bg: none,
-	// header-color: white,
-	// header-bg_fixed: #d2691e,
-	// header-item-shadow: white,
-	// burger-bg: white,
-	// burger-bg_hovered: mix(white, lime, 70%),
-	// logo-bg: none,
-	// logo-color: inherit,
-	// logo-color_hovered: mix(white, lime, 70%),
-	// btn-bg: #C9453B,
-	// btn-color: white,
-	// footer-bg: #2694990a,
-	// footer-color: black,
-	// social-color: white
+	header-bg: inherit,
+	header-color: inherit,
+	header-bg_fixed: none,
+	burger-bg: inherit,
+	burger-bg_hovered: $main,
+	logo-bg: inherit,
+	logo-color: $main,
+	logo-color_hovered: inherit,
+	btn-bg: $main,
+	btn-color: $main,
+	footer-bg: inherit,
+	footer-color: inherit,
+	social-color: inherit,
+	social-color_hovered: $main
 );
 
 @function color($key) {
@@ -41,9 +41,8 @@ $colors: (
 $fonts: (
 	poppins: ('Poppins', sans-serif),
 	roboto: ('Roboto', sans-serif),
-	gelasio: ('Gelasio', serif),
-	awesome: ("Font Awesome 5 Free"),
-	ribey: ('Ribeye', cursive)
+	droid: ('droid_serifregular', sans-serif),
+	awesome: ("Font Awesome 5 Free")
 );
 
 @function font($key) {
@@ -54,11 +53,29 @@ $fonts: (
 	@return null;
 }
 
+$font-sizes: (
+	-2: 0.8125rem,
+	-1: 0.875rem,
+	1: 1rem,
+	2: 1.125rem,
+	3: 1.5rem,
+	4: 1.875rem,
+	5: 3.75rem
+);
+
+@function font-size($key) {
+	@if map-has-key($font-sizes, $key) {
+	  @return map-get($font-sizes, $key);
+	}
+	@warn "Unknown `#{$key}` in $font-sizes";
+	@return null;
+}
+
 $title-sizes: (
-	h1: 4.0625rem,
-	h2: 2.6875rem,
+	h1: 3.75rem,
+	h2: 1.875rem,
 	h3: 1.5rem,
-	h4: 1.25rem
+	h4: 1.125rem
 );
 
 @function title-size($key) {

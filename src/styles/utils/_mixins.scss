@@ -41,6 +41,6 @@
 // properties for header/footer elements
 @mixin edge-color($edgeColor) {
 	background-color: $edgeColor;
-	color: contrast($edgeColor);
-	@extend %edge;
+	color: invert($edgeColor);
+	height: 3.75rem;
 }
