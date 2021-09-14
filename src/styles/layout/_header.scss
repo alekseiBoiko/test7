@@ -1,98 +1,73 @@
 .header {
+    position: relative;
     width: 100%;
+    height: 10rem;
     color: color(header-color);
     background-color: color(header-bg);
-    height: 6.9375rem;
+    // overflow-x: hidden;
 
     &_fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    background-color: color(header-bg_fixed);
-    box-shadow: $main;
-    }
-}
-
-.header-contact {
-    &-list {
-        font-family: font(roboto);
-        font-size: font-size(-1);
-        margin-right: -0.3rem;
-        width: 22%;
-        @include flex(unset, unset, space-between, center);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        background-color: color(header-bg_fixed);
+        box-shadow: $main;
     }
 
-    &-item {
-        margin-right: 0.3rem;
-        
-        &:first-child {
-            display: none;
+    .header-contact {
+        &-list {
+            width: 22%;
+            margin-right: -0.3rem;
+            font-family: font(roboto);
+            font-size: font-size(-1);
+            @include flex(unset, unset, space-between, center);
+        }
+
+        &-item {
+            margin-right: 0.3rem;
+
+            &:first-child {
+                display: none;
+            }
+        }
+
+        &__link {
+            margin-left: 2.2rem;
+            @include transition(text-decoration);
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
-    &__link {
-        margin-left: 2.2rem;
+    .header-socials-holder {
+        width: 11.5rem;
     }
-}
 
-.header-socials-holder {
-    width: 11.5rem;
-}
+    .main-header-area {
+        height: 6.3rem;
 
-.main-header-area {
-    height: 6.3rem;
-    
-    .logo {
-        font-family: inherit;
-        font-size: font-size(3);
-        // font-weight: 500;
-        color: color(logo-color);
-        background-color: color(logo-bg);
-        text-transform: uppercase;
+        .header-nav-btn {
+            &-list {
+                width: 6.625rem;
+                @include flex(unset, unset, space-between, center);
+            }
 
-        @include transition(color);
+            &-item {
+                @include transition(color);
 
-        &::after {
-            content:'bee';
-            color: color(body-color);
-        }
-
-        &:hover {
-            color: color(logo-color_hovered);
-            
-            &::after {
-                color: color(logo-color);
+                &:hover, .nav-btn_active {
+                    color: $main;
+                }
             }
         }
     }
 }
 
-.header-nav {
-    
-    &-list {
-        width: 40rem;
-        margin-right: 4rem;
-        @include flex(wrap, unset, space-between, center);
-    }
+.side-bar-wrapper {
+    position: relative;
+    overflow-x: hidden;
 
-    &-item {
-        min-height: 2rem;
-        @include flex(unset, unset, center, center);
-    }
-    
-    &__link {
-        text-transform: uppercase;
-        font-weight: 500;
-        @include transition(color);
-        
-        &:hover {
-        color: $main;
-        }
-    }
-}
-
-.header-nav-btn-list {
-    width: 6.625rem;
-    @include flex(unset, unset, space-between, center);
 }

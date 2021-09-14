@@ -47,6 +47,12 @@ h4 {
     font-size: title-size(h4);
 }
 
+// img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+
 .edge {
     &_white {
         @include edge-color(white);
@@ -59,7 +65,7 @@ h4 {
 %with-holder {
     height: 100%;
     margin: 0 auto;
-    @include flex(null,normal,space-between,center);
+    @include flex(wrap,normal,space-between,center);
 }
 
 .holder {
@@ -69,6 +75,8 @@ h4 {
     }
     &_short {
         width: 61.0417%;
+        overflow-x: hidden;
+        position: relative;
         @extend %with-holder;
     }
 }
@@ -86,11 +94,7 @@ h4 {
 //     line-height: 160%;
 // }
 
-// .item-img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
+
 
 // .img_rounded {
 //     @extend .item-img;

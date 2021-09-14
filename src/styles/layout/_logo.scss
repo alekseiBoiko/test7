@@ -1,0 +1,23 @@
+.logo {
+    font-family: inherit;
+    font-size: font-size(3);
+    font-weight: 500;
+    color: color(logo-color);
+    text-transform: uppercase;
+    background-color: color(logo-bg);
+
+    @include transition(color);
+
+    &::after {
+        color: color(body-color);
+        content: 'bee';
+    }
+
+    &:hover {
+        color: color(logo-color_hovered);
+
+        &::after {
+            color: color(logo-color);
+        }
+    }
+}

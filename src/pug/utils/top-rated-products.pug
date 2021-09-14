@@ -1,0 +1,28 @@
+- 
+  var topList = [
+    {
+      name: 'Casual men wearing cool shoe',
+      url: 'top1.html',
+      price: '250.00',
+    }, 
+    {
+      name: 'Casual men wearing cool shoe',
+      url: 'top1.html',
+      price: '250.00'
+    }, 
+    {
+      name: 'Casual men wearing cool shoe',
+      url: 'top1.html',
+      price: '250.00'
+    }, 
+  ];
+
+mixin topList(navClass, navList = [])
+    ul(class=`${navClass}-nav-list`)
+        each i in navList
+            li(class=`${navClass}-nav-item`)
+                a(href=i.url, class=`${navClass}-nav_link`) 
+                    .img-holder 
+                    .info-holder 
+                        .top_title #{i.name} 
+                        .top_price $#{i.price}

@@ -4,23 +4,25 @@
 
         @include flex(unset, unset, space-between, unset);
     }
+
     &-item {
         width: 1.3rem;
         height: 1.3rem;
-        // margin-right: 1.6rem;
         font-size: 0.8rem;
         color: color(social-color);
         border-radius: 3px;
-        // @include flex(unset, unset, center, center);
+
         @include transition(color);
+
         &:hover {
             color: color(social-color_hovered);
         }
     }
+
     &-link {
         width: 100%;
         height: 100%;
+
         @include flex(unset, unset, center, center);
     }
 }
-

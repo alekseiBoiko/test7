@@ -16,7 +16,7 @@ $colors: (
 	body-color: black,
 	header-bg: inherit,
 	header-color: inherit,
-	header-bg_fixed: none,
+	header-bg_fixed: white,
 	burger-bg: inherit,
 	burger-bg_hovered: $main,
 	logo-bg: inherit,
@@ -42,7 +42,8 @@ $fonts: (
 	poppins: ('Poppins', sans-serif),
 	roboto: ('Roboto', sans-serif),
 	droid: ('droid_serifregular', sans-serif),
-	awesome: ("Font Awesome 5 Free")
+	awesome: ("Font Awesome 5 Free"),
+	raleway: ('Raleway', sans-serif)
 );
 
 @function font($key) {
