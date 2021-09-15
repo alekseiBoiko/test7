@@ -1,0 +1,19 @@
+-
+    var headerBtnList = [
+        'shopping-cart',
+        'search', 
+        'bars'
+    ];
+      
+    var cardMarkers = [
+        'shopping-cart',
+        'heart',
+        'retweet'
+    ];
+
+mixin iconBtn(btnCLassPrefix, btnList = [])
+    ul(class=`${btnCLassPrefix}-list`)
+        each i in btnList
+            li(class=`${btnCLassPrefix}-item`)
+                btn(class=`${btnCLassPrefix}-${i}`)
+                    i(class=`fas fa-${i}`)

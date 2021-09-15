@@ -47,16 +47,20 @@ h4 {
     font-size: title-size(h4);
 }
 
-// img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .edge {
     &_white {
+        border-top: $grayBorder;
+        border-bottom: $grayBorder;
+
         @include edge-color(white);
     }
+
     &_black {
         @include edge-color(black);
     }
@@ -70,41 +74,20 @@ h4 {
 
 .holder {
     &_main {
-        width: 92.917%;
+        width: 111.5rem;
         @extend %with-holder;
     }
+
     &_short {
-        width: 61.0417%;
-        overflow-x: hidden;
         position: relative;
+        width: 73.25rem;
         @extend %with-holder;
     }
 }
 
-
-// .title-text {
-//     width: 100%;
-//     min-height: 3.625rem;
-//     margin: 2rem 0 2.8rem;
-//     text-align: center;
-// }
-
-// .text-block {
-//     font-size: 1.125rem;
-//     line-height: 160%;
-// }
-
-
-
-// .img_rounded {
-//     @extend .item-img;
-//     border-radius: 10px;
-// }
-
-// .mail__link {
-//     // @include transition(box-shadow);
-
-//     // &:hover {
-//     //     box-shadow: $redUnderline;
-//     // }
-// }
+.list-title {
+    font-family: font(poppins);
+    font-weight: 600;
+    text-transform: uppercase;
+    list-style-type: none !important;
+}

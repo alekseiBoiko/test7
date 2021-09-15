@@ -1,4 +1,7 @@
 extends ./common/layout
 
-//- block content 
-//-   include index/welcome
+block content 
+    p you`re here
+    include utils/bread-crumbs
+    +breadCrumb ('user-interface', breadCrumbs)
+    +iconBtn('card-marker', cardMarkers)

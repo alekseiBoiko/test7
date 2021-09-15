@@ -1,0 +1,29 @@
+.breadcrumb {
+    &-list {
+       @include flex(unset,normal,left,flex-start);
+    }
+
+    &-item:not(:last-child)::after {
+        margin: auto 0.5rem;
+        font-family: font(awesome);
+        font-size: font-size(-1);
+        font-weight: 700;
+        content: "\f101";
+    }
+
+    &__link {
+        font-family: font(roboto);
+        font-size: font-size(-1);
+        text-transform: capitalize;
+
+        @include transition(color);
+
+        &:hover {
+            color: $main;
+        }
+    }
+}
+
+#current-page__name {
+    color: $main;
+}

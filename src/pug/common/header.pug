@@ -9,6 +9,12 @@ header.header
       a.logo(href="index.html") 
         b Renoshop
       +navList('header', headerNavList)
-      +headerNavBtn(navBtnList)
-  //- .side-bar-wrapper
-  include right-side-bar
+      +iconBtn('header-btn', headerBtnList)
+  .search-form-wrapper
+    form.search-form(action='#')
+      input.search-form__input(type='text' placeholder='Search here...')
+      button.search-form__btn(type='submit')
+        i.fas.fa-search
+.side-bar-start 
+  .side-bar-wrapper
+    include right-side-bar

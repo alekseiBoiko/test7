@@ -1,18 +1,9 @@
 .side-bar {
-    position: absolute;
-    top: 150px;
-    right: 0;
     transform: translateX(20rem);
-    // flex-basis: 18.75rem;
     width: 18.75rem;
     padding: 0 0.875rem;
     font-size: font-size(-1);
-    background-color: inherit;
-    transition: right 1s;
-    opacity: 0;
-    visibility: hidden;
-    // -webkit-transform: translateZ(0);
-    // -webkit-backface-visibility: hidden;
+    background-color: color(body-bg);
 
     @include flex(unset,column,space-between, flex-start);
     @include transition(transform);
@@ -20,7 +11,7 @@
     &-item {
         width: 100%;
         padding: 3.125rem 0;
-        border-bottom: 1px solid #efefef;
+        border-bottom: $grayBorder;
 
         .categories-nav {
             &-list {
@@ -35,6 +26,14 @@
 
                 &::first-letter {
                     text-transform: capitalize;
+                }
+            }
+
+            &__link {
+                @include transition(text-decoration);
+
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
@@ -140,12 +139,8 @@
             margin-top: 1rem;
         }
     }
-}
 
-.bar_active {
-    // right: 0;
-    // width: 18.75rem;
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
+    &_active {
+        transform: translateX(0);
+    }
 }

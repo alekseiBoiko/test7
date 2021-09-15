@@ -51,10 +51,6 @@
     {
       name: 'My Account',
       url: 'Account.html'
-    },
-    {
-      url: 'accessories.html', 
-      name: 'accessories'
     }
   ];
 
@@ -114,5 +110,8 @@
 mixin navList(navClass, navList = [])
     ul(class=`${navClass}-nav-list`)
         each i in navList
+          if i.url==''
+            li(class=`${navClass}-nav-item list-title`) #{i.name}
+          else
             li(class=`${navClass}-nav-item`)
                 a(href=i.url, class=`${navClass}-nav__link`) #{i.name}

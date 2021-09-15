@@ -1,67 +1,61 @@
 .footer {
-    min-height: 21.75rem;
-    padding: 7.8rem 0;
+    font-family: font(roboto);
+    font-size: font-size(-1);
     color: color(footer-color);
     background: color(footer-bg);
 
-    .footer-holder {
-        @include flex(unset, unset, space-between, flex-start);
+    .footer-socials-holder {
+        width: 17.7rem;
+        margin-right: 2rem;
+    }
 
-        .footer-block_left {
-            width: 68.3%;
+    .main-footer-area {
+        padding-top: 2.5rem;
 
-            @include flex(unset, unset, space-between, flex-start);
+        .footer-nav-list, .footer-contact-list {
+            flex-basis: 25%;
+            min-height: 18.5rem;
+        }
 
-            .contact-block {
-                min-width: 30%;
-                height: 100%;
+        .footer-nav-item, .footer-contact-item {
+            margin-bottom: 1.125rem;
 
-                .contact__text {
-                    max-width: 80%;
-                    margin-top: 2.5rem;
-                    line-height: 205%;
-                    letter-spacing: 1px;
+            &:first-child {
+                margin-bottom: 2.25rem;
+                font-size: font-size(1);
+            }
+
+            .footer-nav__link {
+                @include transition(text-decoration);
+
+                &:hover {
+                    text-decoration: underline;
                 }
             }
 
-            .footer-nav {
-                width: 63%;
-                height: 13.5rem;
-
-                @include flex(wrap,column,left,flex-start);
-
-                .footer-nav-item {
-                    height: 20%;
-                    font-weight: 500;
-                    line-height: 150%;
-                    letter-spacing: 1px;
-
-                    .footer-nav-item__link {
-                        @include transition(box-shadow);
-
-                        &:hover {
-                            // box-shadow: $redUnderline;
-                        }
-                    }
-                }
+            .footer-contact__link {
+                margin-left: 1rem;
             }
         }
 
-        .subscribe-block {
-            width: 31.7%;
+        .footer-contact-item {
+            @include transition(color);
 
-            .subscribe__title {
-                margin-bottom: 3rem;
-                font-size: 1.25rem;
-                font-weight: 500;
-                letter-spacing: 0.06em;
+            &:hover {
+                color: $main;
             }
+        }
+    }
 
-            .subscribe-form {
-                padding-right: 2rem;
+    .copyright {
+        color: $gray;
+    }
 
-                @include flex(unset, unset, space-between, flex-start);
-            }
+    .footer-cards-holder {
+        width: 17.8125rem;
+
+        .payment-cards-list {
+            @include flex(unset, unset, space-between, center);
         }
     }
 }

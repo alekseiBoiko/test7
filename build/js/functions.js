@@ -2,8 +2,9 @@ $(function(){
   fixHeader();
   changeHamburger();
   initHolderBg('.add-holder');
-  drawSlider();
-  sideBar()
+  // drawSlider();
+  onClick('header-btn-search','search-form');
+  onClick('header-btn-bars','side-bar')
   }
 );
 
@@ -29,11 +30,12 @@ function fixHeader() {
   })
 };
 
-function sideBar() {
-  $('.header-nav-btn-bars').on('click', function(e) {
+function onClick(btnClass, blockClass) {
+  $('.'+btnClass).on('click', function(e) {
     e.preventDefault();
-    $(this).toggleClass('nav-btn_active');
-    $('.side-bar').toggleClass('bar_active');
+    $(this).toggleClass('icon-btn_active');
+    $('.'+blockClass+'-wrapper').toggleClass(blockClass+'-wrapper_active');
+    $('.'+blockClass).toggleClass(blockClass+'_active');
   })
 };
 

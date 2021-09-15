@@ -1,9 +1,7 @@
 ul.side-bar 
     li.side-bar-item
-        .side-bar__title categories
         +categoriesList('categories', categorieList)
     li.side-bar-item
-        .side-bar__title Top Rated
         +topList('top', topList)
     li.add-holder
         img.add__img(src='../../img/discount-add.png' alt='advert')

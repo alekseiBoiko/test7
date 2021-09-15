@@ -2,7 +2,8 @@ footer.footer
   .edge_white
     .holder_short
       p We’re confident we’ve provided all the best for you. Stay connect with us
-      +socials(socialList)
+      .footer-socials-holder 
+        +socials(socialList)
   .main-footer-area
     .holder_short
       +navList('footer', informationList)
@@ -10,6 +11,7 @@ footer.footer
       +navList('footer', helpList)
       +contacts('footer', contactList)
   .edge_black
-    .holder_main 
-      p Copyright 2017 RenoshopBee all right reserved  -  Design by BeeStudios
-      +paymentCards(paymentCardsList)
+    .holder_short 
+      span.copyright Copyright 2017 RenoshopBee all right reserved  -  Design by BeeStudios
+      .footer-cards-holder
+        +paymentCards(paymentCardsList)

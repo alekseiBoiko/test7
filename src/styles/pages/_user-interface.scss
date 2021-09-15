@@ -1,0 +1,8 @@
+.block-holder {
+    margin: 1rem;
+    @include flex(unset, column, center, center);
+
+    h4 {
+        padding: 2rem;
+    }
+}

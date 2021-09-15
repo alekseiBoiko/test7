@@ -1,6 +1,11 @@
 - 
   var categorieList = [
     {
+      name: 'categories',
+      url: '',
+      number: ''
+    },
+    {
       name: 'accessories',
       url: 'accessories.html',
       number: '15'
@@ -40,5 +45,8 @@
 mixin categoriesList(navClass, navList = [])
     ul(class=`${navClass}-nav-list`) 
         each i in navList
-          li(class=`${navClass}-nav-item`)
-            a(href=i.url, class=`${navClass}-nav__link`) #{i.name} (#{i.number})
+          if i.url==''
+            li(class=`${navClass}-nav-item list-title`) #{i.name}
+          else
+            li(class=`${navClass}-nav-item`)
+              a(href=i.url, class=`${navClass}-nav__link`) #{i.name} (#{i.number})

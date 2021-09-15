@@ -1,7 +1,15 @@
 extends common/layout
 
-//- block content 
-//-   include index/welcome
+block content 
+    .holder_short
+        //- p you`re here
+        include utils/bread-crumbs
+        .block-holder 
+            h4 Bread crumbs:
+            +breadCrumb ('user-interface', breadCrumbs)
+        .block-holder 
+            h4 Card markers:
+            +iconBtn('card-marker', cardMarkers)
 //-   include index/best
 //-   include index/benefits
 //-   include index/sale

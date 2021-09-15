@@ -1,0 +1,29 @@
+- 
+  var breadCrumbs = [
+    {
+      name: 'home',
+      url: 'home.html'
+    }, 
+    {
+      name: 'page',
+      url: 'page.html'
+    }, 
+    {
+      name: 'shop',
+      url: 'shop.html'
+    }, 
+    {
+      name: 'current page',
+      url: ''
+    }
+  ];
+
+mixin breadCrumb (pageName, navList = [])
+    ul(class=`breadcrumb-list`)
+        each i in navList
+          if i.url==''
+            li.breadcrumb-item#current-page__name 
+              span.breadcrumb__link #{pageName}
+          else
+            li.breadcrumb-item
+                a.breadcrumb__link(href=i.url) #{i.name}
