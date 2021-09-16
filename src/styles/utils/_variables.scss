@@ -83,7 +83,9 @@ $title-sizes: (
 	h1: 3.75rem,
 	h2: 1.875rem,
 	h3: 1.5rem,
-	h4: 1.125rem
+	h4: 1.125rem,
+	h5: 1rem,
+	h6: 0.875rem
 );
 
 @function title-size($key) {

@@ -1,7 +1,7 @@
 extends common/layout
 
 block content 
-    .holder_short
+    .holder_short_started
         //- p you`re here
         include utils/bread-crumbs
         .block-holder 
@@ -10,6 +10,11 @@ block content
         .block-holder 
             h4 Card markers:
             +iconBtn('card-marker', cardMarkers)
+    .holder_short
+        +productCard('product')
+        
+        
+        
 //-   include index/best
 //-   include index/benefits
 //-   include index/sale

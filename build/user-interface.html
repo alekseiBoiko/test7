@@ -20,7 +20,7 @@
   <body>
     <header class="header">
       <div class="edge_black"> 
-        <div class="holder_main">
+        <div class="holder_main_centered">
               <ul class="header-contact-list">
                 <li class="header-contact-item list-title">contact info</li>
                 <li class="header-contact-item"><i class="fas fa-globe"></i><a class="header-contact__link" href="https://maps.google.com">1234 Your Address, Country.</a></li>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="main-header-area"> 
-        <div class="holder_main"><a class="logo" href="index.html"> <b>Renoshop</b></a>
+        <div class="holder_main_centered"><a class="logo" href="index.html"> <b>Renoshop</b></a>
               <ul class="header-nav-list">
                 <li class="header-nav-item"><a class="header-nav__link" href="home.html">Home</a></li>
                 <li class="header-nav-item"><a class="header-nav__link" href="women.html">women</a></li>
@@ -72,8 +72,8 @@
       <div class="side-bar-wrapper">
         <ul class="side-bar"> 
           <li class="side-bar-item">
+                <div class="list-title">categories</div>
                 <ul class="categories-nav-list"> 
-                  <li class="categories-nav-item list-title">categories</li>
                   <li class="categories-nav-item"><a class="categories-nav__link" href="accessories.html">accessories (15)</a></li>
                   <li class="categories-nav-item"><a class="categories-nav__link" href="dresses.html">dresses (50)</a></li>
                   <li class="categories-nav-item"><a class="categories-nav__link" href="women.html">women (150)</a></li>
@@ -84,25 +84,22 @@
                 </ul>
           </li>
           <li class="side-bar-item">
-                <ul class="top-nav-list">
-                  <li class="top-nav-item list-title">Top Rated</li>
-                  <li class="top-nav-item"><a class="top-nav_link" href="top1.html"> 
-                      <div class="img-holder"> </div>
-                      <div class="info-holder"> 
-                        <div class="top_title">Casual men wearing cool shoe </div>
-                        <div class="top_price">$250.00</div>
+                <div class="list-title">top rated</div>
+                <ul class="top-list">
+                  <li class="top-item"><a class="top_link"> 
+                      <div class="top-img-holder"> </div>
+                      <div class="top-info-holder">
+                        <h6 class="top-product__title">Casual men wearing cool shoe </h6><span class="top-product__price">250.00</span>
                       </div></a></li>
-                  <li class="top-nav-item"><a class="top-nav_link" href="top1.html"> 
-                      <div class="img-holder"> </div>
-                      <div class="info-holder"> 
-                        <div class="top_title">Casual men wearing cool shoe </div>
-                        <div class="top_price">$250.00</div>
+                  <li class="top-item"><a class="top_link"> 
+                      <div class="top-img-holder"> </div>
+                      <div class="top-info-holder">
+                        <h6 class="top-product__title">Casual men wearing cool shoe </h6><span class="top-product__price">250.00</span>
                       </div></a></li>
-                  <li class="top-nav-item"><a class="top-nav_link" href="top1.html"> 
-                      <div class="img-holder"> </div>
-                      <div class="info-holder"> 
-                        <div class="top_title">Casual men wearing cool shoe </div>
-                        <div class="top_price">$250.00</div>
+                  <li class="top-item"><a class="top_link"> 
+                      <div class="top-img-holder"> </div>
+                      <div class="top-info-holder">
+                        <h6 class="top-product__title">Casual men wearing cool shoe </h6><span class="top-product__price">250.00</span>
                       </div></a></li>
                 </ul>
           </li>
@@ -139,7 +136,7 @@
         </ul>
     <footer class="footer">
       <div class="edge_white">
-        <div class="holder_short">
+        <div class="holder_short_centered">
           <p>We’re confident we’ve provided all the best for you. Stay connect with us</p>
           <div class="footer-socials-holder"> 
                 <ul class="social-list">
@@ -153,7 +150,7 @@
         </div>
       </div>
       <div class="main-footer-area">
-        <div class="holder_short">
+        <div class="holder_short_started">
               <ul class="footer-nav-list">
                 <li class="footer-nav-item list-title">Information</li>
                 <li class="footer-nav-item"><a class="footer-nav__link" href="Delivery.html">Delivery Information</a></li>
@@ -186,7 +183,7 @@
         </div>
       </div>
       <div class="edge_black">
-        <div class="holder_short"> <span class="copyright">Copyright 2017 RenoshopBee all right reserved  -  Design by BeeStudios</span>
+        <div class="holder_short_centered"> <span class="copyright">Copyright 2017 RenoshopBee all right reserved  -  Design by BeeStudios</span>
           <div class="footer-cards-holder">
                 <ul class="payment-cards-list">
                   <li class="payment-cards-item"><a class="payment-cards-link" href="visa.com"><img class="payment-cards-img" src="../img/card1.png" alt="visa"></a></li>
@@ -202,5 +199,6 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/raty.js"></script>
   </body>
 </html>

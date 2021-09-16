@@ -1,0 +1,156 @@
+.card-marker {
+    &-list {
+        height: 100%;
+    }
+
+    &-item {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.5rem;
+        color: color(btn-color);
+        background-color: color(btn-bg);
+        border: none;
+
+        @include transition(background-color);
+        @include flex(unset, normal, center, center);
+
+        &:hover {
+            background-color: darken(color(btn-bg), 10%);
+        }
+    }
+}
+
+.rate {
+    height: 10px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.description, .select {
+    font-family: font(roboto);
+    font-size: font-size(-1);
+}
+
+.price {
+    font-family: font(droid);
+    color: $main;
+
+    &::before {
+        content: '$';
+    }
+}
+
+.select {
+    width: 40%;
+    padding: 1em;
+    text-transform: capitalize;
+    border: $grayBorder;
+
+    &:first-child {
+        margin-right: 2em;
+    }
+
+    &-holder {
+        width: 100%;
+        padding-top: 3rem;
+        border-top: $grayBorder;
+
+        @include flex(wrap,normal,left,flex-start);
+    }
+
+    &-option {
+        
+    }
+}
+
+.card {
+    &-list {
+        width: 100%;
+        margin-bottom: -1.75rem;
+    }
+
+    &-item {
+        width: 100%;
+        margin-bottom: 1.75rem;
+    }
+
+    &_link {
+        width: 100%;
+        height: 6.3125rem;
+        margin-right: -0.875rem;
+
+        @include flex(unset,normal,space-between, flex-start);
+    }
+
+    &-img-holder {
+        width: 7rem;
+        height: 100%;
+        margin-right: 0.875rem;
+        background: color(body-color);
+    }
+
+    &-info-holder {
+        height: 100%;
+        padding: 1rem 0 0.5rem;
+
+        @include flex(unset,column,space-between, flex-start);
+    }
+
+    &-product__title {
+    }
+
+    &-product__price {
+        font-family: font(droid);
+        color: $main;
+
+        &::before {
+            content: '$';
+        }
+    }
+
+    &-price-ft-rate-holder {
+        @include flex(wrap,normal,left, flex-start);
+    }
+}
+
+.product {
+    &-img-holder {
+        width: 40%;
+        height: 37.5rem;
+        margin-right: 3.125rem;
+        background: color(body-color);
+    }
+
+    &-info-holder {
+        flex-grow: 2;
+        padding: 1rem 0 0.5rem;
+
+        @include flex(unset,column,left, flex-start);
+    }
+
+    &__title {
+        margin-bottom: 1em;
+        font-weight: 600;
+    }
+
+    &-price-ft-rate-holder {
+        width: 100%;
+
+        @include flex(wrap,normal,left, center);
+    }
+
+    &__price {
+        margin-right: 1rem;
+        font-size: font-size(3);
+        @extend .price;
+    }
+
+    &__description {
+        max-width: 31.75rem;
+        margin-top: 2rem;
+        margin-bottom: 3.25rem;
+        @extend .description;
+    }
+}

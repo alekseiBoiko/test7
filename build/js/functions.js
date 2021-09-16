@@ -4,7 +4,8 @@ $(function(){
   initHolderBg('.add-holder');
   // drawSlider();
   onClick('header-btn-search','search-form');
-  onClick('header-btn-bars','side-bar')
+  onClick('header-btn-bars','side-bar');
+  initRaty('.rate')
   }
 );
 
@@ -68,6 +69,14 @@ function initHolderBg(holder) {
   });
 }
 
+function initRaty(starClass) {
+  'use strict';
+  $(starClass).raty({
+    score: 3,
+    starOff: 'img/star-off.png',
+    starOn: 'img/star-on.png',
+  });
+}
 
 function drawSlider() {
   $('.offer-list').slick({
