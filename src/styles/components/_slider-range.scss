@@ -1,0 +1,71 @@
+.range-list {
+    font-size: 0;
+    margin: 0 0 17px;
+  }
+  .range-list li {
+    font-size: 14px;
+    color: #727272;
+    display: inline-block;
+  }
+  .range-list li:last-child {
+    float: right;
+  }
+  .range-list span,
+  .range-list .input.sm.range {
+    display: inline-block;
+    vertical-align: middle !important;
+  }
+  
+  
+  .input.sm.range {
+    width: 81px;
+    height: 37px;
+    font-family: "roboto", "arial", sans-serif;
+    color: #323232;
+    font-size: 14px;
+    padding: 9px 5px 9px 10px;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  /*--------------------------- SLIDERRANGE ------------------------------*/
+  .ui-slider {
+    background: #ebebeb;
+    position: relative;
+    height: 9px;
+  }
+  
+  .ui-slider-range {
+    background: black;
+  }
+  
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    height: 100%;
+  }
+  
+  .ui-slider .ui-slider-handle {
+    box-shadow: 0 0 0 2px #a1a1a1, 0 0 0 4px #232323;
+    background-color: black;
+    // background-position: 0px -189px;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    cursor: pointer;
+    margin: 0 0 0 -17px;
+    top: -5px;
+  }
+
+  .ui-slider .ui-slider-handle:last-child {
+    background-color: black;
+    background-position: 0px -226px;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0 0 -8px;
+    top: -6px;
+  }
+  
+  /*--------------------------- SLIDERRANGE END ------------------------------*/
+  
+  
+  

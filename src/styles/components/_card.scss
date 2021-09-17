@@ -31,6 +31,7 @@
 .description, .select {
     font-family: font(roboto);
     font-size: font-size(-1);
+    line-height: 1.5rem;
 }
 
 .price {
@@ -45,8 +46,24 @@
 .select {
     width: 40%;
     padding: 1em;
+    text-overflow: '';
     text-transform: capitalize;
     border: $grayBorder;
+    appearance: none;
+
+    @include transition(border-color);
+
+    &:hover {
+        border-color: $main;
+    }
+    
+    &_arrow {
+        background: transparent url("/img/arrow-down.png") no-repeat 90% center;
+    }
+
+    &_square {
+        background: transparent url("/img/square.png") no-repeat 90% center;
+    }
 
     &:first-child {
         margin-right: 2em;
@@ -55,14 +72,25 @@
     &-holder {
         width: 100%;
         padding-top: 3rem;
+        overflow: hidden;
         border-top: $grayBorder;
 
         @include flex(wrap,normal,left,flex-start);
     }
+}
 
-    &-option {
-        
+.img-holder {
+    background: color(body-color);
+    
+    @include transition(opacity);
+
+    &:hover {
+        opacity: 0.5;
     }
+}
+
+.info-holder_horizontal {
+    height: 100%;
 }
 
 .card {
@@ -86,9 +114,6 @@
 
     &-img-holder {
         width: 7rem;
-        height: 100%;
-        margin-right: 0.875rem;
-        background: color(body-color);
     }
 
     &-info-holder {
@@ -116,11 +141,14 @@
 }
 
 .product {
+    width: 100%;
+    // min-height: 37.5rem;
+    @include flex(unset,normal,stretch, flex-start);
+
     &-img-holder {
         width: 40%;
         height: 37.5rem;
         margin-right: 3.125rem;
-        background: color(body-color);
     }
 
     &-info-holder {
@@ -148,9 +176,13 @@
     }
 
     &__description {
-        max-width: 31.75rem;
-        margin-top: 2rem;
-        margin-bottom: 3.25rem;
+        max-width: 31rem;
+        margin-top: 1.7rem;
+        margin-bottom: 3rem;
         @extend .description;
+    }
+
+    &-btn-holder {
+        margin-top: 2rem;
     }
 }

@@ -17,3 +17,5 @@ mixin iconBtn(btnCLassPrefix, btnList = [])
             li(class=`${btnCLassPrefix}-item`)
                 btn(class=`${btnCLassPrefix}-${i}`)
                     i(class=`fas fa-${i}`)
+                    if i=='shopping-cart'& btnCLassPrefix=='card-btn'
+                        span(class=`${btnCLassPrefix}-cart`) Add to cart

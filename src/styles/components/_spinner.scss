@@ -1,0 +1,59 @@
+.count-holder {
+	width: 40%;
+}
+
+.ui-spinner {
+	margin-top: 2rem;
+	user-select: none;
+	position: relative;
+	text-align: left;
+	padding: 0;
+	width: 100%;
+	border: 1px solid #ddd;
+	display: inline-block;
+}
+.ui-button {
+	position: absolute;
+	top: 0;
+	width: 3.5rem;
+	height: 3.125rem;
+	line-height: 32px;
+	display: block;
+	// background: #faf4f2;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	font-family: arial;
+	color: #3e1e02;
+	text-decoration: none;
+
+	@include flex(unset, unset, center, center);
+	
+	&:hover {
+		background: $main;
+	}
+}
+
+.ui-spinner-up {
+	right: 0;
+	border-left: $grayBorder;
+}
+
+.ui-spinner-down {
+	left: 0;
+	border-right: $grayBorder;
+}
+
+.ui-spinner-input {
+	display: inline-block;
+	font-size: 14px;
+	color: #000;
+	line-height: 32px;
+	height: 3.125rem;
+	padding: 0;
+	outline: none;
+	border: none;
+	width: 100%;
+	text-align: center;
+	font-size: font-size(2);
+}

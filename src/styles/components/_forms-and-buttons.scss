@@ -51,7 +51,35 @@
     &-item {
         width: 2.5rem;
         height: 2.5rem;
-        
+    }
+
+}
+
+.card-btn {
+    &-list {
+        width: 40%;
+        margin-top: 2rem;
+
+        @include flex(unset,normal,space-between,flex-start);
+    }
+
+    &-item {
+        min-width: 3.125rem;
+        height: 3.125rem;
+        padding: 1rem;
+        border: $grayBorder;
+        @include transition(background-color color);
+
+        &:hover {
+            color: color(btn-color);
+            background-color: color(btn-bg);
+        }
+    }
+
+    &-cart {
+        margin-left: 0.5rem;
+        font-size: font-size(-1);
+        text-transform: uppercase;
     }
 }
 

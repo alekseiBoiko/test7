@@ -67,7 +67,7 @@ h4 {
 }
 
 %with-holder {
-    min-height: 100%;
+    min-height: 60px;
     margin: 0 auto;
     @include flex(wrap,normal,space-between,unset);
 }

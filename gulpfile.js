@@ -7,6 +7,7 @@ const gulpStylelint = require('gulp-stylelint');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
 const pug = require('gulp-pug');
+const concat = require('gulp-concat');
 // const imagemin = require('gulp-imagemin');
 
 // gulp.task('imageMinify', function () {
@@ -57,6 +58,12 @@ gulp.task('pug-compile', function() {
       .pipe(gulp.dest('./build/'));
   });
 
+gulp.task('scripts', function() {
+  return gulp.src('./src/js/*.js') // путь к папке со скриптами
+    .pipe(concat('all.js')) // в какой файл объединить
+    .pipe(gulp.dest('./build/js/'));
+});
+
 gulp.task('default', async function(){
     browserSync.init({
         server: "./build/"
@@ -65,6 +72,6 @@ gulp.task('default', async function(){
     // gulp.watch('./build/pages/*.html').on('change', browserSync.reload)
     gulp.watch('./src/pug/**/*.pug', gulp.series('pug-compile')).on('change', browserSync.reload)
     // gulp.watch('./app/**/*.css').on('change', browserSync.reload)
-    gulp.watch('./build/js/*.js').on('change', browserSync.reload)
+    gulp.watch('./src/js/*.js', gulp.series('scripts')).on('change', browserSync.reload)
     // gulp.watch('./src/img/*', gulp.series('imageMinify'))
 })

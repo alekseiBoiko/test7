@@ -11,15 +11,18 @@ mixin topList(navClass, navList = [])
               span(class=`${navClass}-product__price`) #{i.price}
 
 mixin productCard (cardClass)
-  div(class=`${cardClass}-img-holder`) 
-  div(class=`${cardClass}-info-holder`)
-    h3(class=`${cardClass}__title`) This is product name
-    div(class=`${cardClass}-price-ft-rate-holder`)
-      span(class=`${cardClass}__price`) 250.00
-      .rate
-    p(class=`${cardClass}__description`) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    .select-holder 
-      +selectCategorie(sizeList)
-      +selectCategorie(colorList)
+  div(class=`${cardClass}`)
+    div(class=`${cardClass}-img-holder img-holder`) 
+    div(class=`${cardClass}-info-holder`)
+      h3(class=`${cardClass}__title`) This is product name
+      div(class=`${cardClass}-price-ft-rate-holder`)
+        span(class=`${cardClass}__price`) 250.00
+        .rate
+      p(class=`${cardClass}__description`) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      .select-holder 
+        +selectCategorie('arrow',sizeList)
+        +selectCategorie('square',colorList)
+      +spinner()
+      +iconBtn('card-btn', cardMarkers)
 
 
