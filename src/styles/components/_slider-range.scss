@@ -1,71 +1,63 @@
-.range-list {
-    font-size: 0;
-    margin: 0 0 17px;
-  }
-  .range-list li {
-    font-size: 14px;
-    color: #727272;
-    display: inline-block;
-  }
-  .range-list li:last-child {
-    float: right;
-  }
-  .range-list span,
-  .range-list .input.sm.range {
-    display: inline-block;
-    vertical-align: middle !important;
-  }
-  
-  
-  .input.sm.range {
-    width: 81px;
-    height: 37px;
-    font-family: "roboto", "arial", sans-serif;
-    color: #323232;
-    font-size: 14px;
-    padding: 9px 5px 9px 10px;
-    letter-spacing: 0.5px;
-  }
-  
-  
-  /*--------------------------- SLIDERRANGE ------------------------------*/
-  .ui-slider {
-    background: #ebebeb;
-    position: relative;
-    height: 9px;
-  }
-  
-  .ui-slider-range {
-    background: black;
-  }
-  
-  .ui-slider .ui-slider-range {
-    position: absolute;
-    height: 100%;
-  }
-  
-  .ui-slider .ui-slider-handle {
-    box-shadow: 0 0 0 2px #a1a1a1, 0 0 0 4px #232323;
-    background-color: black;
-    // background-position: 0px -189px;
-    width: 1rem;
-    height: 1rem;
-    position: absolute;
-    cursor: pointer;
-    margin: 0 0 0 -17px;
-    top: -5px;
-  }
+.slider-range-wrap {
+    width: 100%;
 
-  .ui-slider .ui-slider-handle:last-child {
-    background-color: black;
-    background-position: 0px -226px;
-    width: 1rem;
-    height: 1rem;
-    margin: 0 0 0 -8px;
-    top: -6px;
-  }
-  
-  /*--------------------------- SLIDERRANGE END ------------------------------*/
-  
-  
-  
+    .slider-range-holder {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.range {
+    &-holder {
+        width: 100%;
+        margin: 0 0 17px;
+
+        @include flex(unset,normal,space-between,flex-start);
+    }
+
+    &-input {
+        position: relative;
+        width: 42.31%;
+        text-align: center;
+
+        @include transition(border-color);
+
+        &:hover, &:focus {
+            border-color: $main;
+        }
+    }
+
+    &__btn {
+        width: $sbarElHeight;
+        height: $sbarElHeight;
+    }
+}
+
+.ui-slider {
+    position: relative;
+    height: 6px;
+    background: #ebebeb;
+
+    &-range {
+        position: absolute;
+        z-index: 10;
+        height: 6px;
+        margin-left: 4px;
+        background: black;
+    }
+
+    &-handle {
+        position: absolute;
+        top: -4px;
+        z-index: 5;
+        width: 13px;
+        height: 13px;
+        margin: 0 0 0 4px;
+        cursor: pointer;
+        background-color: black;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px #232323;
+
+        &:last-child {
+            margin: 0 0 0 -8px;
+        }
+    }
+}

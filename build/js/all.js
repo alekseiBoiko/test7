@@ -134,9 +134,9 @@ function sliderRange() {
       var val_end = slider_wrap.find('.slider-range-end');
       slider.slider({
         range: true,
-        min: 1000,
-        max: 10000,
-        values: [2000, 8000],
+        min: 10,
+        max: 4000,
+        values: [10, 3000],
         slide: function(event, ui) {
           val_start.val(ui.values[0]);
           val_end.val(ui.values[1]);
@@ -197,6 +197,7 @@ function sliderRange() {
     sliderRange();
 })
   /* sliderRange end */
+
 
 function spinner() {
     var spin = $('.spinner');

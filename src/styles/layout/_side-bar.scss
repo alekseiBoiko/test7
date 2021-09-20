@@ -136,4 +136,49 @@
     &_active {
         transform: translateX(0);
     }
+
+    &__element {
+        height: $sbarElHeight;
+        border: $grayBorder;
+
+        @include flex(unset,normal,center,center);
+        @include transition(border-color);
+    }
+}
+
+.size {
+    &-list {
+        width: 100%;
+        margin: -5px -8px;
+        @include flex(wrap,normal,left,flex-start);
+    }
+
+    &-item {
+        position: relative;
+        width: 2.8125rem;
+        margin: 2.5px 4px;
+
+        &:first-child {
+            display: none;
+        }
+    }
+}
+
+.color {
+    &-list {
+        width: 100%;
+        margin-bottom: -1.125rem;
+
+        @include flex(unset,column,left,flex-start);
+    }
+
+    &-item {
+        position: relative;
+        // width: 100%;
+        margin-bottom: 1.125rem;
+
+        &:first-child {
+            display: none;
+        }
+    }
 }

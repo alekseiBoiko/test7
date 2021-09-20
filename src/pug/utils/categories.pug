@@ -73,4 +73,10 @@ mixin selectCategorie (selectClass, list = [])
     each i in list
       option.select-option #{i}
     
-  
+mixin filterCategorie (selectClass, list = [])
+  .list-title #{selectClass}
+  ul(class=`${selectClass}-list`) 
+    each i in list
+      li(class=`${selectClass}-item`)
+        input(class=`${selectClass}-custom-checkbox custom-checkbox` type="checkbox" id="custom" name=`${selectClass}` value="yes")
+        label(class=`${selectClass}-label` for="custom") #{i}

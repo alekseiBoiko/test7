@@ -10,10 +10,16 @@ block content
         .block-holder 
             h4 Card markers:
             +iconBtn('card-marker', cardMarkers)
-        .block-holder 
-            +sliderRange()
     .holder_short
         +productCard('product')
+    .holder_short
+        .block-holder 
+            h4 Price filter:
+            +sliderRange()
+        .block-holder 
+            +filterCategorie('size',sizeList)
+        .block-holder 
+            +filterCategorie('color',colorList)
         
         
         
