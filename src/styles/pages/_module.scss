@@ -1,2 +1,14 @@
 @import '_user-interface';
-@import '_product.scss';
+@import 'index/_welcome';
+@import 'index/_best';
+@import 'index/_benefits';
+@import 'index/_collection';
+@import 'index/_featured';
+@import 'index/_discount';
+
+
+// best
+//   include pages/index/benefits
+//   include pages/index/collection
+//   include pages/index/featured
+//   include pages/index/discount

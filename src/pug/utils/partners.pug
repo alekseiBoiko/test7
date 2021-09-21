@@ -1,0 +1,6 @@
+mixin partners(number)
+    ul.partner-list
+    - for (var x=1; x<=number; x++)
+        li.partner-item
+            a.partner-link(href=`${x}.html`)
+                img.partner__img(src=`img/brand-logo-${x}.png` alt=`${x}`)

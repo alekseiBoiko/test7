@@ -20,9 +20,36 @@ mixin productCard (cardClass)
         .rate
       p(class=`${cardClass}__description`) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       .select-holder 
-        +selectCategorie('arrow',sizeList)
-        +selectCategorie('square',colorList)
+        +selectCategorie('size',sizeList)
+        +selectCategorie('color',colorList)
       +spinner()
       +iconBtn('card-btn', cardMarkers)
 
+mixin bestProductCard (cardClass, productList = [])
+  ul(class=`${cardClass}-list`)
+    each i in productList
+        if i.number>1 & i.number<6
+          li(class=`${cardClass}-item`)
+            a(href=`${i.number}.html`, class=`${cardClass}_link`) 
+              div(class=`img-holder ${cardClass}-img-holder`)
+                .overlay-card-holder 
+                  +iconBtn('card-marker', cardMarkers)
+              div(class=`info-holder_vertical`)
+                h6(class=`product__title`) #{i.name} 
+                span(class=`price`) #{i.price}
+                .rate 
+
+mixin featuredProductCard (cardClass, productList = [])
+  ul(class=`${cardClass}-list`)
+    each i in productList
+      li(class=`${cardClass}-item`)
+        if i.categories=='bags'
+          a(href=`${i.number}.html`, class=`${cardClass}_link`) 
+            div(class=`img-holder ${cardClass}-img-holder`)
+              .overlay-card-holder 
+                +iconBtn('card-marker', cardMarkers)
+            div(class=`info-holder_vertical`)
+              h6(class=`product__title`) #{i.name} 
+              span(class=`price`) #{i.price}
+              .rate 
 

@@ -1,7 +1,22 @@
-extends ./common/layout
+extends common/layout
 
 block content 
-    p you`re here
-    include utils/bread-crumbs
-    +breadCrumb ('user-interface', breadCrumbs)
-    +iconBtn('card-marker', cardMarkers)
+    .holder_short_started
+        .block-holder 
+            h4 Bread crumbs:
+            +breadCrumb ('user-interface', breadCrumbs)
+        .block-holder 
+            h4 Card markers:
+            +iconBtn('card-marker', cardMarkers)
+    .holder_short
+        +productCard('product')
+    .holder_short
+        .block-holder 
+            h4 Price filter:
+            +sliderRange()
+        .block-holder 
+            +filterCategorie('size',sizeList)
+        .block-holder 
+            +filterCategorie('color',colorList)
+        
+        

@@ -1,30 +1,9 @@
 extends common/layout
 
 block content 
-    .holder_short_started
-        //- p you`re here
-        include utils/bread-crumbs
-        .block-holder 
-            h4 Bread crumbs:
-            +breadCrumb ('user-interface', breadCrumbs)
-        .block-holder 
-            h4 Card markers:
-            +iconBtn('card-marker', cardMarkers)
-    .holder_short
-        +productCard('product')
-    .holder_short
-        .block-holder 
-            h4 Price filter:
-            +sliderRange()
-        .block-holder 
-            +filterCategorie('size',sizeList)
-        .block-holder 
-            +filterCategorie('color',colorList)
-        
-        
-        
-//-   include index/best
-//-   include index/benefits
-//-   include index/sale
-//-   include index/featured
-//-   include index/discount
+  include pages/index/welcome
+  include pages/index/best
+  include pages/index/benefits
+  include pages/index/collection
+  include pages/index/featured
+  include pages/index/discount

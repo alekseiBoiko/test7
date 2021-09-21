@@ -11,6 +11,33 @@
         'retweet'
     ];
 
+    var benefits = [
+    {
+      name: 'special offers',
+      url: 'offers',
+      icon: 'gem',
+      text: 'Shop Big Save Big'
+    }, 
+    {
+      name: 'Free delivery',
+      url: 'delivery',
+      icon: 'paper-plane',
+      text: 'On Orders Above $99'
+    },
+    {
+      name: '30 Days Return',
+      url: 'return',
+      icon: 'retweet',
+      text: 'Policy We Offers'
+    },
+    {
+      name: 'Fastest Shipping',
+      url: 'shipping',
+      icon: 'rocket',
+      text: '2 Days Express'
+    }
+  ];
+
 mixin iconBtn(btnCLassPrefix, btnList = [])
     ul(class=`${btnCLassPrefix}-list`)
         each i in btnList
@@ -19,3 +46,12 @@ mixin iconBtn(btnCLassPrefix, btnList = [])
                     i(class=`fas fa-${i}`)
                     if i=='shopping-cart'& btnCLassPrefix=='card-btn'
                         span(class=`${btnCLassPrefix}-cart`) Add to cart
+
+mixin benefitList (btnCLassPrefix, benefitList = [])                        
+    ul(class=`${btnCLassPrefix}-list`)
+        each i in benefitList
+            li(class=`${btnCLassPrefix}-item`)
+                a(href=`${i.url}.html` class=`${btnCLassPrefix}-link`)
+                    i(class=`fas fa-${i.icon}`)
+                    h4(class=`${btnCLassPrefix}__title`) #{i.name}
+                    span(class=`${btnCLassPrefix}__text`) #{i.text}

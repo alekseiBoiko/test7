@@ -1,0 +1,35 @@
+.best {
+    &-section {
+        height: 44.6875rem;
+        padding-top: 6.25rem;
+    }
+
+    &-info-holder {
+        width: 20%;
+        height: 100%;
+
+        @include flex(unset,column,center,flex-start);
+    }
+
+    &-list {
+        width: 80%;
+        height: 100%;
+
+        @include flex(unset,normal,space-between,flex-start);
+    }
+
+    &-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-img-holder {
+        height: 28.125rem;
+
+        &:hover .overlay-card-holder {
+            opacity: 1;
+        }
+    }
+
+
+}

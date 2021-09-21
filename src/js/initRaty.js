@@ -1,3 +1,5 @@
+// RATE STARS
+
 function initRaty(starClass) {
   'use strict';
   $(starClass).raty({
@@ -8,5 +10,7 @@ function initRaty(starClass) {
 }
 
 $(function(){
-  initRaty();
+  initRaty('.rate');
 })
+
+// END RATE STARS

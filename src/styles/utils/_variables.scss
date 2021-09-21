@@ -31,7 +31,9 @@ $colors: (
 	footer-bg: inherit,
 	footer-color: inherit,
 	social-color: inherit,
-	social-color_hovered: $main
+	social-color_hovered: $main,
+	welcome-bg: #121212,
+	welcome-color: #333
 );
 
 
@@ -49,6 +51,7 @@ $fonts: (
 	poppins: ('Poppins', sans-serif),
 	roboto: ('Roboto', sans-serif),
 	droid: ('droid_serifregular', sans-serif),
+	droid_i: ('droid_serifitalic', sans-serif),
 	awesome: ('Font Awesome 5 Free'),
 	raleway: ('Raleway', sans-serif)
 );

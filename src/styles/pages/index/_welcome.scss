@@ -1,0 +1,31 @@
+.welcome {
+    &-section {
+        height: 50rem;
+        color: color(welcome-color);
+        background-color: color(welcome-bg);
+    }
+
+    &-information-holder {
+        width: 49%;
+        margin-bottom: 1em;
+        margin-left: 1em;
+
+        @include flex(unset,column,space-between,flex-start);
+    }
+
+    &-title {
+        line-height: 1.25em;
+
+        @include flex(unset,column,left,flex-start);
+
+        b:nth-child(2) {
+            color: $main;
+        }
+    }
+
+    &__text {
+        margin: 1rem 0 2rem;
+        font-weight: 500;
+        line-height: 1.25em;
+    }
+}

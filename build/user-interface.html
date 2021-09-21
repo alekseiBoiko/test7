@@ -41,8 +41,8 @@
       <div class="main-header-area"> 
         <div class="holder_main_centered"><a class="logo" href="index.html"> <b>Renoshop</b></a>
               <ul class="header-nav-list">
-                <li class="header-nav-item"><a class="header-nav__link" href="home.html">Home</a></li>
-                <li class="header-nav-item"><a class="header-nav__link" href="women.html">women</a></li>
+                <li class="header-nav-item"><a class="header-nav__link" href="user-interface.html">Home</a></li>
+                <li class="header-nav-item"><a class="header-nav__link" href="shop-list.html">women</a></li>
                 <li class="header-nav-item"><a class="header-nav__link" href="men.html">men</a></li>
                 <li class="header-nav-item"><a class="header-nav__link" href="kids.html">kids</a></li>
                 <li class="header-nav-item"><a class="header-nav__link" href="jewellery.html">jewellery</a></li>
@@ -119,27 +119,156 @@
         </ul>
       </div>
     </div>
-    <p>you`re here</p>
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a class="breadcrumb__link" href="home.html">home</a></li>
-          <li class="breadcrumb-item"><a class="breadcrumb__link" href="page.html">page</a></li>
-          <li class="breadcrumb-item"><a class="breadcrumb__link" href="shop.html">shop</a></li>
-          <li class="breadcrumb-item" id="current-page__name"> <span class="breadcrumb__link">user-interface</span></li>
-        </ul>
-        <ul class="card-marker-list">
-          <li class="card-marker-item">
-            <btn class="card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i>
-            </btn>
-          </li>
-          <li class="card-marker-item">
-            <btn class="card-marker-heart"><i class="fas fa-heart"></i>
-            </btn>
-          </li>
-          <li class="card-marker-item">
-            <btn class="card-marker-retweet"><i class="fas fa-retweet"></i>
-            </btn>
-          </li>
-        </ul>
+    <div class="holder_short_started">
+      <div class="block-holder"> 
+        <h4>Bread crumbs:</h4>
+            <ul class="breadcrumb-list">
+              <li class="breadcrumb-item"><a class="breadcrumb__link" href="home.html">home</a></li>
+              <li class="breadcrumb-item"><a class="breadcrumb__link" href="page.html">page</a></li>
+              <li class="breadcrumb-item"><a class="breadcrumb__link" href="shop.html">shop</a></li>
+              <li class="breadcrumb-item" id="current-page__name"> <span class="breadcrumb__link">user-interface</span></li>
+            </ul>
+      </div>
+      <div class="block-holder"> 
+        <h4>Card markers:</h4>
+            <ul class="card-marker-list">
+              <li class="card-marker-item">
+                <btn class="card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i>
+                </btn>
+              </li>
+              <li class="card-marker-item">
+                <btn class="card-marker-heart"><i class="fas fa-heart"></i>
+                </btn>
+              </li>
+              <li class="card-marker-item">
+                <btn class="card-marker-retweet"><i class="fas fa-retweet"></i>
+                </btn>
+              </li>
+            </ul>
+      </div>
+    </div>
+    <div class="holder_short">
+          <div class="product">
+            <div class="product-img-holder img-holder"> </div>
+            <div class="product-info-holder">
+              <h3 class="product__title">This is product name</h3>
+              <div class="product-price-ft-rate-holder"><span class="product__price">250.00</span>
+                <div class="rate"></div>
+              </div>
+              <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="select-holder"> 
+                    <select class="select select_size">
+                      <option class="select-option">Select size</option>
+                      <option class="select-option">xs</option>
+                      <option class="select-option">s</option>
+                      <option class="select-option">m</option>
+                      <option class="select-option">l</option>
+                      <option class="select-option">sl</option>
+                      <option class="select-option">xl</option>
+                      <option class="select-option">xxl</option>
+                    </select>
+                    <select class="select select_color">
+                      <option class="select-option">Select color</option>
+                      <option class="select-option">black</option>
+                      <option class="select-option">white</option>
+                      <option class="select-option">blue</option>
+                      <option class="select-option">yellow</option>
+                      <option class="select-option">green</option>
+                    </select>
+              </div>
+                  <div class="count-holder">
+                    <input class="spinner input count" name="value" value="1" readonly="">
+                  </div>
+                  <ul class="card-btn-list">
+                    <li class="card-btn-item">
+                      <btn class="card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-cart">Add to cart</span>
+                      </btn>
+                    </li>
+                    <li class="card-btn-item">
+                      <btn class="card-btn-heart"><i class="fas fa-heart"></i>
+                      </btn>
+                    </li>
+                    <li class="card-btn-item">
+                      <btn class="card-btn-retweet"><i class="fas fa-retweet"></i>
+                      </btn>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+    </div>
+    <div class="holder_short">
+      <div class="block-holder"> 
+        <h4>Price filter:</h4>
+            <div class="slider-range-wrap">
+              <div class="slider-range-holder">
+                <div class="slider-range slider-range-price"></div>
+              </div>
+              <div class="range-holder">
+                <input class="range-input slider-range-start side-bar__element" type="text" placeholder="$10">
+                <input class="range-input slider-range-end side-bar__element" type="text" placeholder="$3000">
+                <batton class="btn range__btn"><i class="fas fa-search"></i></batton>
+              </div>
+            </div>
+      </div>
+      <div class="block-holder"> 
+            <div class="list-title">size</div>
+            <ul class="size-list"> 
+              <li class="size-item">
+                <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
+                <label class="size-label" for="custom">xs</label>
+              </li>
+              <li class="size-item">
+                <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
+                <label class="size-label" for="custom">s</label>
+              </li>
+              <li class="size-item">
+                <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
+                <label class="size-label" for="custom">m</label>
+              </li>
+              <li class="size-item">
+                <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
+                <label class="size-label" for="custom">l</label>
+              </li>
+              <li class="size-item">
+                <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
+                <label class="size-label" for="custom">sl</label>
+              </li>
+              <li class="size-item">
+                <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
+                <label class="size-label" for="custom">xl</label>
+              </li>
+              <li class="size-item">
+                <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
+                <label class="size-label" for="custom">xxl</label>
+              </li>
+            </ul>
+      </div>
+      <div class="block-holder"> 
+            <div class="list-title">color</div>
+            <ul class="color-list"> 
+              <li class="color-item">
+                <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
+                <label class="color-label" for="custom">black</label>
+              </li>
+              <li class="color-item">
+                <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
+                <label class="color-label" for="custom">white</label>
+              </li>
+              <li class="color-item">
+                <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
+                <label class="color-label" for="custom">blue</label>
+              </li>
+              <li class="color-item">
+                <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
+                <label class="color-label" for="custom">yellow</label>
+              </li>
+              <li class="color-item">
+                <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
+                <label class="color-label" for="custom">green</label>
+              </li>
+            </ul>
+      </div>
+    </div>
     <footer class="footer">
       <div class="edge_white">
         <div class="holder_short_centered">
