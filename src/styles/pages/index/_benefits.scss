@@ -1,0 +1,53 @@
+.benefit {
+    &-section, &-list {
+        width: 100%;
+    }
+
+    &-section {
+        min-height: 12.5rem;
+        background-color: #f5f6f9;
+
+        @include flex(unset,normal,space-between,center);
+    }
+
+    &-list {
+        @include flex(unset,normal,space-between,center);
+    }
+
+    &-item {
+        width: 25%;
+    }
+
+    &-link {
+        display: block;
+        margin-bottom: 0.5rem;
+
+        @include flex(unset,column,center,center);
+
+        &:hover {
+            .benefit__icon, .benefit__title, .benefit__text {
+                color: $main;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: font-size(5);
+        color: #464646;
+    }
+
+    &__title {
+        margin-top: 1.5em;
+        margin-bottom: 0.3em;
+        font-weight: 600;
+        color: #232323;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: font(droid);
+        font-size: font-size(-2);
+        color: #888;
+        text-transform: capitalize;
+    }
+}

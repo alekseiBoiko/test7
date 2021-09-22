@@ -52,6 +52,6 @@ mixin benefitList (btnCLassPrefix, benefitList = [])
         each i in benefitList
             li(class=`${btnCLassPrefix}-item`)
                 a(href=`${i.url}.html` class=`${btnCLassPrefix}-link`)
-                    i(class=`fas fa-${i.icon}`)
+                    i(class=`fas fa-${i.icon} ${btnCLassPrefix}__icon`)
                     h4(class=`${btnCLassPrefix}__title`) #{i.name}
                     span(class=`${btnCLassPrefix}__text`) #{i.text}

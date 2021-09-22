@@ -60,9 +60,8 @@ h4 {
 }
 
 %with-holder {
-    // min-height: 60px;
-    height: 100%;
     margin: 0 auto;
+
     @include flex(wrap,normal,space-between,unset);
 }
 
@@ -73,6 +72,7 @@ h4 {
 
         &_centered {
             align-items: center;
+            height: 100%;
             @extend .holder_main;
         }
 
@@ -85,6 +85,7 @@ h4 {
     &_short {
         position: relative;
         width: 73.25rem;
+        height: 100%;
         @extend %with-holder;
 
         &_centered {

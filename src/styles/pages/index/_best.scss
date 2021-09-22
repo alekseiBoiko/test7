@@ -5,31 +5,20 @@
     }
 
     &-info-holder {
-        width: 20%;
-        height: 100%;
+        margin-bottom: 7rem;
 
         @include flex(unset,column,center,flex-start);
     }
 
-    &-list {
-        width: 80%;
-        height: 100%;
-
-        @include flex(unset,normal,space-between,flex-start);
+    &__title {
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
     }
 
-    &-item {
-        width: 100%;
-        height: 100%;
+    &__text {
+        margin-top: 2rem;
+        font-size: font-size(-1);
+        font-weight: 500;
+        line-height: 1.5;
     }
-
-    &-img-holder {
-        height: 28.125rem;
-
-        &:hover .overlay-card-holder {
-            opacity: 1;
-        }
-    }
-
-
 }

@@ -1,43 +1,50 @@
-mixin topList(navClass, navList = [])
+mixin topProductCard(cardClass, navList = [])
   .list-title top rated
-  ul(class=`${navClass}-list`)
+  ul(class=`product-list_${cardClass}`)
     each i in navList
       if i.rate > 4
-        li(class=`${navClass}-item`)
-          a(href=i.url, class=`${navClass}_link`) 
-            div(class=`${navClass}-img-holder`) 
-            div(class=`${navClass}-info-holder`)
-              h6(class=`${navClass}-product__title`) #{i.name} 
-              span(class=`${navClass}-product__price`) #{i.price}
+        li(class=`product-item_${cardClass}`)
+          a(href=i.url, class=`product-link_${cardClass}`) 
+            div(class=`product-img-holder_${cardClass}`) 
+            div(class=`product-info-holder_${cardClass}`)
+              h6(class=`product__title_${cardClass}`) #{i.name} 
+              div(class=`product__price_${cardClass}`) #{i.price}
 
-mixin productCard (cardClass)
-  div(class=`${cardClass}`)
-    div(class=`${cardClass}-img-holder img-holder`) 
-    div(class=`${cardClass}-info-holder`)
-      h3(class=`${cardClass}__title`) This is product name
-      div(class=`${cardClass}-price-ft-rate-holder`)
-        span(class=`${cardClass}__price`) 250.00
-        .rate
-      p(class=`${cardClass}__description`) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+mixin shopProductCard (cardClass)
+  .product-card
+    div(class=`product-img-holder_${cardClass}`) 
+    div(class=`product-info-holder_${cardClass}`)
+      h3(class=`product__title`) This is product name
+      div(class=`product-price-ft-rate-holder`)
+        div(class=`product__price`) 250.00
+        .rate_small
+      p(class=`product__description`) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       .select-holder 
-        +selectCategorie('size',sizeList)
-        +selectCategorie('color',colorList)
+        +selectCategorie('size', sizeList)
+        +selectCategorie('color', colorList)
       +spinner()
       +iconBtn('card-btn', cardMarkers)
 
 mixin bestProductCard (cardClass, productList = [])
-  ul(class=`${cardClass}-list`)
+  ul(class=`product-list_${cardClass}`)
+    li(class=`product-item_${cardClass}`)
+      .best-info-holder
+            h2.best__title 
+                b Best sellers
+            span.under-title-text 
+                i The best productions from us
+            p.best__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     each i in productList
         if i.number>1 & i.number<6
-          li(class=`${cardClass}-item`)
-            a(href=`${i.number}.html`, class=`${cardClass}_link`) 
-              div(class=`img-holder ${cardClass}-img-holder`)
-                .overlay-card-holder 
+          li(class=`product-item_${cardClass}`)
+            a(href=`${i.number}.html`, class=`product_link product-card_short`) 
+              .product-img-holder_short
+                .overlay-img-holder 
                   +iconBtn('card-marker', cardMarkers)
-              div(class=`info-holder_vertical`)
+              div(class=`product-info-holder_short`)
                 h6(class=`product__title`) #{i.name} 
-                span(class=`price`) #{i.price}
-                .rate 
+                div(class=`product__price_short`) #{i.price}
+                div(class=`product__rate product__rate_midle`)
 
 mixin featuredProductCard (cardClass, productList = [])
   ul(class=`${cardClass}-list`)
@@ -45,11 +52,11 @@ mixin featuredProductCard (cardClass, productList = [])
       li(class=`${cardClass}-item`)
         if i.categories=='bags'
           a(href=`${i.number}.html`, class=`${cardClass}_link`) 
-            div(class=`img-holder ${cardClass}-img-holder`)
-              .overlay-card-holder 
+            .product-img-holder_short
+              .overlay-img-holder 
                 +iconBtn('card-marker', cardMarkers)
             div(class=`info-holder_vertical`)
               h6(class=`product__title`) #{i.name} 
-              span(class=`price`) #{i.price}
+              div(class=`price`) #{i.price}
               .rate 
 

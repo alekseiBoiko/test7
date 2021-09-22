@@ -53,7 +53,8 @@ $fonts: (
 	droid: ('droid_serifregular', sans-serif),
 	droid_i: ('droid_serifitalic', sans-serif),
 	awesome: ('Font Awesome 5 Free'),
-	raleway: ('Raleway', sans-serif)
+	raleway: ('Raleway', sans-serif),
+	fjala: ('Fjalla One', sans-serif)
 );
 
 @function font($key) {
@@ -71,7 +72,8 @@ $font-sizes: (
 	2: 1.125rem,
 	3: 1.5rem,
 	4: 1.875rem,
-	5: 3.75rem
+	5: 2rem,
+	6: 3.75rem
 );
 
 @function font-size($key) {
@@ -103,5 +105,3 @@ $grayBorder: 1px solid color(border);
 
 $sbarElHeight: 1.875rem;
 $cardElHeight: 2.875rem;
-// $redUnderline: 0 2px 0 $red;
-// $grayShadow: 0 0 5px rgba(0, 0, 0, 0.25);

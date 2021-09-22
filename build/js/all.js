@@ -111,7 +111,7 @@ function initRaty(starClass) {
 }
 
 $(function(){
-  initRaty('.rate');
+  initRaty('.product__rate');
 })
 
 // END RATE STARS
