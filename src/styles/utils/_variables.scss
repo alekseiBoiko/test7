@@ -1,15 +1,7 @@
 $main: #3cb878;
 $gray: #777;
-// $red: #C9453B;
-// $yellow: #FFC700;
-// $lime: #00ff00;
 
-// $socialColors: (
-// 	FB: darkslateblue,
-// 	insta: purple,
-// 	twitter: skyblue,
-// 	linkedin: black
-// );
+// COLORS
 
 $colors: (
 	body-bg: white,
@@ -33,10 +25,18 @@ $colors: (
 	social-color: inherit,
 	social-color_hovered: $main,
 	welcome-bg: #121212,
-	welcome-color: #333
+	welcome-color: #333,
+	benefits-bg: #f5f6f9,
+	benefits-icon: #464646,
+	benefits-title: #232323,
+	benefits-text: #888,
+	collection-bg1: #2e3348,
+	collection-bg2: #34394f,
+	collection-border: #9598a3,
+	partners-discount-bg: rgba(43, 46, 65, 1),
+	partners-discount-color: white,
+	partners-block-bg: #f5f6f9
 );
-
-
 
 @function color($key) {
   @if map-has-key($colors, $key) {
@@ -46,6 +46,7 @@ $colors: (
   @return null;
 }
 
+// FONTS
 
 $fonts: (
 	poppins: ('Poppins', sans-serif),
@@ -102,6 +103,9 @@ $title-sizes: (
 }
 
 $grayBorder: 1px solid color(border);
+$collectionBorder: 10px double color(collection-border);
+
+$boxShadowHovered: $main;
 
 $sbarElHeight: 1.875rem;
 $cardElHeight: 2.875rem;

@@ -6,30 +6,11 @@
     }
 }
 
-.range {
-    &-holder {
-        width: 100%;
-        margin: 0 0 17px;
+.range-holder {
+    width: 100%;
+    margin: 0 0 17px;
 
-        @include flex(unset,normal,space-between,flex-start);
-    }
-
-    &-input {
-        position: relative;
-        width: 42.31%;
-        text-align: center;
-
-        @include transition(border-color);
-
-        &:hover, &:focus {
-            border-color: $main;
-        }
-    }
-
-    &__btn {
-        width: $sbarElHeight;
-        height: $sbarElHeight;
-    }
+    @include flex(unset,normal,space-between,flex-start);
 }
 
 .ui-slider {

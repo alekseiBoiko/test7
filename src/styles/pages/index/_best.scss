@@ -1,11 +1,10 @@
 .best {
     &-section {
         height: 44.6875rem;
-        padding-top: 6.25rem;
     }
 
     &-info-holder {
-        margin-bottom: 7rem;
+        margin-bottom: 4rem;
 
         @include flex(unset,column,center,flex-start);
     }

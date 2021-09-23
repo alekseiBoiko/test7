@@ -74,9 +74,10 @@
 
 .side-bar-wrapper {
     position: absolute;
-    overflow-x: hidden;
     top: 0;
     right: 0;
+    z-index: 10;
+    overflow-x: hidden;
     opacity: 0;
 
     &_active {

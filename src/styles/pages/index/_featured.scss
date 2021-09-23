@@ -1,0 +1,17 @@
+.featured {
+    &-section {
+        margin-bottom: 5rem;
+    }
+
+    &-title-holder {
+        width: 100%;
+        margin: 6rem 0 4rem;
+
+        @include flex(unset,column,left,center);
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+}

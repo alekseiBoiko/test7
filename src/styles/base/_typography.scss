@@ -113,3 +113,11 @@ h4 {
     font-size: font-size(-1);
     color: $main;
 }
+
+img {
+    @include transition(opacity);
+
+    &:hover {
+        opacity: 0.5;
+    }
+}

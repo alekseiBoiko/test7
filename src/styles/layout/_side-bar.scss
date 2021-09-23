@@ -48,6 +48,7 @@
             width: 100%;
             height: 16.875rem;
             margin-top: 3rem;
+
             @include flex(unset,normal,center, center);
         }
 
@@ -57,12 +58,14 @@
             color: white;
             background-color: #232323;
             box-shadow: 0 0 0 3px #a1a1a1, 0 0 0 6px #232323;
+
             @include flex(unset,column,center, center);
-            
+
             .star-list {
                 font-size: xx-small;
+
                 @include flex(unset,normal,center, center);
-                
+
                 .star-item:nth-child(2) {
                     margin: 0 10px 10px;
                 }

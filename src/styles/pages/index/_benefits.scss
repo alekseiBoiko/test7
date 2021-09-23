@@ -5,7 +5,7 @@
 
     &-section {
         min-height: 12.5rem;
-        background-color: #f5f6f9;
+        background-color: color(benefits-bg);
 
         @include flex(unset,normal,space-between,center);
     }
@@ -33,21 +33,25 @@
 
     &__icon {
         font-size: font-size(5);
-        color: #464646;
+        color: color(benefits-icon);
     }
 
     &__title {
         margin-top: 1.5em;
         margin-bottom: 0.3em;
         font-weight: 600;
-        color: #232323;
+        color: color(benefits-title);
         text-transform: uppercase;
     }
 
     &__text {
         font-family: font(droid);
         font-size: font-size(-2);
-        color: #888;
+        color: color(benefits-text);
         text-transform: capitalize;
+    }
+
+    &__icon, &__title, &__text {
+        @include transition(color);
     }
 }

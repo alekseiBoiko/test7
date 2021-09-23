@@ -1,0 +1,28 @@
+- 
+  var collectionList = [
+    {
+      name: 'summer & autumn',
+      url: 'summer-ft-autumn', 
+      note: 'fashion'
+    }, 
+    {
+      name: '30% off',
+      url: 'special-offer', 
+      note: 'fashion for men'
+    }, 
+    {
+      name: 'new fashion styles',
+      url: 'new', 
+      note: 'fashion'
+    }
+  ];
+
+
+mixin collectionList(classPrefix, collectionList = [])
+    ul(class=`${classPrefix}-list`)
+        each i in collectionList
+            li(class=`${classPrefix}-item`)
+                a(href=`${i.url}.html`, class=`${classPrefix}-link collection-description`) 
+                    .collection__notes #{i.note}
+                    .collection__title #{i.name}
+                    .collection__notes winter collection

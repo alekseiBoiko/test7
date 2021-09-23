@@ -1,33 +1,68 @@
 .collection {
     &-list {
-        font-size: font-size(4);
-        background-color: #2e3348;
+        background-color: color(collection-bg1);
+
         @include flex(unset,normal,space-between,unset);
     }
 
     &-item {
         width: 100%;
-        height: 40rem;
-        @include flex(unset,normal,center,center);
 
         &:nth-child(2) {
-            font-size: font-size(6);
-            background-color: #34394f;
+            background-color: color(collection-bg2);
+
+            .collection__title {
+                margin: 0.5rem 0;
+                font-size: 4.5rem;
+            }
+        }
+    }
+
+    &-link {
+        position: relative;
+        width: 100%;
+        height: 40rem;
+        overflow: hidden;
+        font-family: font(fjala);
+        color: color(btn-color);
+        text-align: center;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        @include flex(unset,column,center,center);
+
+        &::before {
+            position: absolute;
+            width: 18rem;
+            height: 18rem;
+            content: '';
+            border: $collectionBorder;
+            transform: rotate(45deg);
+
+            @include flex(unset,normal,center,center);
+            @include transition(border-color);
+        }
+
+        &:hover {
+            &::before {
+                border-color: $main;
+            }
+
+            .collection__title {
+                color: $main;
+            }
         }
     }
 
     &__title {
-        font-family: font(fjala);
-        color: white;
-        text-transform: uppercase;
-        transform: rotate(-45deg);
-    }
-}
+        margin: 1.5rem 0;
+        font-size: 2.7rem;
 
-.rhomb {
-    transform: rotate(45deg);
-    width: 18.75rem;
-    height: 18.75rem;
-    border: 7px double white;
-    @include flex(unset,normal,center,center);
+        @include transition(color);
+    }
+
+    &__notes {
+        letter-spacing: 0.5em;
+    }
 }

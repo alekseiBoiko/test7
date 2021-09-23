@@ -1,11 +1,11 @@
-.section-discount
-    .coupon-iformation-block 
-        .coupon-information-holder 
-            h2.coupon-title
-            p.description Donec eu tristique felis. Duis augue mi, auctor ut purus et, dignissim aliquet quam. register your email for news and special offers
-            form.coupon-form(action="#")
-                input.coupon__input(type="email" placeholder="Email")
-                button.btn.coupon__btn(href="#") get coupon now
-    .partners-block    
-        .partners-information-holder
-            +partners(4)
+.partners-section
+    .partners-discount
+        img.partners-discount__img(src='../../img/discount-bg.png' alt='discount')
+        .partners-discount-info-holder 
+            h2.partners-discount__title Get Out Special Discount
+            p.description.partners-discount__text Donec eu tristique felis. Duis augue mi, auctor ut purus et, dignissim aliquet quam. register your email for news and special offers
+            form.partners-discount-form(action="#")
+                input.input.partners-discount__input(type="email" placeholder="E-mail address")
+                button.btn.partners-discount__btn(href="#") get coupon now
+    .partners-block
+        +partners(4)

@@ -97,6 +97,7 @@ function initHolderBg(holder) {
 
 $(function(){
     initHolderBg('.add-holder');
+    initHolderBg('.partners-discount');
 })
 
 // RATE STARS
