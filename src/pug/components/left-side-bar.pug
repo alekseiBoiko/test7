@@ -1,6 +1,13 @@
-ul.side-bar_right
+ul.side-bar 
     li.side-bar-item
         +categoriesList('categories', categorieList)
+    li.side-bar-item
+        h5.list-title Price filter:
+        +sliderRange()
+    li.side-bar-item
+        +filterCategorie('size',sizeList)
+    li.side-bar-item
+        +filterCategorie('color',colorList)
     li.side-bar-item
         +topProductCard('top', products)
     li.add-holder

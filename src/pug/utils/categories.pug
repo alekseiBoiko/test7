@@ -55,6 +55,12 @@
         'green'
     ];
   
+  var sortList = [
+    'newness',
+    'popular',
+    'categorie'
+  ]
+  
 
 mixin categoriesList(navClass, navList = [])
   .list-title #{navClass}
@@ -71,6 +77,11 @@ mixin selectCategorie (selectClass, list = [])
     option.select-option Select #{selectClass}
     each i in list
       option.select-option #{i}
+
+mixin sortList (selectClass, list = [])
+  select(class=`${selectClass}-select`)
+    each i in list
+      option.select-option Sort by #{i}
     
 mixin filterCategorie (selectClass, list = [])
   .list-title #{selectClass}

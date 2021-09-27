@@ -2,4 +2,7 @@ extends common/layout
 
 block content 
     .holder_short_started
-        +breadCrumb ('shop-list', breadCrumbs)
+        +breadCrumb ('Cart', breadCrumbs)
+        .shop-list-content
+            include components/sort-line
+            +shopProductCardList('shop-list',products)

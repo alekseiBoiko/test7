@@ -35,7 +35,9 @@ $colors: (
 	collection-border: #9598a3,
 	partners-discount-bg: rgba(43, 46, 65, 1),
 	partners-discount-color: white,
-	partners-block-bg: #f5f6f9
+	partners-block-bg: #f5f6f9,
+	sort-line-color: #777,
+	product-categorie-color: #999
 );
 
 @function color($key) {

@@ -17,13 +17,29 @@ mixin shopProductCard (cardClass)
       h3(class=`product__title`) This is product name
       div(class=`product-price-ft-rate-holder`)
         div(class=`product__price`) 250.00
-        .rate_small
+        .product__rate.product__rate_small
       p(class=`product__description`) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       .select-holder 
         +selectCategorie('size', sizeList)
         +selectCategorie('color', colorList)
       +spinner()
-      +iconBtn('card-btn', cardMarkers)
+      .product-btn-holder_shop
+        +iconBtn('card-btn', cardMarkers)
+
+mixin shopProductCardList (cardClass, productList = [])
+  ul(class=`product-list_${cardClass}`)
+    each i in productList
+        if i.number>2 & i.number<8
+          li(class=`product-item_${cardClass}`)
+            div(class=`product-img-holder_${cardClass}`) 
+            div(class=`product-info-holder_${cardClass}`)
+              h4(class=`product__title`) #{i.name}
+              div(class=`product__price_${cardClass}`) #{i.price}
+              .product__rate.product__rate_midle
+              p(class=`product__description_${cardClass}`) #{i.summary}
+              .product__categorie.text #{i.categories}
+              .product-btn-holder_shop-list
+                +iconBtn('card-btn', cardMarkers)
 
 mixin bestProductCard (cardClass, productList = [])
   ul(class=`product-list_${cardClass}`)
@@ -44,7 +60,7 @@ mixin bestProductCard (cardClass, productList = [])
               div(class=`product-info-holder_short`)
                 h6(class=`product__title`) #{i.name} 
                 div(class=`product__price_short`) #{i.price}
-                div(class=`product__rate product__rate_midle`)
+                .product__rate.product__rate_midle
 
 mixin featuredProductCard (cardClass, productList = [])
   ul(class=`product-list_${cardClass}`)

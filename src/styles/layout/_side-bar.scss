@@ -1,17 +1,38 @@
+.leftsidebar-content-holder {
+    width: 100%;
+    padding-left: 1rem;
+
+    @include flex(unset,normal,space-between, flex-start);
+}
+
 .side-bar {
     width: 18.75rem;
-    padding: 0 0.875rem;
+    padding-right: 2.5rem;
+    // margin-top: -3.125rem;
     font-size: font-size(-1);
     background-color: color(body-bg);
-    transform: translateX(20rem);
 
     @include flex(unset,column,space-between, flex-start);
-    @include transition(transform);
+   
+    &_right {
+        transform: translateX(20rem);
+
+        @include transition(transform);
+        @extend .side-bar;
+
+        &_active {
+            transform: translateX(0);
+        }
+    }
 
     &-item {
         width: 100%;
         padding: 3.125rem 0;
         border-bottom: $grayBorder;
+
+        &:first-child {
+            padding-top: 0;
+        }
 
         .categories-nav {
             &-list {
@@ -93,9 +114,7 @@
         }
     }
 
-    &_active {
-        transform: translateX(0);
-    }
+    
 
     &__element {
         height: $sbarElHeight;

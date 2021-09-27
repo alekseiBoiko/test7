@@ -98,8 +98,7 @@
 
 .card-btn {
     &-list {
-        width: 40%;
-        margin-top: 2rem;
+        width: 100%;
 
         @include flex(unset,normal,space-between,flex-start);
     }

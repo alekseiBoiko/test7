@@ -1,6 +1,9 @@
 .breadcrumb {
     &-list {
-       @include flex(unset,normal,left,flex-start);
+        width: 100%;
+        margin: 3rem 0 2.5rem 1rem;
+
+        @include flex(unset,normal,left,flex-start);
     }
 
     &-item:not(:last-child)::after {

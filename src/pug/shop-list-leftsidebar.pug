@@ -1,0 +1,10 @@
+extends common/layout
+
+block content 
+    .holder_short_started
+        +breadCrumb ('Cart', breadCrumbs)
+        .leftsidebar-content-holder
+            include components/left-side-bar
+            .shop-list-content
+                include components/sort-line
+                +shopProductCardList('shop-list',products)
