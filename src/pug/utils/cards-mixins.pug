@@ -12,12 +12,15 @@ mixin topProductCard(cardClass, navList = [])
 
 mixin shopProductCard (cardClass)
   div(class=`product-card_${cardClass}`)
-    div(class=`product-img-holder_${cardClass}`) 
+    div(class=`product-img-carousel-holder`)
+      div(class=`product-img-holder_${cardClass}`)
+      .product-carousel-holder
+        +carousel('6')
     div(class=`product-info-holder_${cardClass}`)
       h3(class=`product__title`) This is product name
       div(class=`product-price-ft-rate-holder`)
-        div(class=`product__price`) 250.00
-        .product__rate.product__rate_small
+        div(class=`product__price_shop`) 250.00
+        .product__rate.product__rate_midle
       p(class=`product__description`) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       .select-holder 
         +selectCategorie('size', sizeList)
@@ -58,7 +61,7 @@ mixin bestProductCard (cardClass, productList = [])
                 .overlay-img-holder 
                   +iconBtn('card-marker', cardMarkers)
               div(class=`product-info-holder_short`)
-                h6(class=`product__title`) #{i.name} 
+                h6(class=`product__title_short`) #{i.name} 
                 div(class=`product__price_short`) #{i.price}
                 .product__rate.product__rate_midle
 
@@ -72,7 +75,20 @@ mixin featuredProductCard (cardClass, productList = [])
               .overlay-img-holder 
                 +iconBtn('card-marker', cardMarkers)
             div(class=`product-info-holder_short`)
-                h6(class=`product__title`) #{i.name} 
+                h6(class=`product__title_short`) #{i.name} 
                 div(class=`product__price_short`) #{i.price}
                 div(class=`product__rate product__rate_midle`)
 
+mixin gridProductCard (cardClass,q,productList = [])
+  ul(class=`product-list_${cardClass}`)
+    each i in productList
+      if i.number<+q
+        li(class=`product-item_${cardClass}`)
+          a(href=`${i.number}.html`, class=`product_link product-card_short`) 
+            div(class=`product-img-holder_${cardClass}`)
+              .overlay-img-holder 
+                +iconBtn('card-marker', cardMarkers)
+            div(class=`product-info-holder_${cardClass}`)
+                h6(class=`product__title_short`) #{i.name} 
+                div(class=`product__price_short`) #{i.price}
+                div(class=`product__rate product__rate_midle`)

@@ -1,18 +1,20 @@
-function drawSlider() {
-    $('.offer-list').slick({
+function drawSlider(listClass) {
+    $(listClass).slick({
         
-        slidesToShow: 5,
+        slidesToShow: 3,
         infinite: true,
-        dots: true,
-        slidesToScroll: 2,
+        dots: false,
+        slidesToScroll: 1,
         slide: 'li',
-        arrows: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-double-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-double-right"></i></button>',
         responsive: [
           {
             breakpoint: 1200,
             settings: {
-              slidesToShow: 4,
-              slidesToScroll: 2,
+              slidesToShow: 3,
+              slidesToScroll: 1,
             }
           },
           {
@@ -34,6 +36,6 @@ function drawSlider() {
 };
 
 $(function(){
-    drawSlider();
+    drawSlider('.product-img-list');
 })
 

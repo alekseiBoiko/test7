@@ -37,7 +37,11 @@ $colors: (
 	partners-discount-color: white,
 	partners-block-bg: #f5f6f9,
 	sort-line-color: #777,
-	product-categorie-color: #999
+	product-categorie-color: #999,
+	pagination-color_hovered: $main,
+	slick-slider-bg: #f5f6f9,
+	slick-slider-bg-hovered: $main,
+	slick-slider-color-hovered: #fff
 );
 
 @function color($key) {
@@ -111,3 +115,4 @@ $boxShadowHovered: $main;
 
 $sbarElHeight: 1.875rem;
 $cardElHeight: 2.875rem;
+$cardElHolderWidth: 41%;

@@ -91,6 +91,20 @@ h4 {
         }
     }
 
+    &-inner-page {
+        flex-basis: 0;
+        flex-grow: 999;
+        width: 100%;
+        padding-bottom: 6rem;
+        padding-left: 1rem;
+
+        &-leftsidebar {
+            width: 100%;
+            padding-left: 1rem;
+
+            @include flex(unset,normal,space-between, flex-start);
+        }
+    }
 }
 
 .list-title {

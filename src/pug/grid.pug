@@ -1,0 +1,10 @@
+extends common/layout
+
+block content 
+    .holder_short_started
+        +breadCrumb ('Checkout', breadCrumbs)
+        .holder-inner-page
+            include components/sort-line
+            +gridProductCard('grid','13',products)
+            .pagination-line
+                +pagination(paginationList)

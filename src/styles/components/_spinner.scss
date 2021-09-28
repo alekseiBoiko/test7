@@ -1,15 +1,17 @@
 .count-holder {
-	width: 40%;
+	width: $cardElHolderWidth;
+	height: $cardElHeight;
+	margin: 2rem 0;
 }
 
 .ui-spinner {
-	margin-top: 2rem;
 	user-select: none;
 	position: relative;
 	text-align: left;
 	padding: 0;
 	width: 100%;
-	border: 1px solid #ddd;
+	border: $grayBorder;
+	height: 100%;
 	display: inline-block;
 }
 
@@ -17,8 +19,7 @@
 	position: absolute;
 	top: 0;
 	width: 3.5rem;
-	height: 3.125rem;
-	line-height: 2rem;
+	height: 100%;
 	display: block;
 	font-size: 20px;
 	font-weight: 600;
@@ -49,7 +50,7 @@
 	font-size: 14px;
 	color: #000;
 	line-height: 32px;
-	height: 3.125rem;
+	height: 100%;
 	padding: 0;
 	outline: none;
 	border: none;

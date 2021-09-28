@@ -27,6 +27,18 @@
                 <li class="header-contact-item"><i class="fas fa-phone"></i><a class="header-contact__link" href="tel:+1 234 5678 9999">+1 234 5678 9999</a></li>
                 <li class="header-contact-item"><i class="fas fa-envelope"></i><a class="header-contact__link" href="mailto:mail@domain.com">info@company.com</a></li>
               </ul>
+              <ul class="header-nav-list">
+                <li><a href="user-interface.html">1 </a></li>
+                <li><a href="shop-list.html">2 </a></li>
+                <li><a href="shop-list-leftsidebar.html">3 </a></li>
+                <li><a href="grid.html">4 </a></li>
+                <li><a href="grid-leftsidebar.html">5 </a></li>
+                <li><a href="products.html">6 </a></li>
+                <li><a href="comparison.html">7 </a></li>
+                <li><a href="wishlist.html">8 </a></li>
+                <li><a href="cart.html">9 </a></li>
+                <li><a href="checkout.html">10 </a></li>
+              </ul>
           <div class="header-socials-holder">
                 <ul class="social-list">
                   <li class="social-item"><a class="social-link" href="facebook.com"><i class="fab fa-facebook-f"></i></a></li>
@@ -41,9 +53,9 @@
       <div class="main-header-area"> 
         <div class="holder_main_centered"><a class="logo" href="index.html"> <b>Renoshop</b></a>
               <ul class="header-nav-list">
-                <li class="header-nav-item"><a class="header-nav__link" href="user-interface.html">Home</a></li>
-                <li class="header-nav-item"><a class="header-nav__link" href="shop-list.html">women</a></li>
-                <li class="header-nav-item"><a class="header-nav__link" href="shop-list-leftsidebar.html">men</a></li>
+                <li class="header-nav-item"><a class="header-nav__link" href="home.html">Home</a></li>
+                <li class="header-nav-item"><a class="header-nav__link" href="women.html">women</a></li>
+                <li class="header-nav-item"><a class="header-nav__link" href="men.html">men</a></li>
                 <li class="header-nav-item"><a class="header-nav__link" href="kids.html">kids</a></li>
                 <li class="header-nav-item"><a class="header-nav__link" href="jewellery.html">jewellery</a></li>
                 <li class="header-nav-item"><a class="header-nav__link" href="accessories.html">accessories</a></li>
@@ -150,17 +162,48 @@
                 </li>
               </ul>
         </div>
+        <div class="block-holder"> 
+          <h4>Pagination: </h4>
+              <ul class="pagination-list">
+                <li class="pagination-item"><a class="pagination__link" href="page1.html">1</a></li>
+                <li class="pagination-item"><a class="pagination__link" href="page2.html">2</a></li>
+                <li class="pagination-item"><a class="pagination__link" href="page3.html">3</a></li>
+                <li class="pagination-item"><a class="pagination__link" href="page4.html">4</a></li>
+                <li class="pagination-item"><a class="pagination__link" href="page5.html">5</a></li>
+                <li class="pagination-item"><a class="pagination__link" href="">...</a></li>
+                <li class="pagination-item"><a class="pagination__link" href="">&gt;</a></li>
+                <li class="pagination-item"><a class="pagination__link" href="">»</a></li>
+              </ul>
+        </div>
             <div class="product-card_shop">
-              <div class="product-img-holder_shop"> </div>
+              <div class="product-img-carousel-holder">
+                <div class="product-img-holder_shop"></div>
+                <div class="product-carousel-holder">
+                      <ul class="product-img-list">
+                        <li><a class="slider-link">
+                            <div class="product-img-holder_slider"></div></a></li>
+                        <li><a class="slider-link">
+                            <div class="product-img-holder_slider"></div></a></li>
+                        <li><a class="slider-link">
+                            <div class="product-img-holder_slider"></div></a></li>
+                        <li><a class="slider-link">
+                            <div class="product-img-holder_slider"></div></a></li>
+                        <li><a class="slider-link">
+                            <div class="product-img-holder_slider"></div></a></li>
+                        <li><a class="slider-link">
+                            <div class="product-img-holder_slider"></div></a></li>
+                      </ul>
+                </div>
+              </div>
               <div class="product-info-holder_shop">
                 <h3 class="product__title">This is product name</h3>
                 <div class="product-price-ft-rate-holder">
-                  <div class="product__price">250.00</div>
-                  <div class="product__rate product__rate_small"></div>
+                  <div class="product__price_shop">250.00</div>
+                  <div class="product__rate product__rate_midle"></div>
                 </div>
                 <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <div class="select-holder"> 
-                      <select class="select select_size">
+                      <select class="select select_size text">
                         <option class="select-option">Select size</option>
                         <option class="select-option">xs</option>
                         <option class="select-option">s</option>
@@ -170,7 +213,7 @@
                         <option class="select-option">xl</option>
                         <option class="select-option">xxl</option>
                       </select>
-                      <select class="select select_color">
+                      <select class="select select_color text">
                         <option class="select-option">Select color</option>
                         <option class="select-option">black</option>
                         <option class="select-option">white</option>

@@ -2,11 +2,11 @@ extends common/layout
 
 block content 
     .holder_short_started
-        +breadCrumb ('Cart', breadCrumbs)
+        +breadCrumb ('Categories', breadCrumbs)
         .holder-inner-page-leftsidebar
             include components/left-side-bar
             .holder-inner-page
                 include components/sort-line
-                +shopProductCardList('shop-list',products)
+                +gridProductCard('grid','10',products)
                 .pagination-line
                     +pagination(paginationList)

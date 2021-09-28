@@ -3,6 +3,8 @@ extends common/layout
 block content 
     .holder_short_started
         +breadCrumb ('Cart', breadCrumbs)
-        .shop-list-content
+        .holder-inner-page
             include components/sort-line
             +shopProductCardList('shop-list',products)
+            .pagination-line
+                +pagination(paginationList)

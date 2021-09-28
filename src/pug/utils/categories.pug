@@ -73,7 +73,7 @@ mixin categoriesList(navClass, navList = [])
             a(href=i.url, class=`${navClass}-nav__link`) #{i.name} (#{i.number})
 
 mixin selectCategorie (selectClass, list = [])
-  select(class=`select select_${selectClass}`)
+  select(class=`select select_${selectClass} text`)
     option.select-option Select #{selectClass}
     each i in list
       option.select-option #{i}

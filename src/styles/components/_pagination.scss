@@ -1,0 +1,27 @@
+.pagination {
+    &-line {
+        width: 100%;
+        border-top: $grayBorder;
+        border-bottom: $grayBorder;
+
+        @include flex(unset,normal,center,center);
+    }
+
+    &-list {
+        width: 15rem;
+        padding: 1rem 1.5rem;
+        border-right: $grayBorder;
+        border-left: $grayBorder;
+
+        @include flex(unset,normal,space-between,center);
+    }
+
+    &__link {
+        @include transition(color);
+
+        &:hover {
+            color: color(pagination-color_hovered);
+            // text-decoration: underline;
+        }
+    }
+}

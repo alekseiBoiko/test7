@@ -1,16 +1,59 @@
 - 
+  var workNavList = [
+    {
+      name: '1',
+      url: 'user-interface'
+    }, 
+    {
+      name: '2',
+      url: 'shop-list'
+    }, 
+    {
+      name: '3',
+      url: 'shop-list-leftsidebar'
+    }, 
+    {
+      name: '4',
+      url: 'grid'
+    }, 
+    {
+      name: '5',
+      url: 'grid-leftsidebar'
+    },
+    {
+      name: '6',
+      url: 'products'
+    },
+    {
+      name: '7',
+      url: 'comparison'
+    },
+    {
+      name: '8',
+      url: 'wishlist'
+    },
+    {
+      name: '9',
+      url: 'cart'
+    },
+    {
+      name: '10',
+      url: 'checkout'
+    }
+  ];
+
   var headerNavList = [
     {
       name: 'Home',
-      url: 'user-interface.html'
+      url: 'home.html'
     }, 
     {
       name: 'women',
-      url: 'shop-list.html'
+      url: 'women.html'
     }, 
     {
       name: 'men',
-      url: 'shop-list-leftsidebar.html'
+      url: 'men.html'
     }, 
     {
       name: 'kids',
@@ -26,7 +69,6 @@
     }
   ];
 
-- 
   var informationList = [
     {
       name: 'Information',
@@ -54,7 +96,6 @@
     }
   ];
 
-- 
   var userAccountList = [
     {
       name: 'My account',
@@ -82,7 +123,6 @@
     }
   ];
 
-- 
   var helpList = [
     {
       name: 'help',
@@ -106,6 +146,42 @@
     }
   ];
 
+  var paginationList = [
+    {
+      name: '1',
+      url: 'page1.html' 
+    }, 
+    {
+      name: '2',
+      url: 'page2.html' 
+    }, 
+    {
+      name: '3',
+      url: 'page3.html' 
+    }, 
+    {
+      name: '4',
+      url: 'page4.html' 
+    }, 
+    {
+      name: '5',
+      url: 'page5.html' 
+    }, 
+    {
+      name: '...',
+      url: '' 
+    }, 
+    {
+      name: '>',
+      url: '' 
+    }, 
+    {
+      name: '»',
+      url: '' 
+    }
+  ];
+
+
 
 mixin navList(navClass, navList = [])
     ul(class=`${navClass}-nav-list`)
@@ -115,3 +191,15 @@ mixin navList(navClass, navList = [])
           else
             li(class=`${navClass}-nav-item`)
                 a(href=i.url, class=`${navClass}-nav__link`) #{i.name}
+
+mixin workList(navList = [])
+  ul.header-nav-list
+    each i in navList
+      li
+        a(href=`${i.url}.html`) #{i.name} 
+
+mixin pagination(navList = [])
+  ul.pagination-list
+    each i in navList
+      li.pagination-item
+        a.pagination__link(href=`${i.url}`) #{i.name}
