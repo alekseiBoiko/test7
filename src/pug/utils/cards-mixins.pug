@@ -88,7 +88,14 @@ mixin gridProductCard (cardClass,q,productList = [])
             div(class=`product-img-holder_${cardClass}`)
               .overlay-img-holder 
                 +iconBtn('card-marker', cardMarkers)
-            div(class=`product-info-holder_${cardClass}`)
+            div(class=`product-info-holder_grid`)
                 h6(class=`product__title_short`) #{i.name} 
                 div(class=`product__price_short`) #{i.price}
                 div(class=`product__rate product__rate_midle`)
+
+mixin carousel(number)
+    ul.product-img-list
+        - for (var i=0; i<+number; i++)
+            li.product-img-item
+                a.slider-link
+                    .product-img-holder_slider                

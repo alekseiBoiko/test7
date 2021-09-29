@@ -4,3 +4,6 @@ block content
     .holder_short_started
         +breadCrumb ('Product', breadCrumbs)
         +shopProductCard('shop')
+        include components/product-tabs
+        h4 Related Products 
+        +gridProductCard('related','16',products)

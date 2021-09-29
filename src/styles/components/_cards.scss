@@ -9,7 +9,7 @@
     &-list {
         width: 100%;
 
-        &_top, &_best, &_featured, &_shop {
+        &_top, &_best, &_featured, &_shop, &_related {
             @extend .product-list;
         }
 
@@ -17,7 +17,7 @@
             margin-bottom: -1.75rem;
         }
 
-        &_best {
+        &_best, &_related {
             height: 100%;
 
             @include flex(unset,normal,space-between,center);
@@ -33,6 +33,11 @@
 
         &_grid {
             margin-bottom: 1.4rem;
+        }
+
+        &_related {
+            height: 38.25rem;
+            padding-top: 2rem;
         }
     }
 
@@ -63,9 +68,18 @@
         }
 
         &_grid {
-            // width: 23.5%;
+            width: 23.5%;
             margin-bottom: 3.25rem;
         }
+
+        &_related {
+            min-height: 38.25rem !important;
+            margin-right: 2rem;
+            // background-color: sandybrown;
+            // outline: 1px solid red;
+            // z-index: 10000;
+        }
+
     }
 
     &-link {
@@ -80,6 +94,7 @@
 
     &-card {
         &_shop {
+            padding-bottom: 3rem;
             padding-left: 1rem;
 
             @include flex(unset,normal,stretch, flex-start);
@@ -98,9 +113,14 @@
 
     &-img {
         &-list {
+            padding: 0.6rem 0;
             border: $grayBorder;
 
             @include flex(unset,normal,space-between, center);
+        }
+
+        &-item {
+            width: 7.5rem !important;
         }
 
         &-carousel-holder {
@@ -118,7 +138,7 @@
             }
 
             
-            &_top, &_shop, &_short, &_shop-list, &_grid, &_slider {
+            &_top, &_shop, &_short, &_shop-list, &_grid, &_slider, &_related, &_table {
                 @extend .product-img-holder;
             }
 
@@ -151,8 +171,9 @@
                 height: 28.125rem;
             }
 
-            &_grid {
-                width: 16.875rem;
+            &_grid, &_related {
+                width: 100%;
+                // width: 16.875rem;
                 height: 25rem;
             }
 
@@ -161,6 +182,13 @@
                 height: 6.9375rem;
                 margin-right: 2rem;
             }
+
+            &_table {
+                width: 5rem;
+                height: 6.25rem;
+                margin: 0 auto;
+            }
+
         }
     }
 
@@ -173,13 +201,15 @@
     &-info-holder {
         &_top {
             height: 100%;
-            padding: 1rem 0 0.5rem;
 
             @include flex(unset,column,space-between, flex-start);
         }
 
         &_shop {
             width: 60%;
+        }
+
+        &_top, &_shop {
             padding: 1rem 0 0.5rem;
         }
 
@@ -189,11 +219,10 @@
 
         &_shop-list {
             width: 73%;
-            padding: 2rem 0 0.5rem;
         }
 
-        &_grid {
-            padding-top: 2rem;
+        &_shop-list, &_grid {
+            padding: 2rem 0 0.5rem;
         }
     }
 
@@ -295,9 +324,9 @@
 }
 
 .description {
-    font-family: font(roboto);
-    font-size: font-size(-1);
     line-height: 1.5rem;
+
+    @extend .text;
 }
 
 .select {

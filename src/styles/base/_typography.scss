@@ -133,6 +133,13 @@ img {
     }
 }
 
-// .wrapper {
-//     width: 100%;
-// }
+.table-cell {
+    padding: 1rem;
+    border: $grayBorder;
+
+    &_header {
+        text-align: center;
+
+        @extend .table-cell;
+    }
+}

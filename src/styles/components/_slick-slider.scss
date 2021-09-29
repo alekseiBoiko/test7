@@ -6,7 +6,6 @@
         box-sizing: border-box;
         width: 100%;
         min-width: 0;
-        // margin: 3.5rem -5px 0;
         -webkit-touch-callout: none;
         -ms-touch-action: pan-y;
         touch-action: pan-y;
@@ -19,7 +18,6 @@
     }
 
     &-track, &-list {
-        // max-height: 25rem;
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
         -ms-transform: translate3d(0, 0, 0);
@@ -57,8 +55,6 @@
     &-list {
         position: relative;
         display: block;
-        padding: 0.6rem 0;
-        // margin-bottom: 3rem;
         overflow: hidden;
 
         &:focus {
@@ -95,9 +91,7 @@
 
     &-slide {
         float: left;
-        width: 7.5rem !important;
-        min-height: 1px;
-        // margin: 0 1rem;
+        min-height: 100px;
         text-align: left;
 
         [dir="rtl"] & {
@@ -129,32 +123,49 @@
 
     &-prev, &-next {
         position: absolute;
-        top: 50%;
         z-index: 100;
         display: block;
-        width: 30px;
-        height: 100%;
         padding: 0;
         cursor: pointer;
-        background: color(slick-slider-bg);
+        background: color(slick-slider-btn-bg);
         border: none;
         outline: none;
-        transform: translate(0, -50%);
 
         @include transition(color background);
 
         &:hover, &:focus {
             color: color(slick-slider-color-hovered);
-            background: color(slick-slider-bg-hovered);
+            background: color(slick-slider-btn-bg-hovered);
             outline: none;
+        }
+
+        &_card {
+            top: 50%;
+            width: 30px;
+            height: 100%;
+            transform: translate(0, -50%);
+        }
+
+        &_related {
+            top: -2rem;
+            width: 2.25rem;
+            height: 1.375rem;
         }
     }
 
-    &-prev {
+    &-prev_card {
         left: 0;
     }
 
-    &-next {
+    &-next_card {
         right: 0;
+    }
+
+    &-prev_related {
+        right: 5rem;
+    }
+
+    &-next_related {
+        right: 2.25rem;
     }
 }

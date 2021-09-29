@@ -21,6 +21,25 @@
     &:hover {
         background-color: darken(color(btn-bg), 10%);
     }
+
+    &_transparent {
+        
+        padding: 1rem;
+        border: $grayBorder;
+
+        @include transition(background-color color);
+
+        &:hover {
+            color: color(btn-color);
+            background-color: color(btn-bg);
+        }
+    }
+
+    &-table {
+        min-width: 9.375rem;
+        min-height: 2.25rem;
+        margin: 0 auto;
+    }
 }
 
 .search-form {
@@ -97,6 +116,11 @@
 }
 
 .card-btn {
+    width: 100%;
+    height: 100%;
+
+    @extend .btn_transparent;
+
     &-list {
         width: 100%;
 
@@ -106,20 +130,20 @@
     &-item {
         min-width: 3.125rem;
         height: 3.125rem;
-        padding: 1rem;
-        border: $grayBorder;
+        // padding: 1rem;
+        // border: $grayBorder;
 
-        @include transition(background-color color);
+        // @include transition(background-color color);
 
-        &:hover {
-            color: color(btn-color);
-            background-color: color(btn-bg);
-        }
+        // &:hover {
+        //     color: color(btn-color);
+        //     background-color: color(btn-bg);
+        // }
     }
 
-    &-cart {
+    &-name {
         margin-left: 0.5rem;
-        font-size: font-size(-1);
+        font-size: font-size(-1); 
         text-transform: uppercase;
     }
 }
