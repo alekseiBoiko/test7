@@ -1,0 +1,157 @@
+- 
+  var comparisonTableRowHeader = [
+    {
+      rowNumber: '1',
+      name: 'Products',
+    }, 
+    {
+      rowNumber: '2',
+      name: 'Image',
+    }, 
+    {
+      rowNumber: '3',
+      name: 'Price',
+    }, 
+    {
+      rowNumber: '4',
+      name: 'Rating',
+    }, 
+    {
+      rowNumber: '5',
+      name: 'Model',
+    }, 
+    {
+      rowNumber: '6',
+      name: 'Brand',
+    }, 
+    {
+      rowNumber: '7',
+      name: 'Summary'
+    } 
+  ]
+
+    var wishlistTableHeader = [
+        'Products',
+        'Color & Size',
+        'Price'
+    ]
+
+    var cartTableHeader = [
+        'Products',
+        'Color & Size',
+        'Quantity',
+        'Price',
+        'Total'
+    ]
+
+mixin comparisonTable(rowHeader, productList)
+    table.table_comparison
+        each h in rowHeader
+            if h.rowNumber==1
+                tr.table-row_product-name
+                    th.table-cell_header.text #{h.name}          
+                        each i in productList
+                            if i.rate=='4.5'
+                                td.table-cell.product__title_short #{i.name}
+            if h.rowNumber==2
+                tr.table-row_product-img
+                    th.table-cell_header.text #{h.name}          
+                        each i in productList
+                            if i.rate=='4.5'
+                                td.table-cell.text 
+                                    .product-img-holder_table
+            if h.rowNumber==3
+                tr
+                    th.table-cell_header.text #{h.name}          
+                        each i in productList
+                            if i.rate=='4.5'
+                                td.table-cell.text $120
+            if h.rowNumber==4
+                tr
+                    th.table-cell_header.text #{h.name}          
+                        each i in productList
+                            if i.rate=='4.5'
+                                td.table-cell.text 
+                                    .product__rate.product__rate_midle
+            if h.rowNumber==5
+                tr
+                    th.table-cell_header.text #{h.name}          
+                        each i in productList
+                            if i.rate=='4.5'
+                                td.table-cell.text Product 1
+            if h.rowNumber==6
+                tr
+                    th.table-cell_header.text #{h.name}          
+                        each i in productList
+                            if i.rate=='4.5'
+                                td.table-cell.text Hewlett-Packard
+            if h.rowNumber==7
+                tr
+                    th.table-cell_header.text #{h.name}          
+                        each i in productList
+                            if i.rate=='4.5'
+                                td.table-cell.text.description #{i.summary}
+        tr.table-row_btn
+            th.table-cell_header.text
+                each i in productList
+                    if i.rate=='4.5'
+                        td.table-cell
+                            button.btn_transparent.btn-table Add to cart
+                            a.btn-product-item_del(href='') 
+                                i.far.fa-times-circle
+                                    
+mixin wishlistTable(header, productList)
+    table.table_wishlist
+        thead 
+            tr.table-row-body_product-name
+                each h in header
+                    th.table-cell_header.text #{h}
+                th.table-cell_header          
+        tbody            
+            each i in productList
+                if i.rate=='4.5'
+                    tr.table-row_product-img
+                        td.table-cell_product
+                            a.product-link_wishlist(href=`${i.number}.html`)
+                                .product-img-holder_table
+                                .product__title_short #{i.name}
+                        td.table-cell.text 
+                            div Size: XL 
+                            div Color: Black
+                        td.table-cell_price $120
+                        td.table-cell_btn.text
+                            .table-cell-holder_horizontal
+                                button.btn_transparent.btn-table Add to cart
+                                a.btn-product-item_del(href='') 
+                                    i.far.fa-times-circle
+
+mixin cartTable(header, productList)
+    table.table_cart
+        thead 
+            tr.table-row
+                each h in header
+                    th.table-cell_header.text #{h}
+        tbody            
+            each i in productList
+                if i.rate=='4.5'
+                    tr.table-row_product-img
+                        td.table-cell_product
+                            a.product-link_wishlist(href=`${i.number}.html`)
+                                .product-img-holder_table
+                                .product__title_short #{i.name}
+                        td.table-cell.text 
+                            div Size: XL 
+                            div Color: Black
+                        td.table-cell_price 
+                            div.quantity__input 1
+                        td.table-cell_price $#{i.price}
+                        td.table-cell
+                            .table-cell-holder_horizontal
+                                div $#{i.price}
+                                a.btn-product-item_del(href='') 
+                                    i.far.fa-times-circle
+            tr.table-row.table-cell
+                td(colspan='5')
+                    .table-cell-holder_right
+                        button.btn_transparent.btn-table_cart Update Cart
+                        button.btn_transparent.btn-table_cart Continue shopping

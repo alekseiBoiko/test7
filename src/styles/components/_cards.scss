@@ -75,11 +75,7 @@
         &_related {
             min-height: 38.25rem !important;
             margin-right: 2rem;
-            // background-color: sandybrown;
-            // outline: 1px solid red;
-            // z-index: 10000;
         }
-
     }
 
     &-link {
@@ -89,6 +85,10 @@
             margin-right: -0.875rem;
 
             @include flex(unset,normal,space-between, flex-start);
+        }
+
+        &_wishlist {
+            @include flex(unset,normal,space-between, center);
         }
     }
 
@@ -101,8 +101,6 @@
         }
 
         &_short {
-            width: 100%;
-
             @include flex(unset,column,left, flex-start);
         }
 
@@ -268,7 +266,6 @@
         }
 
         &_shop {
-            
             margin-right: 1rem;
             font-size: font-size(3);
         }
@@ -325,7 +322,6 @@
 
 .description {
     line-height: 1.5rem;
-
     @extend .text;
 }
 

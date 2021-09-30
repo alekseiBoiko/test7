@@ -1,5 +1,82 @@
-.table-btn-cell {
-    text-align: center;
+.table {
+    &_comparison {
+        margin: 0 1rem 11rem;
+    }
+
+    &_wishlist {
+        margin: 0 1rem 7rem;
+    }
+
+    &_cart {
+        margin: 0 1rem 1rem;
+    }
+
+    &-cell {
+        padding: 1.125rem 1.8rem;
+        line-height: 1.5;
+        vertical-align: middle;
+        border: $grayBorder;
+
+        &_product, &_size, &_total, &_header, &_price, &_btn {
+            @extend .table-cell;
+        }
+
+        &_product {
+            width: 35.96%;
+        }
+
+        &_size, &_total {
+            width: 11.875rem;
+        }
+
+        &_header {
+            width: 8.75rem;
+            text-align: center;
+        }
+
+        &_price {
+            text-align: center;
+        }
+
+        &_btn {
+            width: 32.63%;
+        }
+
+        &-holder_horizontal {
+            @include flex(unset,normal,space-around, center);
+        }
+
+        &-holder_right {
+            height: 2.25rem;
+            margin: 1rem 0;
+
+            @include flex(unset,normal,right, center);
+        }
+    }
+
+    &-row {
+        min-height: 3.625rem;
+
+        &_product-img {
+            height: 11.875rem;
+        }
+
+        &_btn {
+            height: 6.25rem;
+            text-align: center;
+        }
+    }
+
+    &-column_product {
+        width: 25.5rem;
+    }
 }
 
+.quantity__input {
+    width: 3.125rem;
+    height: 1.875rem;
+    margin: 0 auto;
 
+    @extend .input;
+    @include flex(unset,normal,center, center);
+}
