@@ -11,7 +11,6 @@
 
     &-discount {
         position: relative;
-        
 
         @include flex(unset,normal,center,center);
 
@@ -44,32 +43,6 @@
             margin-bottom: 2rem;
             color: inherit;
             text-align: center;
-        }
-
-        &-form {
-            width: 100%;
-            height: $cardElHeight;
-
-            @include flex(unset,normal,space-between,unset);
-        }
-
-        &__input {
-            width: 66%;
-            padding-left: 1rem;
-            color: $gray;
-
-            &::placeholder {
-                @extend .description;
-            }
-        }
-
-        &__btn {
-            width: 32.5%;
-            font-size: font-size(-1);
-        }
-
-        &__input, &__btn {
-            height: 100%;
         }
     }
 

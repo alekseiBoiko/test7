@@ -3,5 +3,46 @@ extends common/layout
 block content 
     .holder_short_started
         +breadCrumb ('Cart', breadCrumbs)
-        +cartTable(cartTableHeader,products)
-        +wishlistInput('coupon code')
+        ul.cart-list
+            li.cart-item.cart-item_table
+                +cartTable(cartTableHeader,products)
+            li.cart-item.cart-item_form
+                +cartInput('coupon code')
+            li.cart-item.cart-item_form
+                +cartInput('gift voucher')
+            li.cart-item.cart-item_form
+                form.form_custom(action="#") 
+                    h6.list-title Shipping Availability
+                    ul.cart-shipping-list 
+                        li.cart-shipping-item 
+                            +cartSelect('Country', 'Viet Nam')
+                        li.cart-shipping-item 
+                            +cartSelect('State', 'TP.HCM')
+                        li.cart-shipping-item 
+                            label.label_cart Postcode / Zip
+                            input.input_custom.select_cart(type="code" placeholder=`Postcode / Zip`)
+                        li.cart-shipping-item 
+                            input.btn_transparent.btn_shipping-form(type="submit" value="Update Totals")
+            li.cart-item.cart-item_form 
+                form.form_custom(action="#") 
+                    h6.list-title Shopping cart calcuation
+                    table.table_calculation 
+                        tbody
+                            tr.table-row_calculation_wide 
+                                th.table-cell_calculation-key Subtotal
+                                td.table-cell_calculation-value $450
+                            tr
+                                th.table-cell_calculation-key Coupon
+                                td.table-cell_calculation-value -$50
+                            tr.table-row_calculation_wide 
+                                th.table-cell_calculation-key Shipping
+                                td.table-cell_calculation-text-value Free Shipping 
+                        tfoot.table_calculation_footer   
+                            tr.table-row_calculation_wide 
+                                th.table-cell_calculation-key Total
+                                td.table-cell_calculation-value $400
+                    input.btn_transparent.btn_calculation-form(type="submit" value="proceed to checkout")
+
+                            
+
+                            

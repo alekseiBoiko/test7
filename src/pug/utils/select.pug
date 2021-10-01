@@ -1,0 +1,31 @@
+mixin categoriesList(navClass, navList = [])
+  .list-title #{navClass}
+  ul(class=`${navClass}-nav-list`) 
+      each i in navList
+        if i.url==''
+          li(class=`${navClass}-nav-item list-title`) #{i.name}
+        else
+          li(class=`${navClass}-nav-item`)
+            a(href=i.url, class=`${navClass}-nav__link`) #{i.name} (#{i.number})
+
+mixin selectCategorie (selectClass, list = [])
+  select(class=`select select_${selectClass} text`)
+    option.select-option Select #{selectClass}
+    each i in list
+      option.select-option #{i}
+
+mixin sortList (selectClass, list = [])
+  select(class=`${selectClass}-select`)
+    each i in list
+      option.select-option Sort by #{i}
+
+mixin cartSelect(listName, optionName)
+    .label_cart Select #{listName}
+    select.input_custom.select_cart(name=`Select ${listName}` required='true')
+        option.select-option Select #{listName}
+        option.select-option #{optionName}
+
+
+
+
+

@@ -20,6 +20,7 @@ $colors: (
 	search-input-border: $main,
 	search-input-btn: $main,
 	border: #efefef,
+	border-dark: #a3a2a3,
 	footer-bg: inherit,
 	footer-color: inherit,
 	social-color: inherit,
@@ -41,7 +42,9 @@ $colors: (
 	pagination-color_hovered: $main,
 	slick-slider-btn-bg: #f5f6f9,
 	slick-slider-btn-bg-hovered: $main,
-	slick-slider-color-hovered: #fff
+	slick-slider-color-hovered: #fff,
+	label-cart-color: #777
+
 );
 
 @function color($key) {
@@ -108,7 +111,23 @@ $title-sizes: (
 	@return null;
 }
 
+$element-heights: (
+	xs: 1.875rem,
+	s: 2.25rem,
+	m: 2.875rem,
+	l: 3.25rem
+);
+
+@function element-height($key) {
+	@if map-has-key($element-heights, $key) {
+	  @return map-get($element-heights, $key);
+	}
+	@warn "Unknown `#{$key}` in $element-heights";
+	@return null;
+}
+
 $grayBorder: 1px solid color(border);
+$darkGrayBorder: 1px solid color(border-dark);
 $collectionBorder: 10px double color(collection-border);
 
 $boxShadowHovered: $main;

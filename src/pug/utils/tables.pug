@@ -143,9 +143,9 @@ mixin cartTable(header, productList)
                             div Size: XL 
                             div Color: Black
                         td.table-cell_price 
-                            div.quantity__input 1
+                            input(value='1').input__quantity
                         td.table-cell_price $#{i.price}
-                        td.table-cell
+                        td.table-cell_price
                             .table-cell-holder_horizontal
                                 div $#{i.price}
                                 a.btn-product-item_del(href='') 

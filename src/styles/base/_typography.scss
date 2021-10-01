@@ -132,3 +132,21 @@ img {
         opacity: 0.5;
     }
 }
+
+.border {
+    border: $grayBorder;
+
+    &_dark {
+        border: $darkGrayBorder;
+    }
+
+    &, &_dark {
+        @include transition(border-color);
+
+        &:hover, &:focus {
+            border-color: $main;
+        }
+    }
+}
+
+

@@ -325,43 +325,6 @@
     @extend .text;
 }
 
-.select {
-    width: $cardElHolderWidth;
-    padding: 1em;
-    text-overflow: '';
-    border: $grayBorder;
-    appearance: none;
-
-    @include transition(border-color);
-
-    &:hover {
-        border-color: $main;
-    }
-
-    &_size {
-        background: transparent url("/img/arrow-down.png") no-repeat 96.5% center;
-        background-size: 8px;
-    }
-
-    &_color {
-        background: transparent url("/img/square.png") no-repeat 96.5% center;
-        background-size: 20px;
-    }
-
-    &:first-child {
-        margin-right: 2em;
-    }
-
-    &-holder {
-        width: 100%;
-        padding-top: 3rem;
-        overflow: hidden;
-        border-top: $grayBorder;
-
-        @include flex(wrap,normal,left,flex-start);
-    }
-}
-
 .card-marker {
     &-list {
         height: 100%;

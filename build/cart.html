@@ -141,86 +141,161 @@
             <li class="breadcrumb-item"><a class="breadcrumb__link" href="shop.html">shop</a></li>
             <li class="breadcrumb-item" id="current-page__name"> <span class="breadcrumb__link">Cart</span></li>
           </ul>
-          <table class="table_cart">
-            <thead> 
-              <tr class="table-row">
-                <th class="table-cell_header text">Products</th>
-                <th class="table-cell_header text">Color &amp; Size</th>
-                <th class="table-cell_header text">Quantity</th>
-                <th class="table-cell_header text">Price</th>
-                <th class="table-cell_header text">Total</th>
-              </tr>
-            </thead>
-            <tbody>           
-              <tr class="table-row_product-img">
-                <td class="table-cell_product"><a class="product-link_wishlist" href="1.html">
-                    <div class="product-img-holder_table"></div>
-                    <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
-                <td class="table-cell text"> 
-                  <div>Size: XL </div>
-                  <div>Color: Black</div>
-                </td>
-                <td class="table-cell_price"> 
-                  <div class="quantity__input">1</div>
-                </td>
-                <td class="table-cell_price">$250.00</td>
-                <td class="table-cell">
-                  <div class="table-cell-holder_horizontal">
-                    <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
-                  </div>
-                </td>
-              </tr>
-              <tr class="table-row_product-img">
-                <td class="table-cell_product"><a class="product-link_wishlist" href="12.html">
-                    <div class="product-img-holder_table"></div>
-                    <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
-                <td class="table-cell text"> 
-                  <div>Size: XL </div>
-                  <div>Color: Black</div>
-                </td>
-                <td class="table-cell_price"> 
-                  <div class="quantity__input">1</div>
-                </td>
-                <td class="table-cell_price">$250.00</td>
-                <td class="table-cell">
-                  <div class="table-cell-holder_horizontal">
-                    <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
-                  </div>
-                </td>
-              </tr>
-              <tr class="table-row_product-img">
-                <td class="table-cell_product"><a class="product-link_wishlist" href="13.html">
-                    <div class="product-img-holder_table"></div>
-                    <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
-                <td class="table-cell text"> 
-                  <div>Size: XL </div>
-                  <div>Color: Black</div>
-                </td>
-                <td class="table-cell_price"> 
-                  <div class="quantity__input">1</div>
-                </td>
-                <td class="table-cell_price">$250.00</td>
-                <td class="table-cell">
-                  <div class="table-cell-holder_horizontal">
-                    <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
-                  </div>
-                </td>
-              </tr>
-              <tr class="table-row table-cell">
-                <td colspan="5">
-                  <div class="table-cell-holder_right">
-                    <button class="btn_transparent btn-table_cart">Update Cart</button>
-                    <button class="btn_transparent btn-table_cart">Continue shopping</button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <form class="partners-discount-form" action="#"> 
-            <label>Enter Your coupon code Here</label>
-            <input class="input partners-discount__input" type="code" placeholder="Enter Your coupon code Here">
-            <button class="btn partners-discount__btn" href="#">apply</button>
+      <ul class="cart-list">
+        <li class="cart-item cart-item_table">
+              <table class="table_cart">
+                <thead> 
+                  <tr class="table-row">
+                    <th class="table-cell_header text">Products</th>
+                    <th class="table-cell_header text">Color &amp; Size</th>
+                    <th class="table-cell_header text">Quantity</th>
+                    <th class="table-cell_header text">Price</th>
+                    <th class="table-cell_header text">Total</th>
+                  </tr>
+                </thead>
+                <tbody>           
+                  <tr class="table-row_product-img">
+                    <td class="table-cell_product"><a class="product-link_wishlist" href="1.html">
+                        <div class="product-img-holder_table"></div>
+                        <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
+                    <td class="table-cell text"> 
+                      <div>Size: XL </div>
+                      <div>Color: Black</div>
+                    </td>
+                    <td class="table-cell_price"> 
+                      <input class="input__quantity" value="1">
+                    </td>
+                    <td class="table-cell_price">$250.00</td>
+                    <td class="table-cell_price">
+                      <div class="table-cell-holder_horizontal">
+                        <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table-row_product-img">
+                    <td class="table-cell_product"><a class="product-link_wishlist" href="12.html">
+                        <div class="product-img-holder_table"></div>
+                        <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
+                    <td class="table-cell text"> 
+                      <div>Size: XL </div>
+                      <div>Color: Black</div>
+                    </td>
+                    <td class="table-cell_price"> 
+                      <input class="input__quantity" value="1">
+                    </td>
+                    <td class="table-cell_price">$250.00</td>
+                    <td class="table-cell_price">
+                      <div class="table-cell-holder_horizontal">
+                        <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table-row_product-img">
+                    <td class="table-cell_product"><a class="product-link_wishlist" href="13.html">
+                        <div class="product-img-holder_table"></div>
+                        <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
+                    <td class="table-cell text"> 
+                      <div>Size: XL </div>
+                      <div>Color: Black</div>
+                    </td>
+                    <td class="table-cell_price"> 
+                      <input class="input__quantity" value="1">
+                    </td>
+                    <td class="table-cell_price">$250.00</td>
+                    <td class="table-cell_price">
+                      <div class="table-cell-holder_horizontal">
+                        <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="table-row table-cell">
+                    <td colspan="5">
+                      <div class="table-cell-holder_right">
+                        <button class="btn_transparent btn-table_cart">Update Cart</button>
+                        <button class="btn_transparent btn-table_cart">Continue shopping</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </li>
+        <li class="cart-item cart-item_form">
+              <h6 class="list-title">use coupon code </h6>
+              <form class="form_custom" action="#"> 
+                <label class="label_cart" for="input_cart">Enter Your coupon code Here</label>
+                <div class="btn-grp">
+                  <input class="input_custom input_cart-code" id="input_cart" type="code" placeholder="Enter Your coupon code Here">
+                  <button class="btn btn_cart-code" href="#">apply</button>
+                </div>
+              </form>
+        </li>
+        <li class="cart-item cart-item_form">
+              <h6 class="list-title">use gift voucher </h6>
+              <form class="form_custom" action="#"> 
+                <label class="label_cart" for="input_cart">Enter Your gift voucher Here</label>
+                <div class="btn-grp">
+                  <input class="input_custom input_cart-code" id="input_cart" type="code" placeholder="Enter Your gift voucher Here">
+                  <button class="btn btn_cart-code" href="#">apply</button>
+                </div>
+              </form>
+        </li>
+        <li class="cart-item cart-item_form">
+          <form class="form_custom" action="#"> 
+            <h6 class="list-title">Shipping Availability</h6>
+            <ul class="cart-shipping-list"> 
+              <li class="cart-shipping-item"> 
+                    <div class="label_cart">Select Country</div>
+                    <select class="input_custom select_cart" name="Select Country" required="true">
+                      <option class="select-option">Select Country</option>
+                      <option class="select-option">Viet Nam</option>
+                    </select>
+              </li>
+              <li class="cart-shipping-item"> 
+                    <div class="label_cart">Select State</div>
+                    <select class="input_custom select_cart" name="Select State" required="true">
+                      <option class="select-option">Select State</option>
+                      <option class="select-option">TP.HCM</option>
+                    </select>
+              </li>
+              <li class="cart-shipping-item"> 
+                <label class="label_cart">Postcode / Zip</label>
+                <input class="input_custom select_cart" type="code" placeholder="Postcode / Zip">
+              </li>
+              <li class="cart-shipping-item"> 
+                <input class="btn_transparent btn_shipping-form" type="submit" value="Update Totals">
+              </li>
+            </ul>
           </form>
+        </li>
+        <li class="cart-item cart-item_form"> 
+          <form class="form_custom" action="#"> 
+            <h6 class="list-title">Shopping cart calcuation</h6>
+            <table class="table_calculation"> 
+              <tbody>
+                <tr class="table-row_calculation_wide"> 
+                  <th class="table-cell_calculation-key">Subtotal</th>
+                  <td class="table-cell_calculation-value">$450</td>
+                </tr>
+                <tr>
+                  <th class="table-cell_calculation-key">Coupon</th>
+                  <td class="table-cell_calculation-value">-$50</td>
+                </tr>
+                <tr class="table-row_calculation_wide"> 
+                  <th class="table-cell_calculation-key">Shipping</th>
+                  <td class="table-cell_calculation-text-value">Free Shipping </td>
+                </tr>
+              </tbody>
+              <tfoot class="table_calculation_footer">  
+                <tr class="table-row_calculation_wide"> 
+                  <th class="table-cell_calculation-key">Total</th>
+                  <td class="table-cell_calculation-value">$400</td>
+                </tr>
+              </tfoot>
+            </table>
+            <input class="btn_transparent btn_calculation-form" type="submit" value="proceed to checkout">
+          </form>
+        </li>
+      </ul>
     </div>
     <footer class="footer">
       <div class="edge_white">
