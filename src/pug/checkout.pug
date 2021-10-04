@@ -1,0 +1,111 @@
+extends common/layout
+
+block content 
+    .holder_short_started
+        +breadCrumb ('Checkout', breadCrumbs)
+        ul.checkout-list
+            li.checkout-item
+                h6.list-title Billing Details
+                form.form_custom(action="#")
+                    ul.billing-details-list     
+                        li.billing-details-item_short 
+                            label.label_checkout 
+                                span First Name 
+                                span *
+                            input.input_custom.input_checkout(type="code" required='true')
+                        li.billing-details-item_short 
+                            label.label_checkout 
+                                span Last Name 
+                                span *
+                            input.input_custom.input_checkout(type="code" required='true')
+                        li.billing-details-item 
+                            .label_checkout
+                                span Country
+                                span *
+                            select.input_custom.input_checkout(name=`Select Country` required='true')
+                                option.select-option Select Country
+                                option.select-option Viet Nam
+                        li.billing-details-item 
+                            label.label_checkout Company Name
+                            input.input_custom.input_checkout(type="code")
+                        li.billing-details-item 
+                            label.label_checkout 
+                                span Address 
+                                span *
+                            input.input_custom.input_checkout(type="code" required='true' placeholder=`Street address`)
+                        li.billing-details-item 
+                            label.label_checkout Postcode / Zip
+                            input.input_custom.input_checkout(type="code" placeholder=`Postcode / Zip`)
+                        li.billing-details-item 
+                            label.label_checkout 
+                                span Town / City 
+                                span *
+                            input.input_custom.input_checkout(type="code" required='true' placeholder=`Town / City`)
+                        li.billing-details-item_short 
+                            label.label_checkout 
+                                span Email Address 
+                                span *
+                            input.input_custom.input_checkout(type="code" required='true')
+                        li.billing-details-item_short 
+                            label.label_checkout 
+                                span Phone 
+                                span *
+                            input.input_custom.input_checkout(type="code" required='true')
+                        li.billing-details-item 
+                            input(type="checkbox" id='new-account') 
+                            label.label_checkout(for='new-account') Create an account?
+            li.checkout-item
+                form.form_custom(action="#")
+                    table.table_order.text
+                        thead 
+                            tr 
+                                th
+                                th 
+                                    h6.list-title.table_order-name Your order
+                                th
+                            tr
+                                th
+                                th Product            
+                                th Total
+                        tfoot
+                            tr 
+                                td
+                                td Total 
+                                td $ 400
+                        tbody 
+                            tr
+                            tr 
+                                td
+                                td Casual men wearing cool shoe x 1
+                                td $ 120
+                            tr
+                                td
+                                td Casual men wearing x 2
+                                td $ 280
+                        tbody 
+                            tr
+                            tr
+                                td
+                                td Subtotal
+                                td $ 400
+                            tr
+                                td
+                                td Shipping
+                                td Free Shipping
+                    .check-payment-details.text
+                        ul.payment-list     
+                            li.payment-item 
+                                input(type="checkbox" id='payment-details_1')
+                                label.label_payment(for='payment-details_1') Direct Bank Transfer
+                                p.description.payment-description Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                            li.payment-item 
+                                input(type="checkbox" id='payment-details_2')
+                                label.label_payment(for="payment-details_2") Cheque Payment
+                            li.payment-item 
+                                input(type="checkbox" id='payment-details_3')
+                                label.label_payment(for="payment-details_3") PayPal
+                    input.btn_transparent.btn_checkout(type="submit" value="place order")
+                                
+
+                           
+                        

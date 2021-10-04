@@ -59,7 +59,7 @@ mixin comparisonTable(rowHeader, productList)
                         each i in productList
                             if i.rate=='4.5'
                                 td.table-cell.text 
-                                    .product-img-holder_table
+                                    .product-img-holder_table_comparison
             if h.rowNumber==3
                 tr
                     th.table-cell_header.text #{h.name}          
@@ -113,7 +113,7 @@ mixin wishlistTable(header, productList)
                     tr.table-row_product-img
                         td.table-cell_product
                             a.product-link_wishlist(href=`${i.number}.html`)
-                                .product-img-holder_table
+                                .product-img-holder_table_wishlist
                                 .product__title_short #{i.name}
                         td.table-cell.text 
                             div Size: XL 
@@ -155,3 +155,24 @@ mixin cartTable(header, productList)
                     .table-cell-holder_right
                         button.btn_transparent.btn-table_cart Update Cart
                         button.btn_transparent.btn-table_cart Continue shopping
+
+mixin shortCartTable(productList)
+    table.table_short
+        thead 
+            tr.table-row
+                th.table-cell_header.text Products 
+                th.table-cell_header.text Total
+        tbody            
+            each i in productList
+                if i.rate=='4.5'
+                    tr.table-row_product-img
+                        td.table-cell_product
+                            a.product-link_wishlist(href=`${i.number}.html`)
+                                .product-img-holder_table_wishlist
+                                .product__title_short #{i.name}
+                        td.table-cell_price
+                            .table-cell-holder_horizontal
+                                div $#{i.price}
+                                a.btn-product-item_del(href='') 
+                                    i.far.fa-times-circle
+            

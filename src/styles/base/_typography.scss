@@ -1,5 +1,5 @@
 html {
-    width: 1920px;
+    // width: 1920px;
     font-size: font-size(1);
 }
 
@@ -59,7 +59,8 @@ h4 {
 
 .holder {
     &_main {
-        width: 111.5rem;
+        // width: 111.5rem;
+        width: 93vw;
         @extend %with-holder;
 
         &_centered {
@@ -76,7 +77,8 @@ h4 {
 
     &_short {
         position: relative;
-        width: 73.25rem;
+        // width: 73.25rem;
+        width: 61vw;
         min-height: 100%;
         @extend %with-holder;
 
@@ -119,6 +121,11 @@ h4 {
     font-size: font-size(-1);
 }
 
+.description {
+    line-height: 1.5rem;
+    @extend .text;
+}
+
 .under-title-text {
     font-family: font(droid_i);
     font-size: font-size(-1);
@@ -148,5 +155,3 @@ img {
         }
     }
 }
-
-

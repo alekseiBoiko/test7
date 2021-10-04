@@ -15,6 +15,83 @@
         }
     }
 
+    &_order {
+        border: $darkGrayBorder;
+
+        td, th {
+            height: 1em;
+            padding-bottom: 1em;
+
+            &:first-child {
+                width: 1.5rem;
+            }
+
+            &:last-child {
+                padding-right: 1.5rem;
+                text-align: right;
+            }
+        }
+
+        thead, tbody {
+            tr:last-child {
+                td, th {
+                    &:not(:first-child) {
+                        border-bottom: $grayBorder;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr:first-child {
+                height: 2em;
+                td {
+                    vertical-align: text-bottom;
+                }
+            }
+
+            tr:last-child {
+                height: 3em;
+                td {
+                    vertical-align: text-top;
+                }
+            }
+        }
+
+        tfoot {
+            font-size: font-size(2);
+            font-weight: 500;
+
+            td {
+                height: 5rem;
+                vertical-align: middle;
+            }
+        }
+
+        &-name {
+            padding-top: 2rem;
+        }
+    }
+
+    &_short {
+        border: $collectionBorder;
+        transform: translateY(-50rem);
+
+        @include transition(transform);
+
+        &:hover {
+            border-color: $main;
+        }
+
+        &_active {
+            transform: translateY(0);
+        }
+
+        td:first-child {
+            width: 60%;
+        }
+    }
+
     &-cell {
         padding: 1.125rem 1.8rem;
         line-height: 1.5;
@@ -73,7 +150,7 @@
                 text-align: right;
             }
 
-            &-key, &-value, &-text-value {            
+            &-key, &-value, &-text-value {
                 vertical-align: middle;
             }
 
@@ -84,7 +161,6 @@
             &-value {
                 font-size: font-size(2);
             }
-
         }
     }
 

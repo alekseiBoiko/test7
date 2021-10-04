@@ -43,8 +43,8 @@ $colors: (
 	slick-slider-btn-bg: #f5f6f9,
 	slick-slider-btn-bg-hovered: $main,
 	slick-slider-color-hovered: #fff,
-	label-cart-color: #777
-
+	label-cart-color: #777,
+	payment-description-bg: #f8f8f8
 );
 
 @function color($key) {

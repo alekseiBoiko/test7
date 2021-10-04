@@ -21,7 +21,7 @@ mixin sortList (selectClass, list = [])
 
 mixin cartSelect(listName, optionName)
     .label_cart Select #{listName}
-    select.input_custom.select_cart(name=`Select ${listName}` required='true')
+    select.input_custom.input_cart(name=`Select ${listName}` required='true')
         option.select-option Select #{listName}
         option.select-option #{optionName}
 

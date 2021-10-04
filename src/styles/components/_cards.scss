@@ -171,7 +171,6 @@
 
             &_grid, &_related {
                 width: 100%;
-                // width: 16.875rem;
                 height: 25rem;
             }
 
@@ -184,7 +183,18 @@
             &_table {
                 width: 5rem;
                 height: 6.25rem;
-                margin: 0 auto;
+
+                &_comparison {
+                    margin: 0 auto;
+
+                    @extend .product-img-holder_table;
+                }
+
+                &_wishlist {
+                    margin-right: 1rem;
+
+                    @extend .product-img-holder_table;
+                }
             }
 
         }
@@ -318,11 +328,6 @@
             margin-top: 1.5rem;
         }
     }
-}
-
-.description {
-    line-height: 1.5rem;
-    @extend .text;
 }
 
 .card-marker {

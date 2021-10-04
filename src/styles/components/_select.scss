@@ -33,10 +33,4 @@
 
         @include flex(wrap,normal,left,flex-start);
     }
-
-    &_cart {
-        width: 100%;
-        height: element-height(m);
-        margin-top: 1rem;
-    }
 }

@@ -173,6 +173,7 @@ function onClick(btnClass, blockClass) {
 $(function(){
     onClick('header-btn-search','search-form');
     onClick('header-btn-bars','side-bar_right');
+    onClick('header-btn-shopping-cart','table_short');
 })
 
 // END ON CLICK BTNS

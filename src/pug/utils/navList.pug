@@ -193,7 +193,7 @@ mixin navList(navClass, navList = [])
                 a(href=i.url, class=`${navClass}-nav__link`) #{i.name}
 
 mixin workList(navList = [])
-  ul.header-nav-list
+  ul.work-list
     each i in navList
       li
         a(href=`${i.url}.html`) #{i.name} 
