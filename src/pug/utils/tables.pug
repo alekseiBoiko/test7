@@ -142,14 +142,15 @@ mixin cartTable(header, productList)
                         td.table-cell.text 
                             div Size: XL 
                             div Color: Black
-                        td.table-cell_price 
+                        td.table-cell_price.table-cell_quantity
                             input(value='1').input__quantity
-                        td.table-cell_price $#{i.price}
+                        td.table-cell_price.table-cell_price-per-unit #{i.price}
                         td.table-cell_price
                             .table-cell-holder_horizontal
-                                div $#{i.price}
+                                div.table-row__total-price 
                                 a.btn-product-item_del(href='') 
                                     i.far.fa-times-circle
+        tfoot 
             tr.table-row.table-cell
                 td(colspan='5')
                     .table-cell-holder_right
@@ -161,6 +162,8 @@ mixin shortCartTable(productList)
         thead 
             tr.table-row
                 th.table-cell_header.text Products 
+                th.table-cell_header.text Quantity
+                th.table-cell_header.text Price 
                 th.table-cell_header.text Total
         tbody            
             each i in productList
@@ -170,9 +173,12 @@ mixin shortCartTable(productList)
                             a.product-link_wishlist(href=`${i.number}.html`)
                                 .product-img-holder_table_wishlist
                                 .product__title_short #{i.name}
+                        td.table-cell_price.table-cell_quantity 
+                            input(value='1').input__quantity
+                        td.table-cell_price.table-cell_price-per-unit 200
                         td.table-cell_price
                             .table-cell-holder_horizontal
-                                div $#{i.price}
+                                div.table-row__total-price 0
                                 a.btn-product-item_del(href='') 
                                     i.far.fa-times-circle
             

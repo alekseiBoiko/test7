@@ -9,9 +9,16 @@
         @include flex(unset,normal,space-between,unset);
     }
 
-    // &_cart {
-    //     width: 100%;
-    // }
+    &_add-review {
+        width: 50rem;
+
+        @include flex(wrap,normal,space-between,unset);
+    }
+}
+
+#textarea__review {
+    width: 100%;
+    height: 9.25rem;
 }
 
 .label {
@@ -39,6 +46,10 @@
         margin-left: 1rem;
 
         @extend .label;
+    }
+
+    &_review-textarea {
+        width: 30%;
     }
 }
 
@@ -80,6 +91,18 @@
 
     &_checkout {
         margin-top: 0.5rem;
+    }
+
+    &_review {
+        width: 47.5%;
+        height: element-height(m);
+        padding-left: 1rem;
+        @extend .border;
+
+        &::placeholder {
+            text-transform: capitalize;
+            @extend .description;
+        }
     }
 }
 
@@ -161,6 +184,12 @@
         height: element-height(s);
         padding: 0 1.5rem;
         margin: 0.8rem 0 0 auto;
+    }
+
+    &_checkout {
+        height: element-height(s);
+        padding: 0 1.5rem;
+        margin: 0.8rem auto 0 0;
     }
 }
 

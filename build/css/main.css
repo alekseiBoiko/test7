@@ -146,39 +146,39 @@ h4 {
   font-weight: 600;
   text-transform: uppercase; }
 
-.input_custom::-webkit-input-placeholder, .range-input::-webkit-input-placeholder {
+.input_custom::-webkit-input-placeholder, .range-input::-webkit-input-placeholder, .input_review::-webkit-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem; }
 
-.input_custom::-moz-placeholder, .range-input::-moz-placeholder {
+.input_custom::-moz-placeholder, .range-input::-moz-placeholder, .input_review::-moz-placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem; }
 
-.input_custom:-ms-input-placeholder, .range-input:-ms-input-placeholder {
+.input_custom:-ms-input-placeholder, .range-input:-ms-input-placeholder, .input_review:-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem; }
 
-.input_custom::-ms-input-placeholder, .range-input::-ms-input-placeholder {
+.input_custom::-ms-input-placeholder, .range-input::-ms-input-placeholder, .input_review::-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem; }
 
-.text, .description, .input_custom::placeholder, .range-input::placeholder, .product__description, .product__description_shop-list, .label, .label_cart, .label_checkout, .label_payment {
+.text, .description, .input_custom::placeholder, .range-input::placeholder, .input_review::placeholder, .product__description, .product__description_shop-list, .label, .label_cart, .label_checkout, .label_payment {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem; }
 
-.input_custom::-webkit-input-placeholder, .range-input::-webkit-input-placeholder {
+.input_custom::-webkit-input-placeholder, .range-input::-webkit-input-placeholder, .input_review::-webkit-input-placeholder {
   line-height: 1.5rem; }
 
-.input_custom::-moz-placeholder, .range-input::-moz-placeholder {
+.input_custom::-moz-placeholder, .range-input::-moz-placeholder, .input_review::-moz-placeholder {
   line-height: 1.5rem; }
 
-.input_custom:-ms-input-placeholder, .range-input:-ms-input-placeholder {
+.input_custom:-ms-input-placeholder, .range-input:-ms-input-placeholder, .input_review:-ms-input-placeholder {
   line-height: 1.5rem; }
 
-.input_custom::-ms-input-placeholder, .range-input::-ms-input-placeholder {
+.input_custom::-ms-input-placeholder, .range-input::-ms-input-placeholder, .input_review::-ms-input-placeholder {
   line-height: 1.5rem; }
 
-.description, .input_custom::placeholder, .range-input::placeholder, .product__description, .product__description_shop-list {
+.description, .input_custom::placeholder, .range-input::placeholder, .input_review::placeholder, .product__description, .product__description_shop-list {
   line-height: 1.5rem; }
 
 .under-title-text {
@@ -192,14 +192,14 @@ img {
   img:hover {
     opacity: 0.5; }
 
-.border, .input__quantity {
+.border, .input__quantity, .input_review {
   border: 1px solid #efefef; }
   .border_dark, .input_custom, .range-input {
     border: 1px solid #a3a2a3; }
-  .border, .input__quantity, .border_dark, .input_custom, .range-input {
+  .border, .input__quantity, .input_review, .border_dark, .input_custom, .range-input {
     -webkit-transition: border-color 0.5s ease 0s;
     transition: border-color 0.5s ease 0s; }
-    .border:hover, .input__quantity:hover, .border:focus, .input__quantity:focus, .border_dark:hover, .input_custom:hover, .range-input:hover, .border_dark:focus, .input_custom:focus, .range-input:focus {
+    .border:hover, .input__quantity:hover, .input_review:hover, .border:focus, .input__quantity:focus, .input_review:focus, .border_dark:hover, .input_custom:hover, .range-input:hover, .border_dark:focus, .input_custom:focus, .range-input:focus {
       border-color: #3cb878; }
 
 .logo {
@@ -629,7 +629,7 @@ img {
   top: 0;
   right: 0;
   z-index: 100;
-  width: 25vw;
+  width: 50vw;
   overflow: hidden;
   visibility: hidden;
   background-color: white;
@@ -749,6 +749,28 @@ img {
   -ms-flex-align: unset;
   align-items: unset; }
 
+.form_add-review {
+  width: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: normal;
+  flex-direction: normal;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset; }
+
+#textarea__review {
+  width: 100%;
+  height: 9.25rem; }
+
 .label, .label_cart, .label_checkout, .label_payment {
   width: 100%;
   font-weight: 400;
@@ -759,6 +781,8 @@ img {
     color: red; }
   .label_payment {
     margin-left: 1rem; }
+  .label_review-textarea {
+    width: 30%; }
 
 .input_custom, .range-input {
   padding-left: 1rem; }
@@ -808,6 +832,21 @@ img {
 
 .input_checkout {
   margin-top: 0.5rem; }
+
+.input_review {
+  width: 47.5%;
+  height: 2.875rem;
+  padding-left: 1rem; }
+  .input_review::-webkit-input-placeholder {
+    text-transform: capitalize; }
+  .input_review::-moz-placeholder {
+    text-transform: capitalize; }
+  .input_review:-ms-input-placeholder {
+    text-transform: capitalize; }
+  .input_review::-ms-input-placeholder {
+    text-transform: capitalize; }
+  .input_review::placeholder {
+    text-transform: capitalize; }
 
 .btn {
   color: white;
@@ -891,6 +930,10 @@ img {
     height: 2.25rem;
     padding: 0 1.5rem;
     margin: 0.8rem 0 0 auto; }
+  .btn_checkout {
+    height: 2.25rem;
+    padding: 0 1.5rem;
+    margin: 0.8rem auto 0 0; }
 
 .search-form {
   position: relative;
@@ -1877,7 +1920,7 @@ img {
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   .table_short td:first-child {
-    width: 60%; }
+    min-width: 40%; }
 
 .table-cell, .table-cell_product, .table-cell_size, .table-cell_total, .table-cell_header, .table-cell_price, .table-cell_btn {
   padding: 1.125rem 1.8rem;
@@ -1997,6 +2040,114 @@ img {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start; }
+
+.tabs {
+  width: 100%;
+  margin: 1rem;
+  overflow: hidden; }
+  .tabs-title {
+    list-style-type: none; }
+  .tabs-holder {
+    position: relative;
+    min-height: 45rem; }
+
+.tab-title {
+  display: inline-block;
+  min-width: 8.375rem;
+  padding: 1.2rem 1.8rem;
+  cursor: pointer; }
+  .tab-title.active {
+    background-color: #f5f6f9; }
+
+.tab-item {
+  position: absolute;
+  padding: 1rem 2rem;
+  background: #f5f6f9;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: visibility 0.5s ease, opacity 0.5s ease;
+  transition: visibility 0.5s ease, opacity 0.5s ease; }
+  .tab-item.active {
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1; }
+  .tab-item p {
+    margin-bottom: 2rem; }
+
+.review-item {
+  margin: 2rem 0 4.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: unset;
+  flex-wrap: unset;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: normal;
+  flex-direction: normal;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.review__title {
+  margin-top: 1rem; }
+
+.review-content {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: white; }
+
+.review-user__name {
+  margin: 1rem 0; }
+
+.review-user-img-holder {
+  width: 6rem;
+  height: 5rem;
+  margin-right: 1rem; }
+
+.review-rate-holder {
+  width: 16rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: unset;
+  flex-wrap: unset;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: normal;
+  flex-direction: normal;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.review__date {
+  padding-left: 1.5rem;
+  font-family: "droid_serifitalic", sans-serif;
+  font-size: 0.75rem;
+  color: #999;
+  border-left: 1px solid #efefef; }
+
+.review__rate, .review__date {
+  width: 50%; }
+
+.review__rate {
+  padding-right: 1.5rem; }
+
+.review__text-title {
+  margin: 2rem 0 1rem; }
+
+.form-add-review__title {
+  width: 100%;
+  margin-bottom: 1.2rem; }
 
 .user-interface-holder {
   min-height: 100vh; }

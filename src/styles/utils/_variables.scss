@@ -1,5 +1,6 @@
 $main: #3cb878;
 $gray: #777;
+$lightGray: #f5f6f9;
 
 // COLORS
 
@@ -27,7 +28,7 @@ $colors: (
 	social-color_hovered: $main,
 	welcome-bg: #121212,
 	welcome-color: #333,
-	benefits-bg: #f5f6f9,
+	benefits-bg: $lightGray,
 	benefits-icon: #464646,
 	benefits-title: #232323,
 	benefits-text: #888,
@@ -36,15 +37,17 @@ $colors: (
 	collection-border: #9598a3,
 	partners-discount-bg: rgba(43, 46, 65, 1),
 	partners-discount-color: white,
-	partners-block-bg: #f5f6f9,
+	partners-block-bg: $lightGray,
 	sort-line-color: #777,
 	product-categorie-color: #999,
 	pagination-color_hovered: $main,
-	slick-slider-btn-bg: #f5f6f9,
+	slick-slider-btn-bg: $lightGray,
 	slick-slider-btn-bg-hovered: $main,
 	slick-slider-color-hovered: #fff,
 	label-cart-color: #777,
-	payment-description-bg: #f8f8f8
+	payment-description-bg: #f8f8f8,
+	tabs-bg: $lightGray,
+	tabs-review-date-color: #999
 );
 
 @function color($key) {
@@ -76,6 +79,7 @@ $fonts: (
 }
 
 $font-sizes: (
+	-3: 0.75rem,
 	-2: 0.8125rem,
 	-1: 0.875rem,
 	1: 1rem,

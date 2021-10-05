@@ -138,6 +138,8 @@
               <thead> 
                 <tr class="table-row">
                   <th class="table-cell_header text">Products </th>
+                  <th class="table-cell_header text">Quantity</th>
+                  <th class="table-cell_header text">Price </th>
                   <th class="table-cell_header text">Total</th>
                 </tr>
               </thead>
@@ -146,9 +148,13 @@
                   <td class="table-cell_product"><a class="product-link_wishlist" href="1.html">
                       <div class="product-img-holder_table_wishlist"></div>
                       <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
+                  <td class="table-cell_price table-cell_quantity"> 
+                    <input class="input__quantity" value="1">
+                  </td>
+                  <td class="table-cell_price table-cell_price-per-unit">200</td>
                   <td class="table-cell_price">
                     <div class="table-cell-holder_horizontal">
-                      <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
+                      <div class="table-row__total-price">0</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -156,9 +162,13 @@
                   <td class="table-cell_product"><a class="product-link_wishlist" href="12.html">
                       <div class="product-img-holder_table_wishlist"></div>
                       <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
+                  <td class="table-cell_price table-cell_quantity"> 
+                    <input class="input__quantity" value="1">
+                  </td>
+                  <td class="table-cell_price table-cell_price-per-unit">200</td>
                   <td class="table-cell_price">
                     <div class="table-cell-holder_horizontal">
-                      <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
+                      <div class="table-row__total-price">0</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -166,9 +176,13 @@
                   <td class="table-cell_product"><a class="product-link_wishlist" href="13.html">
                       <div class="product-img-holder_table_wishlist"></div>
                       <div class="product__title_short">Casual men wearing cool shoe</div></a></td>
+                  <td class="table-cell_price table-cell_quantity"> 
+                    <input class="input__quantity" value="1">
+                  </td>
+                  <td class="table-cell_price table-cell_price-per-unit">200</td>
                   <td class="table-cell_price">
                     <div class="table-cell-holder_horizontal">
-                      <div>$250.00</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
+                      <div class="table-row__total-price">0</div><a class="btn-product-item_del" href=""> <i class="far fa-times-circle"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -252,16 +266,41 @@
             </div>
           </div>
       <div class="tabs">
-        <input id="tab_1" type="radio" name="inset" value="" checked="">
-        <label for="tab_1">Description1</label>
-        <input id="tab_2" type="radio" name="inset" value="">
-        <label for="tab_2">Reviews (2)</label>
-        <div id="txt_1">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <ul class="tabs-title">
+          <li class="tab-title text">Description</li>
+          <li class="tab-title text">Reviews (2)</li>
+        </ul>
+        <div class="tabs-holder">
+          <div class="tab-item"> 
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="tab-item"> 
+            <div class="review__title text">1 reviews for Etiam tristique nisl</div>
+            <div class="review-item">
+              <div class="review-user-img-holder product-img-holder"></div>
+              <div class="review-content">  
+                <div class="review-rate-holder"> 
+                  <div class="review__rate product__rate product__rate_midle"></div>
+                  <div class="review__date">Jun 3,2017</div>
+                </div>
+                <div class="review-user__name product__title">JOHN GREEN</div>
+                <div class="review__text text">This will go great with my Hoodie that I ordered a few weeks ago.</div>
+              </div>
+            </div>
+            <form class="form_add-review"> 
+              <div class="form-add-review__title product__title">Add a review</div>
+              <input class="input_review" type="name" placeholder="Your name ..." required="true">
+              <input class="input_review" type="mail" placeholder="Your e-mail ..." required="true">
+              <label class="label_review-textarea review__text-title text" for="textarea__review">Your Review</label>
+              <div class="review__text-title text">Your Rating</div>
+              <div class="raty-list"></div>
+              <textarea class="input_review" id="textarea__review" name="review">  </textarea>
+              <input class="btn btn_checkout" type="submit" value="submit">
+            </form>
+          </div>
         </div>
-        <div id="txt_2"></div>
       </div>
       <h4>Related Products </h4>
           <ul class="product-list_related">
