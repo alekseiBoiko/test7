@@ -96,13 +96,15 @@
     &__rate {
         padding-right: 1.5rem;
     }
-
-    &__text-title {
-        margin: 2rem 0 1rem;
-    }
 }
 
 .form-add-review__title {
     width: 100%;
     margin-bottom: 1.2rem;
+}
+
+.add-review-rate-holder {
+    padding: 2rem 0 1rem;
+
+    @include flex(unset,normal,left, flex-start);
 }

@@ -87,9 +87,11 @@
     right: 0;
     z-index: 10;
     overflow-x: hidden;
+    visibility: hidden;
     opacity: 0;
 
     &_active {
+        visibility: visible;
         opacity: 1;
     }
 }
@@ -129,5 +131,49 @@
     
     li {
         margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-nav {
+        &-list {
+            position: absolute;
+            top: -130%;
+            left: 50%;
+            width: 25%;
+            height: auto;
+            margin-left: 0;
+            opacity: 0;
+            transform: translateX(-50%);
+
+            @include flex(unset,column,center, flex-start);
+            @include transition(top);
+
+            &_active {
+                top: 10rem;
+                z-index: 10;
+                opacity: 1;
+            }
+        }
+
+        &-item {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            background-color: $main;
+            border-radius: none;
+
+            @include transition(color background-color box-shadow);
+
+            &:hover {
+                color: $main;
+                background-color: white;
+                box-shadow: 0 0 0 3px $main;
+            }
+        }
+
+        &__link {
+            width: 100%;
+        }
     }
 }

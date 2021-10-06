@@ -29,3 +29,19 @@
         line-height: 1.25em;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .welcome {
+        &-section {
+            height: 30rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .welcome {
+        &-information-holder {
+            width: 90%;
+        }
+    }
+}

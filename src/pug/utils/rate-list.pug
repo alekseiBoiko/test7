@@ -1,0 +1,4 @@
+mixin rateList(number)
+    ul.rate-list
+        - for (var x=1; x<=number; x++)
+            li(class=`rate-item_${x}`)

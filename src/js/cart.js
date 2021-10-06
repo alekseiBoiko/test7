@@ -13,6 +13,7 @@ function keyPress() {
   }
 
   function basketTotal() {
+    var coupon = $('.cart__coupon').html();
     cart = $('.table_cart tbody');
     (total = $('.table_calculation .cart__subtotal')), (total_value = 0);
     (grandTotal = $('.table_calculation .cart__total')), (grandTotal_value = 0);
@@ -26,11 +27,11 @@ function keyPress() {
         sum_value = price * count;
         sum.text('$'+sum_value);
         total_value += sum_value;
-        // console.log(total_value);
         //   packing.html(packege);
     });
     total.html('$'+total_value);
-    grandTotal.html('$'+(total_value-50));
+    
+    grandTotal.html('$'+(total_value+(+coupon)));
   }
 
   function deleteRow(e) {

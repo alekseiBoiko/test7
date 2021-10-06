@@ -1,0 +1,18 @@
+.rate {
+    &-list {
+        padding: 0 8.125rem 0 1.5rem;
+
+        @include flex(unset,normal,space-between, flex-start);
+    }
+
+    &-item {
+        padding: 0 0.5rem;
+        border-right: $orangeBorder;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
+@include rateList(5);

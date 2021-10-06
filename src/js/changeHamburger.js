@@ -1,8 +1,8 @@
 function changeHamburger() {
-    $('.menu-btn').on('click', function(e) {
+    $('.btn_menu').on('click', function(e) {
       e.preventDefault();
-      $(this).toggleClass('menu-btn_active');
-      $('.nav-block').toggleClass('nav_active');
+      $(this).toggleClass('btn_menu_active');
+      $('.header-nav-list').toggleClass('header-nav-list_active');
     })
 };
 

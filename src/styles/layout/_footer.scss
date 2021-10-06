@@ -4,58 +4,92 @@
     color: color(footer-color);
     background: color(footer-bg);
 
-    .footer-socials-holder {
-        width: 17.7rem;
+    &-socials-holder {
+        width: 25%;
         margin-right: 2rem;
     }
 
     .main-footer-area {
         padding-top: 2.5rem;
+    }
 
-        .footer-nav-list, .footer-contact-list {
-            flex-basis: 25%;
-            min-height: 18.5rem;
+    &-nav-list, &-contact-list {
+        width: 25%;
+        min-height: 18.5rem;
+    }
+
+    &-nav-item, &-contact-item {
+        margin-bottom: 1.125rem;
+
+        &:first-child {
+            margin-bottom: 2.25rem;
+            font-size: font-size(1);
         }
+    }
 
-        .footer-nav-item, .footer-contact-item {
-            margin-bottom: 1.125rem;
+    &-nav__link {
+        @include transition(text-decoration);
 
-            &:first-child {
-                margin-bottom: 2.25rem;
-                font-size: font-size(1);
-            }
-
-            .footer-nav__link {
-                @include transition(text-decoration);
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            .footer-contact__link {
-                margin-left: 1rem;
-            }
+        &:hover {
+            text-decoration: underline;
         }
+    }
 
-        .footer-contact-item {
-            @include transition(color);
+    &-contact__link {
+        margin-left: 1rem;
+    }
 
-            &:hover {
-                color: $main;
-            }
+    &-contact-item {
+        @include transition(color);
+
+        &:hover {
+            color: $main;
         }
     }
 
     .copyright {
+        width: 50%;
         color: $gray;
     }
 
-    .footer-cards-holder {
+    &-cards-holder {
         width: 17.8125rem;
 
         .payment-cards-list {
             @include flex(unset, unset, space-between, center);
         }
     }
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer {
+        font-size: font-size(-3);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer {
+        &-socials-text {
+            width: 60%;
+        }
+
+        &-nav-list, &-contact-list {
+            width: 50%;
+            min-height: 14.5rem;
+        }
+
+        .copyright {
+            width: 100%;
+            padding: 1rem 0;
+        }
+
+        .edge_black {
+            height: 6rem;
+        }
+
+        &-cards-holder {
+            width: 100%;
+        }
+    }
+
 }

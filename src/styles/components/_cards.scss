@@ -29,6 +29,7 @@
 
         &_featured {
             margin-bottom: -3.25rem;
+            overflow: hidden;
         }
 
         &_grid {
@@ -348,6 +349,51 @@
 
         &:hover {
             background-color: darken(color(btn-bg), 20%);
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .product-img-holder {
+        &_short {
+            height: 20rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .product-img-holder {
+        &_short {
+            height: 16rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product-item_best {
+        width: 24%;
+    }
+
+    .product {
+        &-list {
+            &_best {
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+
+            &_featured {
+                max-height: 280px;
+            }
+        }
+
+        &-item {
+            &_best:first-child {
+                width: 100%;
+            }
+
+            &_featured {
+                width: 32%;
+            }
         }
     }
 }

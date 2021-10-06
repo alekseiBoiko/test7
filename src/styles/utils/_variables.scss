@@ -10,7 +10,7 @@ $colors: (
 	header-bg: inherit,
 	header-color: inherit,
 	header-bg_fixed: white,
-	burger-bg: inherit,
+	burger-bg: $gray,
 	burger-bg_hovered: $main,
 	logo-bg: inherit,
 	logo-color: $main,
@@ -47,7 +47,8 @@ $colors: (
 	label-cart-color: #777,
 	payment-description-bg: #f8f8f8,
 	tabs-bg: $lightGray,
-	tabs-review-date-color: #999
+	tabs-review-date-color: #999,
+	rate-border: #ff9600
 );
 
 @function color($key) {
@@ -79,10 +80,11 @@ $fonts: (
 }
 
 $font-sizes: (
+	-4: 0.6rem,
 	-3: 0.75rem,
 	-2: 0.8125rem,
 	-1: 0.875rem,
-	1: 1rem,
+	1: 16px,
 	2: 1.125rem,
 	3: 1.5rem,
 	4: 1.875rem,
@@ -133,6 +135,7 @@ $element-heights: (
 $grayBorder: 1px solid color(border);
 $darkGrayBorder: 1px solid color(border-dark);
 $collectionBorder: 10px double color(collection-border);
+$orangeBorder: 1px solid color(rate-border);
 
 $boxShadowHovered: $main;
 

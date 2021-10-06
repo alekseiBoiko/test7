@@ -40,7 +40,19 @@
 
 // properties for header/footer elements
 @mixin edge-color($edgeColor) {
-	background-color: $edgeColor;
-	color: invert($edgeColor);
 	height: 3.75rem;
+	color: invert($edgeColor);
+	background-color: $edgeColor;
 }
+
+@mixin rateList($number) {
+	@for $r from 1 to $number+1 {
+		.rate-item_#{$r} {
+			@extend .rate-item;
+			@extend .product__rate;
+			@extend .product__rate_midle;
+		}
+	}
+}
+
+

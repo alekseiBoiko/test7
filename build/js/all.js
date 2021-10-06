@@ -13,6 +13,7 @@ function keyPress() {
   }
 
   function basketTotal() {
+    var coupon = $('.cart__coupon').html();
     cart = $('.table_cart tbody');
     (total = $('.table_calculation .cart__subtotal')), (total_value = 0);
     (grandTotal = $('.table_calculation .cart__total')), (grandTotal_value = 0);
@@ -26,11 +27,11 @@ function keyPress() {
         sum_value = price * count;
         sum.text('$'+sum_value);
         total_value += sum_value;
-        // console.log(total_value);
         //   packing.html(packege);
     });
     total.html('$'+total_value);
-    grandTotal.html('$'+(total_value-50));
+    
+    grandTotal.html('$'+(total_value+(+coupon)));
   }
 
   function deleteRow(e) {
@@ -57,10 +58,10 @@ $(function(){
 //   END CART
 
 function changeHamburger() {
-    $('.menu-btn').on('click', function(e) {
+    $('.btn_menu').on('click', function(e) {
       e.preventDefault();
-      $(this).toggleClass('menu-btn_active');
-      $('.nav-block').toggleClass('nav_active');
+      $(this).toggleClass('btn_menu_active');
+      $('.header-nav-list').toggleClass('header-nav-list_active');
     })
 };
 
@@ -211,8 +212,21 @@ function initRaty(starClass) {
   });
 }
 
+function rateList(number){
+  
+  for (let r=1;r<number;r++) {
+    'use strict';
+    $('.rate-item_' + r).raty({
+      number: r,
+      starOff: 'img/star-off.png',
+      starOn: 'img/star-on.png',
+    });  
+  }
+}
+
 $(function(){
   initRaty('.product__rate');
+  rateList('6');
 })
 
 // END RATE STARS

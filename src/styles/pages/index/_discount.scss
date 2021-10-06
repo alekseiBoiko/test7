@@ -25,7 +25,7 @@
         }
 
         &-info-holder {
-            max-width: 38rem;
+            max-width: 63.54%;
             color: color(partners-discount-color);
 
             @include flex(unset,column,center,center);
@@ -35,6 +35,7 @@
             margin-bottom: 1em;
             font-weight: 600;
             color: inherit;
+            text-align: center;
             text-transform: capitalize;
         }
 
@@ -47,6 +48,7 @@
     }
 
     &-block {
+        padding: 0 2rem;
         background-color: color(partners-block-bg);
     }
 
@@ -60,12 +62,27 @@
 
     &-item {
         width: 25%;
+        padding: 0 1rem;
 
         @include flex(unset,normal,center,center);
     }
 
     &__img {
+        width: 100%;
+        height: 100%;
         
+    }
+}
 
+@media only screen and (max-width: 480px) {
+    .partners {
+        &-section {
+            flex-wrap: wrap;
+        }
+
+        &-discount, &-block {
+            width: 100%;
+            padding: 2rem 0;
+        }
     }
 }
