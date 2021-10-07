@@ -13,13 +13,13 @@ header.header
       a.btn_menu
         span
       +iconBtn('header-btn', headerBtnList)
-  .search-form-wrapper
+  .wrapper.wrapper_search-form
     form.search-form(action='#')
       input.search-form__input(type='text' placeholder='Search here...')
       button.search-form__btn(type='submit')
         i.fas.fa-search
 .side-bar-start 
-  .side-bar_right-wrapper
+  .wrapper.wrapper_side-bar_right
     include right-side-bar
-  .table_short-wrapper
+  .wrapper.wrapper_table_short
     +shortCartTable(products)

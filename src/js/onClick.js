@@ -4,7 +4,7 @@ function onClick(btnClass, blockClass) {
     $('.'+btnClass).on('click', function(e) {
       e.preventDefault();
       $(this).toggleClass('icon-btn_active');
-      $('.'+blockClass+'-wrapper').toggleClass(blockClass+'-wrapper_active');
+      $('.wrapper_'+blockClass).toggleClass('wrapper_'+blockClass+'_active');
       $('.'+blockClass).toggleClass(blockClass+'_active');
     })
 };

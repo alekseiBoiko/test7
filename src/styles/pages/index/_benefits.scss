@@ -11,7 +11,7 @@
     }
 
     &-list {
-        @include flex(unset,normal,space-between,center);
+        @include flex(wrap,normal,space-between,center);
     }
 
     &-item {
@@ -53,5 +53,13 @@
 
     &__icon, &__title, &__text {
         @include transition(color);
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .benefit-item {
+        width: 48%;
+        padding: 2rem 0;
     }
 }

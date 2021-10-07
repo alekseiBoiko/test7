@@ -34,7 +34,9 @@ mixin shopProductCardList (cardClass, productList = [])
     each i in productList
         if i.number>2 & i.number<8
           li(class=`product-item_${cardClass}`)
-            div(class=`product-img-holder_${cardClass}`) 
+            div(class=`product-img-holder_${cardClass}`)
+              .overlay-img-holder 
+                +iconBtn('card-marker', cardMarkers) 
             div(class=`product-info-holder_${cardClass}`)
               h4(class=`product__title`) #{i.name}
               div(class=`product__price_${cardClass}`) #{i.price}

@@ -6,9 +6,4 @@
     border-bottom: $grayBorder;
 
     @include flex(unset,normal,space-between, center);
-
-    &-select {
-        margin-right: 6rem;
-        border: none;
-    }
 }

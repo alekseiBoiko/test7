@@ -15,7 +15,7 @@ mixin selectCategorie (selectClass, list = [])
       option.select-option #{i}
 
 mixin sortList (selectClass, list = [])
-  select(class=`${selectClass}-select`)
+  select(class=`select_${selectClass}`)
     each i in list
       option.select-option Sort by #{i}
 

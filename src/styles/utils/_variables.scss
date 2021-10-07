@@ -48,7 +48,8 @@ $colors: (
 	payment-description-bg: #f8f8f8,
 	tabs-bg: $lightGray,
 	tabs-review-date-color: #999,
-	rate-border: #ff9600
+	rate-border: #ff9600,
+	table-row-bg: $lightGray
 );
 
 @function color($key) {

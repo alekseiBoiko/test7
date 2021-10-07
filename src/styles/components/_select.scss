@@ -33,4 +33,18 @@
 
         @include flex(wrap,normal,left,flex-start);
     }
+
+    &_sort-line {
+        margin-right: 6rem;
+        background-color: color(body-bg);
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .select {
+        &_sort-line {
+            margin-right: 0;
+        }
+    }
 }

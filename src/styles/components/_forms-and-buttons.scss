@@ -269,7 +269,7 @@
     margin: 0 auto;
     white-space: nowrap;
     vertical-align: middle;
-    background: color(body-bg);
+    // background: color(body-bg);
     transform: translateY(-5rem);
 
     @include transition(transform);

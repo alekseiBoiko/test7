@@ -33,8 +33,10 @@ mixin contacts(navClass, contactData = [])
                 li(class=`${navClass}-contact-item list-title`) #{i.value}
             else
                 li(class=`${navClass}-contact-item`)
-                    i(class=`fas fa-${i.iconPrefix}`)
-                    a(class=`${navClass}-contact__link` href=i.url) #{i.value}
+                    dt 
+                        i(class=`fas fa-${i.iconPrefix}`)
+                    dd  
+                        a(class=`${navClass}-contact__link` href=i.url) #{i.value}
 
     //- <i class="fas fa-globe"></i>
     //- <i class="fas fa-phone"></i>

@@ -41,6 +41,7 @@
 
     &-contact-item {
         @include transition(color);
+        @include flex(unset, unset, left, unset);
 
         &:hover {
             color: $main;
@@ -81,6 +82,7 @@
         .copyright {
             width: 100%;
             padding: 1rem 0;
+            text-align: center;
         }
 
         .edge_black {

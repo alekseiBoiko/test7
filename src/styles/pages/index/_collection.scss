@@ -126,3 +126,20 @@
         }
     }
 }
+
+@media only screen and (max-width: 320px) {
+    .collection {
+        &-list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &-item {
+            width: 100%;
+        }
+
+        &-link {
+            min-height: 12rem;
+        }
+    }
+}
