@@ -13,17 +13,20 @@
         padding-top: 2.5rem;
     }
 
-    &-nav-list, &-contact-list {
+    &-nav-list {
         width: 25%;
-        min-height: 18.5rem;
     }
 
-    &-nav-item, &-contact-item {
+    &-nav-item {
         margin-bottom: 1.125rem;
 
         &:first-child {
             margin-bottom: 2.25rem;
-            font-size: font-size(1);
+            font-size: 1rem;
+        }
+
+        &:last-child {
+            margin-bottom: 4rem;
         }
     }
 
@@ -43,7 +46,7 @@
         @include transition(color);
         @include flex(unset, unset, left, unset);
 
-        &:hover {
+        &:not(.list-title):hover {
             color: $main;
         }
     }
@@ -68,15 +71,31 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     .footer {
         &-socials-text {
             width: 60%;
         }
 
-        &-nav-list, &-contact-list {
+        &-nav-list {
             width: 50%;
-            min-height: 14.5rem;
+
+            .footer-nav-item:not(.list-title) {
+                display: none;
+            }
+
+            &.visible .footer-nav-item,  {
+                display: block;
+                // text-align: center;
+            }
+        }
+
+        &-nav-item {
+            text-align: center;
+
+            &:last-child {
+                margin-bottom: 2rem;
+            }
         }
 
         .copyright {
@@ -90,8 +109,26 @@
         }
 
         &-cards-holder {
-            width: 100%;
+            width: 75%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }   
+
+        &-socials {
+            &-text {
+                width: 100%;
+                padding-top: 0.5rem;
+                text-align: center;
+            }
+
+            &-holder {
+                width: 50%;
+                margin: 0 auto;
+            }
         }
     }
 
+    .payment-cards-img {
+        height: 1.5rem;
+    }
 }

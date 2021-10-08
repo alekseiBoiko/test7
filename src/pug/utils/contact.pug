@@ -27,16 +27,29 @@
     ]
 
 mixin contacts(navClass, contactData = [])
-    ul(class=`${navClass}-contact-list`)
-        each i in contactData
-            if i.url==''
-                li(class=`${navClass}-contact-item list-title`) #{i.value}
-            else
-                li(class=`${navClass}-contact-item`)
-                    dt 
-                        i(class=`fas fa-${i.iconPrefix}`)
-                    dd  
-                        a(class=`${navClass}-contact__link` href=i.url) #{i.value}
+    if navClass=='footer'
+        ul(class=`${navClass}-contact-list ${navClass}-nav-list`)
+            each i in contactData
+                if i.url==''
+                    li(class=`${navClass}-nav-item list-title`) #{i.value}
+                else
+                    li(class=`${navClass}-nav-item ${navClass}-contact-item`)
+                        dt 
+                            i(class=`fas fa-${i.iconPrefix}`)
+                        dd  
+                            a(class=`${navClass}-contact__link` href=i.url) #{i.value}
+    else
+        ul(class=`${navClass}-contact-list`)
+            each i in contactData
+                if i.url==''
+                    li(class=`${navClass}-contact-item list-title`) #{i.value}
+                else
+                    li(class=`${navClass}-contact-item`)
+                        dt 
+                            i(class=`fas fa-${i.iconPrefix}`)
+                        dd  
+                            a(class=`${navClass}-contact__link` href=i.url) #{i.value}
+
 
     //- <i class="fas fa-globe"></i>
     //- <i class="fas fa-phone"></i>

@@ -19,7 +19,9 @@ header.header
       button.search-form__btn(type='submit')
         i.fas.fa-search
 .side-bar-start 
+  .wrapper.wrapper_side-bar_left
+    +sideBar('left')
   .wrapper.wrapper_side-bar_right
-    include right-side-bar
+    +sideBar('right')
   .wrapper.wrapper_table_short
     +shortCartTable(products)

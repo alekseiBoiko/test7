@@ -71,7 +71,7 @@
             &-item {
                 @include transition(color);
 
-                .icon-btn_active, &:hover {
+                &:hover {
                     color: $main;
                 }
             }
@@ -102,11 +102,16 @@
         right: 0;
     }
 
+    &_side-bar_left {
+        top: 0;
+        left: 0;
+    }
+
     &_table_short {
         width: 60vw;
     }
 
-    &_search-form, &_side-bar_right, &_table_short {
+    &_search-form, &_side-bar_right, &_side-bar_left, &_table_short  {
         &_active {
             visibility: visible;
             opacity: 1;

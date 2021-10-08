@@ -2,17 +2,21 @@
     width: 18.75rem;
     padding-right: 2.5rem;
     padding-left: 1rem;
-    // margin-top: -3.125rem;
     font-size: font-size(-1);
     background-color: color(body-bg);
 
     @include flex(unset,column,space-between, flex-start);
-   
+
     &_right {
         transform: translateX(20rem);
+    }
 
+    &_left {
+        transform: translateX(-20rem);
+    }
+
+    &_right, &_left {
         @include transition(transform);
-        @extend .side-bar;
 
         &_active {
             transform: translateX(0);
@@ -26,6 +30,10 @@
 
         &:first-child {
             padding-top: 0;
+        }
+
+        &_right {
+            display: none;
         }
 
         .categories-nav {

@@ -1,6 +1,6 @@
 .count-holder {
 	width: $cardElHolderWidth;
-	height: $cardElHeight;
+	height: element-height(m);
 	margin: 2rem 0;
 }
 
@@ -57,4 +57,11 @@
 	width: 100%;
 	text-align: center;
 	font-size: font-size(2);
+}
+
+@media only screen and (max-width: 768px) {
+	.count-holder {
+    	width: 100%;
+		margin: 1rem 0;
+	}
 }

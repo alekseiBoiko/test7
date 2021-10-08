@@ -13,6 +13,7 @@ $(function(){
     onClick('header-btn-search','search-form');
     onClick('header-btn-bars','side-bar_right');
     onClick('header-btn-shopping-cart','table_short');
+    onClick('btn_filter','side-bar_left');
 })
 
 // END ON CLICK BTNS

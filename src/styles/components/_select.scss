@@ -13,12 +13,12 @@
 
     &_size {
         background: transparent url("/img/arrow-down.png") no-repeat 96.5% center;
-        background-size: 8px;
+        background-size: 0.5rem;
     }
 
     &_color {
         background: transparent url("/img/square.png") no-repeat 96.5% center;
-        background-size: 20px;
+        background-size: 1.25rem;
     }
 
     &:first-child {
@@ -46,5 +46,14 @@
         &_sort-line {
             margin-right: 0;
         }
+
+        &_color {
+            background-size: 0.5rem;
+        }
+
+        &-holder {
+            padding-top: 1rem;
+        }
     }
 }
+

@@ -16,3 +16,11 @@
 }
 
 @include rateList(5);
+
+@media only screen and (max-width: 768px) {
+    .rate {
+        &-list {
+            padding: 0 1rem;
+        }
+    }
+}    

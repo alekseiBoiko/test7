@@ -1,0 +1,23 @@
+mixin sideBar(classPrefix)
+    ul(class=`side-bar side-bar_${classPrefix}`) 
+        li.side-bar-item
+            +categoriesList('categories', categorieList)
+        li(class=`side-bar-item side-bar-item_${classPrefix}`)
+            h5.list-title Price filter:
+            +sliderRange()
+        li(class=`side-bar-item side-bar-item_${classPrefix}`)
+            +filterCategorie('size',sizeList)
+        li(class=`side-bar-item side-bar-item_${classPrefix}`)
+            +filterCategorie('color',colorList)
+        li.side-bar-item
+            +topProductCard('top', products)
+        li.add-holder
+            img.add__img(src='../../img/discount-add.png' alt='advert')
+            .add-slogan
+                ul.star-list 
+                    - for (var x = 0; x < 3; x++)
+                        li.star-item
+                            i.fas.fa-star
+                span.add__info Up to 30% off
+                .add__line 
+                span.add__description Hot & Trendy Clother

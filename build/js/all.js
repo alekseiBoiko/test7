@@ -1,3 +1,21 @@
+// ACCORDION FOOTER NAV
+
+function accordion() {
+    $('.footer-nav-list').each(function () {
+        var cur = $(this),
+            curTitle = cur.find('.list-title');
+        curTitle.on('click', function (e) {
+          e.preventDefault();
+          cur.toggleClass('visible').siblings().removeClass('visible');
+        });
+    });
+}
+
+
+$(function(){
+    accordion();
+})
+// END ACCORDION
 // CART FUNCTIONS
 
 function keyPress() {
@@ -246,6 +264,7 @@ $(function(){
     onClick('header-btn-search','search-form');
     onClick('header-btn-bars','side-bar_right');
     onClick('header-btn-shopping-cart','table_short');
+    onClick('btn_filter','side-bar_left');
 })
 
 // END ON CLICK BTNS
