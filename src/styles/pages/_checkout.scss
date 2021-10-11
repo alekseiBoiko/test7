@@ -4,7 +4,7 @@
         padding: 0 1rem 6rem;
         font-size: font-size(-1);
 
-        @include flex(unset, normal, space-between, unset);
+        @include flex(wrap, normal, space-between, unset);
     }
 
     &-item:first-child {
@@ -18,6 +18,8 @@
 
 .billing-details {
     &-list {
+        padding-bottom: 1rem;
+
         @include flex(wrap, normal, space-between, unset);
     }
 
@@ -50,5 +52,11 @@
         padding: 0.5rem 1rem;
         margin: 1rem 0;
         background-color: color(payment-description-bg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .checkout-item:first-child, .checkout-item:last-child {
+        width: 100%;
     }
 }

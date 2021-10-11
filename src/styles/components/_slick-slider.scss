@@ -170,3 +170,20 @@
         right: 2.25rem;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    .slick {
+        &-prev, &-next {
+            &_card {
+                top: 72px;
+                width: 2rem;
+                height: 2rem;
+                opacity: 1;
+            }
+        }
+
+        &-slide {
+            min-height: 70px;
+        }
+    }
+}

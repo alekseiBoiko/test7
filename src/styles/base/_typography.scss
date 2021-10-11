@@ -164,6 +164,10 @@ img {
     html {
         font-size: font-size(-3);
     }
+
+    .holder_short {
+        width: 75vw;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -174,11 +178,4 @@ img {
     h4 {
         font-size: font-size(-1);
     }
-
-    .holder_short {
-        width: 75vw;
-    }
 }
-
-// @media only screen and (max-width: 320px) {
-// }

@@ -14,6 +14,8 @@ mixin shopProductCard (cardClass)
   div(class=`product-card_${cardClass}`)
     div(class=`product-img-carousel-holder`)
       div(class=`product-img-holder_${cardClass}`)
+        .overlay-img-holder 
+          +iconBtn('card-marker', cardMarkers) 
       .product-carousel-holder
         +carousel('6')
     div(class=`product-info-holder_${cardClass}`)

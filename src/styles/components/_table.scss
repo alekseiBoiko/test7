@@ -122,7 +122,7 @@
         }
 
         &_btn {
-            width: 32.63%;
+            min-width: 32.63%;
         }
 
         &-holder_horizontal {
@@ -130,7 +130,7 @@
         }
 
         &-holder_right {
-            height: element-height(s);
+            min-height: element-height(s);
             margin: 1rem 0;
 
             @include flex(unset,normal,right, center);
@@ -178,7 +178,7 @@
         }
 
         &_calculation_wide {
-            min-height: 5.05rem;
+            height: 5.05rem;
         }
     }
 
@@ -187,67 +187,96 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .table_short {
-        thead, tbody, th, td, tr {
-            display: block;
+// @media only screen and (max-width: 768px) {
+//     // .table_comparison {
+//     //     thead, tbody, th, td, tr {
+//     //         display: block;
+//     //     }
+
+//     //     th {
+//     //         position: absolute;
+//     //         top: -9999px;
+//     //         left: -9999px;
+//     //     }
+//     // }
+// }
+
+@media only screen and (max-width: 768px) {
+    .table {
+        &_short, &_wishlist, &_cart {
+            thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr, tfoot tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr:nth-of-type(odd) { 
+                background: color(table-row-bg);
+
+                td {
+                    border-top: 1px solid white;
+                }
+            }
+
+            tr:nth-of-type(even) { 
+                // background: color(table-row-bg);
+
+                td {
+                    border-top: $grayBorder;
+                }
+            }
+
+            td { 
+                position: relative;
+                padding-left: 40%;
+                text-align: center;
+                border: none;
+            }
+
+            td:before { 
+                position: absolute;
+                top: 1.125rem;
+                left: 6px;
+                width: 25%;
+                margin-right: 1rem;
+                font-size: font-size(-1);
+                text-align: left;
+                white-space: nowrap;
+            }
+
+            .table-cell_product, td:first-child {
+                min-width: 100%;
+            }
+
+            .table-cell-holder_horizontal {
+                flex-wrap: wrap;
+                width: 100%;
+            }
         }
 
-        thead tr { 
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
+        &_short {
+            td:nth-of-type(1):before { content: "Products"; }
+            td:nth-of-type(2):before { content: "Quantity"; }
+            td:nth-of-type(3):before { content: "Price"; }
+            td:nth-of-type(4):before { content: "Total"; }
         }
 
-        tr:nth-of-type(odd) { 
-            background: color(table-row-bg);
+        &_wishlist {
+            td:nth-of-type(1):before { content: "Products"; }
+            td:nth-of-type(2):before { content: 'Color & Size'; }
+            td:nth-of-type(3):before { content: "Price"; }
         }
 
-        td { 
-            /* Behave  like a "row" */
-            position: relative;
-            padding-left: 30%;
-            text-align: center;
-            border: none;
-            // border-bottom: 1px solid #eee; 
-
-        }
-
-        td:before { 
-            /* Now like a table header */
-            position: absolute;
-            /* Top/left values mimic padding */
-            top: 6px;
-            left: 6px;
-            width: 25%;
-            margin-right: 1rem;
-            font-size: font-size(-1);
-            text-align: left;
-            white-space: nowrap;
-        }
-
-        /*
-        Label the data
-        */
-        td:nth-of-type(1):before { content: "Products"; }
-        td:nth-of-type(2):before { content: "Quantity"; }
-        td:nth-of-type(3):before { content: "Price"; }
-        td:nth-of-type(4):before { content: "Total"; }
-
-        .table-cell_product, td:first-child {
-            min-width: 100%;
-        }
-
-        .table-cell-holder_horizontal {
-            flex-direction: column;
-            align-items: stretch;
+        &_cart {
+            td:nth-of-type(1):before { content: "Products"; }
+            td:nth-of-type(2):before { content: "Color & Size"; }
+            td:nth-of-type(3):before { content: "Quantity"; }
+            td:nth-of-type(4):before { content: "Price"; }
+            td:nth-of-type(5):before { content: "Total"; }
         }
     }
 }
-
-@media only screen and (max-width: 320px) {
-    .product-img-holder_table_wishlist {
-        display: none;
-    }
-}
-    /* Hide table headers (but not display: none;, for accessibility) */
