@@ -186,7 +186,7 @@
                 height: 6.25rem;
 
                 &_comparison {
-                    margin: 0 auto;
+                    margin: 2rem auto;
 
                     @extend .product-img-holder_table;
                 }
@@ -327,6 +327,10 @@
         &_shop-list {
             width: 17rem;
             margin-top: 1.5rem;
+        }
+
+        &_comparison {
+            @include flex(unset,column,center, center);
         }
     }
 }

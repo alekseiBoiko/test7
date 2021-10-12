@@ -1,9 +1,12 @@
+
+// - COLORS -
+
+// MAIN COLORS
 $main: #3cb878;
 $gray: #777;
 $lightGray: #f5f6f9;
 
-// COLORS
-
+// COLORS MAP
 $colors: (
 	body-bg: white,
 	body-color: black,
@@ -52,6 +55,7 @@ $colors: (
 	table-row-bg: $lightGray
 );
 
+// COLORS USING FUNCTION
 @function color($key) {
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);
@@ -85,7 +89,7 @@ $font-sizes: (
 	-3: 0.75rem,
 	-2: 0.8125rem,
 	-1: 0.875rem,
-	1: 16px,
+	1: 1rem,
 	2: 1.125rem,
 	3: 1.5rem,
 	4: 1.875rem,

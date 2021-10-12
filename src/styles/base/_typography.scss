@@ -1,6 +1,5 @@
 html {
-    // width: 100vw;
-    font-size: font-size(1);
+    font-size: 16px;
 }
 
 body {
@@ -59,8 +58,7 @@ h4 {
 
 .holder {
     &_main {
-        // width: 111.5rem;
-        width: 93vw;
+        width: 93%;
         @extend %with-holder;
 
         &_centered {
@@ -77,9 +75,8 @@ h4 {
 
     &_short {
         position: relative;
-        // width: 73.25rem;
-        width: 61vw;
-        min-height: 100%;
+        width: 61%;
+        height: 100%;
         @extend %with-holder;
 
         &_centered {
@@ -162,7 +159,7 @@ img {
 
 @media only screen and (max-width: 768px) {
     html {
-        font-size: font-size(-3);
+        font-size: 12px;
     }
 
     .holder_short {

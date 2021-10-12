@@ -88,7 +88,7 @@ h4 {
   align-items: unset; }
 
 .holder_main, .holder_main_centered, .holder_main_started {
-  width: 93vw; }
+  width: 93%; }
   .holder_main_centered {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -101,8 +101,8 @@ h4 {
 
 .holder_short, .holder_short_centered, .holder_short_started {
   position: relative;
-  width: 61vw;
-  min-height: 100%; }
+  width: 61%;
+  height: 100%; }
   .holder_short_centered {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -162,7 +162,7 @@ h4 {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem; }
 
-.text, .description, .input_custom::placeholder, .range-input::placeholder, .input_review::placeholder, .product__description, .product__description_shop-list, .label, .label_cart, .label_checkout, .label_payment {
+.text, .description, .input_custom::placeholder, .range-input::placeholder, .input_review::placeholder, .product__description, .product__description_shop-list, .label, .label_cart, .label_checkout, .label_payment, .table-cell_comparison_price::before {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem; }
 
@@ -207,7 +207,7 @@ img {
 
 @media only screen and (max-width: 768px) {
   html {
-    font-size: 0.75rem; }
+    font-size: 12px; }
   .holder_short, .holder_short_centered, .holder_short_started {
     width: 75vw; } }
 
@@ -1617,7 +1617,7 @@ img {
     width: 5rem;
     height: 6.25rem; }
     .product-img-holder_table_comparison {
-      margin: 0 auto; }
+      margin: 2rem auto; }
     .product-img-holder_table_wishlist {
       margin-right: 1rem; }
 
@@ -1727,6 +1727,23 @@ img {
 .product-btn-holder_shop-list {
   width: 17rem;
   margin-top: 1.5rem; }
+
+.product-btn-holder_comparison {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: unset;
+  flex-wrap: unset;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .card-marker-list {
   height: 100%; }
@@ -2166,6 +2183,63 @@ img {
 
 .table_comparison {
   margin: 0 1rem 11rem; }
+  .table_comparison tbody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .table_comparison tbody tr {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: unset;
+      flex-wrap: unset;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+      justify-content: unset;
+      -webkit-box-align: unset;
+      -ms-flex-align: unset;
+      align-items: unset; }
+    .table_comparison tbody tr:first-child td {
+      position: relative;
+      width: 29.5rem;
+      padding-left: 10.625rem; }
+      .table_comparison tbody tr:first-child td::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 8.5rem;
+        white-space: nowrap;
+        border-right: 1px solid #efefef; }
+      .table_comparison tbody tr:first-child td:nth-of-type(1):before {
+        content: "Products"; }
+      .table_comparison tbody tr:first-child td:nth-of-type(2):before {
+        content: "Image"; }
+      .table_comparison tbody tr:first-child td:nth-of-type(3):before {
+        content: "Price"; }
+      .table_comparison tbody tr:first-child td:nth-of-type(4):before {
+        content: "Rating"; }
+      .table_comparison tbody tr:first-child td:nth-of-type(5):before {
+        content: "Model"; }
+      .table_comparison tbody tr:first-child td:nth-of-type(6):before {
+        content: "Brand"; }
+      .table_comparison tbody tr:first-child td:nth-of-type(7):before {
+        content: "Summary"; }
+      .table_comparison tbody tr:first-child td:nth-of-type(8):before {
+        content: "Add"; }
 
 .table_wishlist {
   margin: 0 1rem 7rem; }
@@ -2222,6 +2296,7 @@ img {
     min-width: 50%; }
 
 .table-cell, .table-cell_product, .table-cell_size, .table-cell_total, .table-cell_header, .table-cell_price, .table-cell_btn {
+  min-height: 3.1875rem;
   padding: 1.125rem 1.8rem;
   line-height: 1.5;
   vertical-align: middle;
@@ -2234,7 +2309,7 @@ img {
     width: 8.75rem;
     text-align: center; }
   .table-cell_price {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center; }
   .table-cell_btn {
     min-width: 32.63%; }
@@ -2285,6 +2360,10 @@ img {
     font-size: 0.875rem; }
   .table-cell_calculation-value {
     font-size: 1.125rem; }
+  .table-cell_comparison_description {
+    min-height: 8rem; }
+  .table-cell_comparison_price {
+    font-size: 1rem; }
 
 .table-row {
   min-height: 3.625rem; }
@@ -2317,15 +2396,15 @@ img {
     padding-left: 40%;
     text-align: center;
     border: none; }
-  .table_short td:before, .table_wishlist td:before, .table_cart td:before {
-    position: absolute;
-    top: 1.125rem;
-    left: 6px;
-    width: 25%;
-    margin-right: 1rem;
-    font-size: 0.875rem;
-    text-align: left;
-    white-space: nowrap; }
+    .table_short td:before, .table_wishlist td:before, .table_cart td:before {
+      position: absolute;
+      top: 1.125rem;
+      left: 6px;
+      width: 25%;
+      margin-right: 1rem;
+      font-size: 0.875rem;
+      text-align: left;
+      white-space: nowrap; }
   .table_short .table-cell_product, .table_short td:first-child, .table_wishlist .table-cell_product, .table_wishlist td:first-child, .table_cart .table-cell_product, .table_cart td:first-child {
     min-width: 100%; }
   .table_short .table-cell-holder_horizontal, .table_wishlist .table-cell-holder_horizontal, .table_cart .table-cell-holder_horizontal {
@@ -2355,7 +2434,61 @@ img {
   .table_cart td:nth-of-type(4):before {
     content: "Price"; }
   .table_cart td:nth-of-type(5):before {
-    content: "Total"; } }
+    content: "Total"; }
+  .table_comparison tbody tr:first-child td {
+    width: 21.5rem; } }
+
+@media only screen and (max-width: 480px) {
+  .table_comparison tbody {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .table_comparison tbody tr, .table_comparison tbody tr:first-child {
+      margin-bottom: 1rem; }
+      .table_comparison tbody tr td, .table_comparison tbody tr:first-child td {
+        position: relative;
+        width: 100%;
+        padding-left: 10.625rem; }
+        .table_comparison tbody tr td::before, .table_comparison tbody tr:first-child td::before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          width: 8.5rem;
+          white-space: nowrap;
+          border-right: 1px solid #efefef; }
+        .table_comparison tbody tr td:nth-of-type(1):before, .table_comparison tbody tr:first-child td:nth-of-type(1):before {
+          content: "Products"; }
+        .table_comparison tbody tr td:nth-of-type(2):before, .table_comparison tbody tr:first-child td:nth-of-type(2):before {
+          content: "Image"; }
+        .table_comparison tbody tr td:nth-of-type(3):before, .table_comparison tbody tr:first-child td:nth-of-type(3):before {
+          content: "Price"; }
+        .table_comparison tbody tr td:nth-of-type(4):before, .table_comparison tbody tr:first-child td:nth-of-type(4):before {
+          content: "Rating"; }
+        .table_comparison tbody tr td:nth-of-type(5):before, .table_comparison tbody tr:first-child td:nth-of-type(5):before {
+          content: "Model"; }
+        .table_comparison tbody tr td:nth-of-type(6):before, .table_comparison tbody tr:first-child td:nth-of-type(6):before {
+          content: "Brand"; }
+        .table_comparison tbody tr td:nth-of-type(7):before, .table_comparison tbody tr:first-child td:nth-of-type(7):before {
+          content: "Summary"; }
+        .table_comparison tbody tr td:nth-of-type(8):before, .table_comparison tbody tr:first-child td:nth-of-type(8):before {
+          content: "Add"; }
+    .table_comparison tbody tr:nth-of-type(even) {
+      background: #f5f6f9; } }
+
+@media only screen and (max-width: 320px) {
+  .table_comparison tbody tr td::before, .table_comparison tbody tr:first-child td::before {
+    width: 4.5rem; }
+  .table_comparison tbody tr td, .table_comparison tbody tr:first-child td {
+    padding-left: 6rem; } }
 
 .select {
   width: 41%;
