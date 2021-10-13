@@ -5,7 +5,7 @@ mixin topProductCard(cardClass, navList = [])
       if i.rate > 4
         li(class=`product-item_${cardClass}`)
           a(href=i.url, class=`product-link_${cardClass}`) 
-            div(class=`product-img-holder_${cardClass}`) 
+            div(class=`product-img-holder_small`) 
             div(class=`product-info-holder_${cardClass}`)
               h6(class=`product__title_${cardClass}`) #{i.name} 
               div(class=`product__price_${cardClass}`) #{i.price}

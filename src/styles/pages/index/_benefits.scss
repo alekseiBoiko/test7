@@ -4,18 +4,18 @@
     }
 
     &-section {
-        min-height: 12.5rem;
         background-color: color(benefits-bg);
-
-        @include flex(unset,normal,space-between,center);
     }
 
     &-list {
+        height: 100%;
+
         @include flex(wrap,normal,space-between,center);
     }
 
     &-item {
         width: 25%;
+        padding: 3rem 0;
     }
 
     &-link {

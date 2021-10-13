@@ -10,11 +10,13 @@
     }
 
     &__title {
+        width: 100%;
         margin-bottom: 0.5rem;
         text-transform: uppercase;
     }
 
     &__text {
+        width: 100%;
         margin-top: 2rem;
         font-size: font-size(-1);
         font-weight: 500;

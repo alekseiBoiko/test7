@@ -1,7 +1,7 @@
 .overlay-img-holder {
     opacity: 0;
 
-    @include flex(unset,normal,right, flex-start);
+    @include flex(unset,normal,flex-end, flex-start);
     @include transition(opacity);
 }
 
@@ -82,7 +82,7 @@
     &-link {
         &_top {
             width: 100%;
-            height: 6.3125rem;
+            height: max-content;
             margin-right: -0.875rem;
 
             @include flex(unset,normal,space-between, flex-start);
@@ -136,15 +136,13 @@
                 opacity: 0.8;
             }
 
-            
-            &_top, &_shop, &_short, &_shop-list, &_grid, &_slider, &_related, &_table {
+            &_small, &_shop, &_short, &_shop-list, &_grid, &_slider, &_related, &_table {
                 @extend .product-img-holder;
             }
 
-            &_top {
-                width: 7rem;
-                height: 100%;
-                margin-right: 0.875rem;
+            &_small {
+                width: 5rem;
+                height: 6.25rem;
             }
 
             &_shop {
@@ -182,19 +180,16 @@
             }
 
             &_table {
-                width: 5rem;
-                height: 6.25rem;
-
                 &_comparison {
                     margin: 2rem auto;
 
-                    @extend .product-img-holder_table;
+                    @extend .product-img-holder_small;
                 }
 
                 &_wishlist {
                     margin-right: 1rem;
 
-                    @extend .product-img-holder_table;
+                    @extend .product-img-holder_small;
                 }
             }
 
@@ -209,9 +204,8 @@
 
     &-info-holder {
         &_top {
-            height: 100%;
-
-            @include flex(unset,column,space-between, flex-start);
+            width: 60%;
+            padding-left: 0.875rem;
         }
 
         &_shop {
@@ -246,10 +240,12 @@
         font-weight: 600;
 
         &_top {
+            padding-bottom: 2rem;
             font-weight: 500;
         }
 
         &_short {
+            width: 100%;
             font-size: font-size(-1);
 
             @extend .product__title;
@@ -373,6 +369,16 @@
             }
         }
 
+        &-info-holder {
+            &_short {
+                width: 100%;
+            }
+        }
+
+        &__title_short {
+            min-height: 2em;
+        }
+
         &__description_shop-list {
             margin-bottom: 1rem;
         }
@@ -407,10 +413,6 @@
             &_featured {
                 max-height: 280px;
             }
-
-            // &_related {
-            //     height: 23rem;
-            // }
         }
 
         &-item {
@@ -425,10 +427,6 @@
             &_best {
                 width: 24%;
             }
-
-            // &_related {
-            //     height: 23rem !important;
-            // }
         }
 
         &-img {
@@ -445,10 +443,6 @@
             &-item {
                 width: 7rem !important;
             }
-        }
-
-        &__title_short {
-            min-height: 2em;
         }
 
         &__categorie {
@@ -509,7 +503,6 @@
 
             &-item {
                 width: 4rem !important;
-                // margin-right: 0.5rem;
             }
         }
 

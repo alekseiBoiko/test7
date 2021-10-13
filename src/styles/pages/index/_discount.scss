@@ -1,12 +1,11 @@
 .partners {
     &-section {
-        min-height: 18.75rem;
-
         @include flex(unset,normal,space-between,unset);
     }
 
     &-discount, &-block {
         width: 50%;
+        padding: 4rem 0;
     }
 
     &-discount {
@@ -16,6 +15,10 @@
 
         &::before {
             position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             z-index: -1;
             width: 100%;
             height: 100%;
@@ -25,13 +28,14 @@
         }
 
         &-info-holder {
-            max-width: 63.54%;
+            width: 63.54%;
             color: color(partners-discount-color);
 
             @include flex(unset,column,center,center);
         }
 
         &__title {
+            width: 100%;
             margin-bottom: 1em;
             font-weight: 600;
             color: inherit;
@@ -40,6 +44,7 @@
         }
 
         &__text {
+            width: 100%;
             padding: 0 2rem;
             margin-bottom: 2rem;
             color: inherit;

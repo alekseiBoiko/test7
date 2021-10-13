@@ -23,6 +23,7 @@ mixin collectionList(classPrefix, collectionList = [])
         each i in collectionList
             li(class=`${classPrefix}-item`)
                 a(href=`${i.url}.html`, class=`${classPrefix}-link collection-description`) 
-                    .collection__notes #{i.note}
-                    .collection__title #{i.name}
-                    .collection__notes winter collection
+                    .collection-info-holder
+                      .collection__notes #{i.note}
+                      .collection__title #{i.name}
+                      .collection__notes winter collection

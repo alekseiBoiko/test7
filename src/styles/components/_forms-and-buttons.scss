@@ -4,7 +4,7 @@
     }
 
     &_partners {
-        min-height: element-height(m);
+        height: element-height(m);
 
         @include flex(unset,normal,space-between,unset);
     }
@@ -131,6 +131,24 @@
         &:hover {
             color: color(btn-color);
             background-color: color(btn-bg);
+        }
+    }
+
+    &_welcome {
+        min-width: 7.5rem;
+        min-height: 2.3125rem;
+        padding: 0.5rem;
+        font-size: font-size(-1);
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 3px solid color(welcome-color);
+    
+        @include transition(background-color);
+        @include flex(unset,normal,center,center);
+    
+        &:hover {
+            background-color: $main;
         }
     }
 
@@ -307,23 +325,6 @@
         background: color(search-input-btn);
         border: none;
         border-radius: 0 5px 5px 0;
-    }
-}
-
-.welcome__btn {
-    min-width: 7.5rem;
-    min-height: 2.3125rem;
-    font-size: font-size(-1);
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: transparent;
-    border: 2px solid color(welcome-color);
-
-    @include transition(background-color);
-    @include flex(unset,normal,center,center);
-
-    &:hover {
-        background-color: $main;
     }
 }
 

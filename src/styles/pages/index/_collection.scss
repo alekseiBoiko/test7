@@ -6,7 +6,8 @@
     }
 
     &-item {
-        width: 33%;
+        width: 33.33%;
+        @include flex(unset,normal,center,unset);
 
         &:nth-child(2) {
             background-color: color(collection-bg2);
@@ -16,12 +17,29 @@
                 font-size: 4.5rem;
             }
         }
+
+        // &::before {
+        //     position: absolute;
+        //     top: 25%;
+        //     left: 25%;
+        //     width: 18rem;
+        //     height: 18rem;
+        //     content: '';
+        //     border: $collectionBorder;
+        //     transform: rotate(45deg);
+
+        //     @include flex(unset,normal,center,center);
+        //     @include transition(border-color opacity);
+        // }
+
     }
+
+    
 
     &-link {
         position: relative;
         width: 100%;
-        min-height: 40rem;
+        padding: 16rem 0;
         overflow: hidden;
         font-family: font(fjala);
         color: color(btn-color);
@@ -30,12 +48,22 @@
         text-transform: uppercase;
         white-space: nowrap;
 
+        
+    }
+
+    &-info-holder {
+        width: 100%;
         @include flex(unset,column,center,center);
 
         &::before {
             position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             width: 18rem;
             height: 18rem;
+            margin: auto;
             content: '';
             border: $collectionBorder;
             transform: rotate(45deg);
