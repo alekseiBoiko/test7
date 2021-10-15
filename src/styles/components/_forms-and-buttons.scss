@@ -6,13 +6,13 @@
     &_partners {
         height: element-height(m);
 
-        @include flex(unset,normal,space-between,unset);
+        @include flex(unset,unset,space-between,unset);
     }
 
     &_add-review {
         width: 70%;
 
-        @include flex(wrap,normal,space-between,unset);
+        @include flex(wrap,unset,space-between,unset);
     }
 }
 
@@ -72,7 +72,7 @@
         text-align: center;
 
         @extend .border;
-        @include flex(unset,normal,center, center);
+        @include flex(unset,unset,center, center);
     }
 
     &_partners-discount {
@@ -113,7 +113,7 @@
     background-color: color(btn-bg);
     border: none;
 
-    @include flex(unset,normal,center,center);
+    @include flex(unset,unset,center,center);
     @include transition(background-color);
 
     &:hover {
@@ -125,7 +125,7 @@
         background-color: transparent;
         border: $grayBorder;
 
-        @include flex(unset,normal,center,center);
+        @include flex(unset,unset,center,center);
         @include transition(background-color color);
 
         &:hover {
@@ -145,7 +145,7 @@
         border: 3px solid color(welcome-color);
     
         @include transition(background-color);
-        @include flex(unset,normal,center,center);
+        @include flex(unset,unset,center,center);
     
         &:hover {
             background-color: $main;
@@ -166,7 +166,7 @@
 
     &-table_cart {
         height: 100%;
-        padding: 0 1.3rem;
+        padding: 0.5rem 1.3rem;
         margin-right: 1.5rem;
     }
 
@@ -338,7 +338,7 @@
     &-list {
         width: 100%;
 
-        @include flex(unset,normal,space-between,flex-start);
+        @include flex(unset,unset,space-between,flex-start);
     }
 
     &-item {
@@ -377,7 +377,7 @@
         content: '';
         border: $grayBorder;
 
-        @include transition(background-color, border-color);
+        @include transition(background-color border-color);
     }
 }
 
@@ -406,7 +406,7 @@
 }
 
 .color-custom-checkbox {
-    @include flex(unset, normal, left, unset);
+    @include flex(unset, unset, left, unset);
 }
 
 .range {

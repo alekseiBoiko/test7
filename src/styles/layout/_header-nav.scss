@@ -1,23 +1,68 @@
 .header-nav {
-
     &-list {
         width: 40rem;
         margin-right: 4rem;
+
         @include flex(wrap, unset, space-between, center);
     }
 
     &-item {
-        min-height: 2rem;
+        padding: 0.5rem 0;
+
         @include flex(unset, unset, center, center);
     }
-    
+
     &__link {
-        text-transform: uppercase;
         font-weight: 500;
+        text-transform: uppercase;
+
         @include transition(color);
-        
+
         &:hover {
-        color: $main;
+            color: $main;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-nav {
+        &-list {
+            position: absolute;
+            top: -130%;
+            left: 50%;
+            width: 30%;
+            height: auto;
+            margin-left: 0;
+            opacity: 0;
+            transform: translateX(-50%);
+
+            @include flex(unset,column,center, flex-start);
+            @include transition(top);
+
+            &_active {
+                top: 10rem;
+                z-index: 10;
+                opacity: 1;
+            }
+        }
+
+        &-item {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            background-color: $main;
+
+            @include transition(color background-color box-shadow);
+
+            &:hover {
+                color: $main;
+                background-color: white;
+                box-shadow: 0 0 0 3px $main;
+            }
+        }
+
+        &__link {
+            width: 100%;
         }
     }
 }

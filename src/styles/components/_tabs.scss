@@ -52,7 +52,7 @@
     &-item {
         margin: 2rem 0 4.2rem;
 
-        @include flex(unset,normal,space-between, flex-start);
+        @include flex(unset,unset,space-between, flex-start);
     }
 
     &__title {
@@ -80,7 +80,7 @@
     &-rate-holder {
         width: 16rem;
 
-        @include flex(unset,normal,space-between, flex-start);
+        @include flex(unset,unset,space-between, flex-start);
     }
 
     &__date {
@@ -108,7 +108,7 @@
 .add-review-rate-holder {
     padding: 2rem 0 1rem;
 
-    @include flex(wrap,normal,left, flex-start);
+    @include flex(wrap,unset,left, flex-start);
 }
 
 @media only screen and (max-width: 480px) {

@@ -89,6 +89,10 @@
                 width: 1.5rem;
             }
 
+            &:nth-child(2) {
+                text-align: left;
+            }
+
             &:last-child {
                 padding-right: 1.5rem;
                 text-align: right;
@@ -106,9 +110,13 @@
         }
 
         tbody {
+            border-left: $darkGrayBorder;
+
             tr:first-child {
                 height: 2em;
+
                 td {
+                    padding-top: 1em;
                     vertical-align: text-bottom;
                 }
             }
@@ -190,14 +198,14 @@
         }
 
         &-holder_horizontal {
-            @include flex(unset,normal,space-around, center);
+            @include flex(unset,unset,space-around, center);
         }
 
         &-holder_right {
             min-height: element-height(s);
             margin: 1rem 0;
 
-            @include flex(unset,normal,right, center);
+            @include flex(unset,unset,flex-end, center);
         }
 
         &_calculation {
@@ -207,7 +215,7 @@
             }
 
             &-key, &-text-value {
-                font: font(roboto);
+                font-family: font(roboto);
             }
 
             &-value, &-text-value {

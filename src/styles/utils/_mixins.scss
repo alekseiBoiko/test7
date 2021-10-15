@@ -43,6 +43,8 @@
 	height: 3.75rem;
 	color: invert($edgeColor);
 	background-color: $edgeColor;
+
+	@include flex(unset, unset, space-between, center);
 }
 
 @mixin rateList($number) {

@@ -42,7 +42,7 @@ mixin iconBtn(btnCLassPrefix, btnList = [])
     ul(class=`${btnCLassPrefix}-list`)
         each i in btnList
             li(class=`${btnCLassPrefix}-item`)
-                btn(class=`${btnCLassPrefix} ${btnCLassPrefix}-${i}`)
+                a(class=`${btnCLassPrefix} ${btnCLassPrefix}-${i}`)
                     i(class=`fas fa-${i}`)
                     if i=='shopping-cart'& btnCLassPrefix=='card-btn'
                         span(class=`${btnCLassPrefix}-name`) Add to cart

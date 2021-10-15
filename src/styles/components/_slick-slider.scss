@@ -29,7 +29,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hide;
+        overflow: hidden;
         font-size: 1.25rem;
         font-weight: bold;
 
@@ -37,7 +37,6 @@
             width: 4.6875rem;
             height: 5px;
             font-size: 0;
-            // background: rgba(201, 69, 59, 0.1);
             border: none;
             border-radius: 10px;
         }
@@ -45,10 +44,6 @@
         li {
             margin: 0 5px;
             list-style: none;
-
-            // &.slick-active button {
-                // background-color: red;
-            // }
         }
     }
 
@@ -63,7 +58,6 @@
 
         &.dragging {
             cursor: pointer;
-            cursor: hand;
         }
     }
 
@@ -128,15 +122,15 @@
         display: block;
         padding: 0;
         cursor: pointer;
-        background: color(slick-slider-btn-bg);
+        background-color: color(slick-slider-btn-bg);
         border: none;
         outline: none;
 
-        @include transition(color background);
+        @include transition(color background-color);
 
         &:hover, &:focus {
             color: color(slick-slider-color-hovered);
-            background: color(slick-slider-btn-bg-hovered);
+            background-color: color(slick-slider-btn-bg-hovered);
             outline: none;
         }
 

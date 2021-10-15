@@ -10,7 +10,7 @@
     &-list {
         height: 100%;
 
-        @include flex(wrap,normal,space-between,center);
+        @include flex(wrap,unset,space-between,center);
     }
 
     &-item {

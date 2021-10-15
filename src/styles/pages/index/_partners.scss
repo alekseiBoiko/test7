@@ -1,6 +1,6 @@
 .partners {
     &-section {
-        @include flex(unset,normal,space-between,unset);
+        @include flex(unset,unset,space-between,unset);
     }
 
     &-discount, &-block {
@@ -11,7 +11,7 @@
     &-discount {
         position: relative;
 
-        @include flex(unset,normal,center,center);
+        @include flex(unset,unset,center,center);
 
         &::before {
             position: absolute;
@@ -69,7 +69,7 @@
         width: 25%;
         padding: 0 1rem;
 
-        @include flex(unset,normal,center,center);
+        @include flex(unset,unset,center,center);
     }
 
     &__img {

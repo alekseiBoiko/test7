@@ -1,7 +1,7 @@
 .overlay-img-holder {
     opacity: 0;
 
-    @include flex(unset,normal,flex-end, flex-start);
+    @include flex(unset,unset,flex-end, flex-start);
     @include transition(opacity);
 }
 
@@ -20,11 +20,11 @@
         &_best, &_related {
             height: 100%;
 
-            @include flex(unset,normal,space-between,center);
+            @include flex(unset,unset,space-between,center);
         }
 
         &_featured, &_grid {
-            @include flex(wrap,normal,space-between,unset);
+            @include flex(wrap,unset,space-between,unset);
         }
 
         &_featured {
@@ -65,7 +65,7 @@
         &_shop-list {
             margin-bottom: 1.875rem;
 
-            @include flex(unset,normal,space-between,unset);
+            @include flex(unset,unset,space-between,unset);
         }
 
         &_grid {
@@ -85,11 +85,11 @@
             height: max-content;
             margin-right: -0.875rem;
 
-            @include flex(unset,normal,space-between, flex-start);
+            @include flex(unset,unset,space-between, flex-start);
         }
 
         &_wishlist {
-            @include flex(unset,normal,space-between, center);
+            @include flex(unset,unset,space-between, center);
         }
     }
 
@@ -98,7 +98,7 @@
             padding-bottom: 3rem;
             padding-left: 1rem;
 
-            @include flex(unset,normal,stretch, flex-start);
+            @include flex(unset,unset,stretch, flex-start);
         }
 
         &_short {
@@ -115,7 +115,7 @@
             padding: 0.6rem 0;
             border: $grayBorder;
 
-            @include flex(unset,normal,space-between, center);
+            @include flex(unset,unset,space-between, center);
         }
 
         &-item {
@@ -143,6 +143,7 @@
             &_small {
                 width: 5rem;
                 height: 6.25rem;
+                margin-right: 1rem;
             }
 
             &_shop {
@@ -185,14 +186,7 @@
 
                     @extend .product-img-holder_small;
                 }
-
-                &_wishlist {
-                    margin-right: 1rem;
-
-                    @extend .product-img-holder_small;
-                }
             }
-
         }
     }
 
@@ -203,16 +197,8 @@
     }
 
     &-info-holder {
-        &_top {
-            width: 60%;
-            padding-left: 0.875rem;
-        }
-
-        &_shop {
-            width: 60%;
-        }
-
         &_top, &_shop {
+            width: 60%;
             padding: 1rem 0 0.5rem;
         }
 
@@ -227,13 +213,17 @@
         &_shop-list, &_grid {
             padding: 2rem 0 0.5rem;
         }
+
+        &_grid {
+            width: 100%;
+        }
     }
 
     &-price-ft-rate-holder {
         width: 100%;
         margin-top: 1.5rem;
 
-        @include flex(wrap,normal,left, center);
+        @include flex(wrap,unset,left, center);
     }
 
     &__title {
@@ -345,7 +335,7 @@
         border: none;
 
         @include transition(background-color);
-        @include flex(unset, normal, center, center);
+        @include flex(unset, unset, center, center);
 
         &:hover {
             background-color: darken(color(btn-bg), 20%);
@@ -384,7 +374,7 @@
         }
 
         &-btn-holder_shop {
-            width: 100%;
+            width: 70%;
             margin-top: 0;
         }
 
@@ -452,6 +442,10 @@
         &__description {
             display: none;
         }
+
+        &-btn-holder_shop {
+            width: 100%;
+        }
     }
 }
 
@@ -506,7 +500,7 @@
             }
         }
 
-        &-btn-holder_shop {
+        &-btn-holder_shop, &-btn-holder_shop-list {
             display: none;
         }
 

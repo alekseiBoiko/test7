@@ -53,7 +53,7 @@ h4 {
 %with-holder {
     margin: 0 auto;
 
-    @include flex(wrap,normal,space-between,unset);
+    @include flex(wrap,unset,space-between,unset);
 }
 
 .holder {
@@ -63,7 +63,6 @@ h4 {
 
         &_centered {
             align-items: center;
-            height: 100%;
             @extend .holder_main;
         }
 
@@ -76,7 +75,6 @@ h4 {
     &_short {
         position: relative;
         width: 61%;
-        height: 100%;
         @extend %with-holder;
 
         &_centered {
@@ -101,7 +99,7 @@ h4 {
             width: 100%;
             padding-left: 1rem;
 
-            @include flex(unset,normal,space-between, flex-start);
+            @include flex(unset,unset,space-between, flex-start);
         }
     }
 }
@@ -111,6 +109,7 @@ h4 {
     font-family: font(poppins);
     font-weight: 600;
     text-transform: uppercase;
+    list-style-type: none;
 }
 
 .text {
@@ -124,7 +123,6 @@ h4 {
 }
 
 .under-title-text {
-    width: 100%;
     font-family: font(droid_i);
     font-size: font-size(-1);
     color: $main;

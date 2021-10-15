@@ -4,7 +4,7 @@
         border-top: $grayBorder;
         border-bottom: $grayBorder;
 
-        @include flex(unset,normal,center,center);
+        @include flex(unset,unset,center,center);
     }
 
     &-list {
@@ -13,7 +13,7 @@
         border-right: $grayBorder;
         border-left: $grayBorder;
 
-        @include flex(unset,normal,space-between,center);
+        @include flex(unset,unset,space-between,center);
     }
 
     &__link {
@@ -21,7 +21,6 @@
 
         &:hover {
             color: color(pagination-color_hovered);
-            // text-decoration: underline;
         }
     }
 }

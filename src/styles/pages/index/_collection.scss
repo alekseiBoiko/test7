@@ -2,12 +2,13 @@
     &-list {
         background-color: color(collection-bg1);
 
-        @include flex(unset,normal,space-between,unset);
+        @include flex(unset,unset,space-between,unset);
     }
 
     &-item {
         width: 33.33%;
-        @include flex(unset,normal,center,unset);
+
+        @include flex(unset,unset,center,unset);
 
         &:nth-child(2) {
             background-color: color(collection-bg2);
@@ -17,24 +18,7 @@
                 font-size: 4.5rem;
             }
         }
-
-        // &::before {
-        //     position: absolute;
-        //     top: 25%;
-        //     left: 25%;
-        //     width: 18rem;
-        //     height: 18rem;
-        //     content: '';
-        //     border: $collectionBorder;
-        //     transform: rotate(45deg);
-
-        //     @include flex(unset,normal,center,center);
-        //     @include transition(border-color opacity);
-        // }
-
     }
-
-    
 
     &-link {
         position: relative;
@@ -47,12 +31,11 @@
         text-overflow: ellipsis;
         text-transform: uppercase;
         white-space: nowrap;
-
-        
     }
 
     &-info-holder {
         width: 100%;
+
         @include flex(unset,column,center,center);
 
         &::before {
@@ -68,7 +51,7 @@
             border: $collectionBorder;
             transform: rotate(45deg);
 
-            @include flex(unset,normal,center,center);
+            @include flex(unset,unset,center,center);
             @include transition(border-color opacity);
         }
 
@@ -97,9 +80,7 @@
 
 @media only screen and (max-width: 768px) {
     .collection {
-        &-link {
-            min-height: 24rem;
-
+        &-info-holder {
             &::before {
                 width: 12rem;
                 height: 12rem;
@@ -114,14 +95,16 @@
         &__notes {
             font-size: font-size(-3);
         }
+
+        &-link {
+            padding: 9rem 0;
+        }
     }
 }
 
 @media only screen and (max-width: 480px) {
     .collection {
-        &-link {
-            min-height: 16rem;
-
+        &-info-holder {
             &::before {
                 // z-index: -1;
                 width: 6rem;
@@ -129,28 +112,21 @@
                 border-top: $collectionBorder;
                 border-right: $collectionBorder;
             }
-
-            &:hover {
-                &::before {
-                    border-color: $main;
-                    opacity: 0.5;
-                }
-    
-                .collection__title {
-                    color: inherit;
-                }
-            }
         }
 
         &__title, &-item:nth-child(2) .collection__title {
+            z-index: 10;
             margin: 0.5rem 0;
             font-size: font-size(3);
-            z-index: 10;
         }
 
         &__notes {
-            font-size: font-size(-4);
             z-index: 10;
+            font-size: font-size(-4);
+        }
+
+        &-link {
+            padding: 5rem 0;
         }
     }
 }
@@ -166,8 +142,17 @@
             width: 100%;
         }
 
-        &-link {
-            min-height: 12rem;
+        &-info-holder {
+            &:hover {
+                &::before {
+                    border-color: $main;
+                    opacity: 0.5;
+                }
+
+                .collection__title {
+                    color: inherit;
+                }
+            }
         }
     }
 }

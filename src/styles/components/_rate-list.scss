@@ -2,7 +2,7 @@
     &-list {
         padding: 0 8.125rem 0 1.5rem;
 
-        @include flex(unset,normal,space-between, flex-start);
+        @include flex(unset,unset,space-between, flex-start);
     }
 
     &-item {

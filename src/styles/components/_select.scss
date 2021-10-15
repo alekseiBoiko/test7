@@ -1,11 +1,15 @@
 .select {
     width: $cardElHolderWidth;
     padding: 1em;
-    text-overflow: '';
     border: $grayBorder;
-    appearance: none;
+    -ms-appearance: none;
+    appearance: none !important;
 
     @include transition(border-color);
+
+    &::-ms-expand {
+        display: none;
+    }
 
     &:hover {
         border-color: $main;
@@ -31,7 +35,7 @@
         overflow: hidden;
         border-top: $grayBorder;
 
-        @include flex(wrap,normal,left,flex-start);
+        @include flex(wrap,unset,left,flex-start);
     }
 
     &_sort-line {

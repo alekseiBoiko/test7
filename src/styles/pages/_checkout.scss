@@ -4,7 +4,7 @@
         padding: 0 1rem 6rem;
         font-size: font-size(-1);
 
-        @include flex(wrap, normal, space-between, unset);
+        @include flex(wrap, unset, space-between, unset);
     }
 
     &-item:first-child {
@@ -20,7 +20,7 @@
     &-list {
         padding-bottom: 1rem;
 
-        @include flex(wrap, normal, space-between, unset);
+        @include flex(wrap, unset, space-between, unset);
     }
 
     &-item {

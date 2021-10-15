@@ -5,5 +5,5 @@
     color: color(sort-line-color);
     border-bottom: $grayBorder;
 
-    @include flex(unset,normal,space-between, center);
+    @include flex(wrap,unset,space-between, center);
 }

@@ -10,7 +10,7 @@
     width: 100%;
     margin: 0 0 17px;
 
-    @include flex(unset,normal,space-between,flex-start);
+    @include flex(unset,unset,space-between,flex-start);
 }
 
 .ui-slider {
