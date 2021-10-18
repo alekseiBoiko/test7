@@ -50,7 +50,7 @@ mixin shopProductCardList (cardClass, productList = [])
 
 mixin bestProductCard (cardClass, productList = [])
   ul(class=`product-list_${cardClass}`)
-    li(class=`product-item_${cardClass}`)
+    li(class=`product-item_short`)
       .best-info-holder
             h2.best__title 
                 b Best sellers
@@ -59,43 +59,40 @@ mixin bestProductCard (cardClass, productList = [])
             p.best__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     each i in productList
         if i.number>1 & i.number<6
-          li(class=`product-item_${cardClass}`)
-            a(href=`${i.number}.html`, class=`product_link product-card_short`) 
-              .product-img-holder_short
-                .overlay-img-holder 
-                  +iconBtn('card-marker', cardMarkers)
-              div(class=`product-info-holder_short`)
-                h6(class=`product__title_short`) #{i.name} 
-                div(class=`product__price_short`) #{i.price}
-                .product__rate.product__rate_midle
+            li(class=`product-item_short`)
+                .product-img-holder_short
+                    .overlay-img-holder 
+                        +iconBtn('card-marker', cardMarkers)
+                a(href=`${i.number}.html` class=`product-info-holder_short`)
+                  h6(class=`product__title_short`) #{i.name} 
+                  div(class=`product__price_short`) #{i.price}
+                  .product__rate.product__rate_midle
 
 mixin featuredProductCard (cardClass, productList = [])
   ul(class=`product-list_${cardClass}`)
     each i in productList
       if i.categories=='bags'
-        li(class=`product-item_${cardClass}`)
-          a(href=`${i.number}.html`, class=`product_link product-card_short`) 
+        li(class=`product-item_short`)
             .product-img-holder_short
-              .overlay-img-holder 
-                +iconBtn('card-marker', cardMarkers)
-            div(class=`product-info-holder_short`)
+                .overlay-img-holder 
+                    +iconBtn('card-marker', cardMarkers)
+            a(href=`${i.number}.html` class=`product-info-holder_short`)
                 h6(class=`product__title_short`) #{i.name} 
                 div(class=`product__price_short`) #{i.price}
                 div(class=`product__rate product__rate_midle`)
 
 mixin gridProductCard (cardClass,q,productList = [])
   ul(class=`product-list_${cardClass}`)
-    each i in productList
-      if i.number<+q
-        li(class=`product-item_${cardClass}`)
-          a(href=`${i.number}.html`, class=`product_link product-card_short`) 
-            div(class=`product-img-holder_${cardClass}`)
-              .overlay-img-holder 
-                +iconBtn('card-marker', cardMarkers)
-            div(class=`product-info-holder_grid`)
-                h6(class=`product__title_short`) #{i.name} 
-                div(class=`product__price_short`) #{i.price}
-                div(class=`product__rate product__rate_midle`)
+      each i in productList
+          if i.number<+q
+              li(class=`product-item_${cardClass}`)
+                  div(class=`product-img-holder_${cardClass}`)
+                      .overlay-img-holder 
+                          +iconBtn('card-marker', cardMarkers)
+                  a(href=`${i.number}.html` class=`product-info-holder_short`)
+                      h6(class=`product__title_short`) #{i.name} 
+                      div(class=`product__price_short`) #{i.price}
+                      div(class=`product__rate product__rate_midle`)
 
 mixin carousel(number)
     ul.product-img-list

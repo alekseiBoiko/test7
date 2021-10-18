@@ -21,21 +21,12 @@
     <header class="header">
       <div class="edge_black"> 
         <div class="holder_main_centered">
-              <dl class="header-contact-list">
+              <ul class="header-contact-list">
                 <li class="header-contact-item list-title">contact info</li>
-                <li class="header-contact-item">
-                  <dt> <i class="fas fa-globe"></i></dt>
-                  <dd> <a class="header-contact__link" href="https://maps.google.com">1234 Your Address, Country.</a></dd>
-                </li>
-                <li class="header-contact-item">
-                  <dt> <i class="fas fa-phone"></i></dt>
-                  <dd> <a class="header-contact__link" href="tel:+1 234 5678 9999">+1 234 5678 9999</a></dd>
-                </li>
-                <li class="header-contact-item">
-                  <dt> <i class="fas fa-envelope"></i></dt>
-                  <dd> <a class="header-contact__link" href="mailto:mail@domain.com">info@company.com</a></dd>
-                </li>
-              </dl>
+                <li class="header-contact-item"><i class="fas fa-globe"></i><a class="header-contact__link" href="https://maps.google.com">1234 Your Address, Country.</a></li>
+                <li class="header-contact-item"><i class="fas fa-phone"></i><a class="header-contact__link" href="tel:+123456789999">+1 234 5678 9999</a></li>
+                <li class="header-contact-item"><i class="fas fa-envelope"></i><a class="header-contact__link" href="mailto:mail@domain.com">info@company.com</a></li>
+              </ul>
               <ul class="work-list">
                 <li><a href="user-interface.html">1 </a></li>
                 <li><a href="shop-list.html">2 </a></li>
@@ -70,9 +61,18 @@
                 <li class="header-nav-item"><a class="header-nav__link" href="accessories.html">accessories</a></li>
               </ul><a class="btn_menu"><span></span></a>
               <ul class="header-btn-list">
-                <li class="header-btn-item"><a class="header-btn header-btn-shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
-                <li class="header-btn-item"><a class="header-btn header-btn-search"><i class="fas fa-search"></i></a></li>
-                <li class="header-btn-item"><a class="header-btn header-btn-bars"><i class="fas fa-bars"></i></a></li>
+                <li class="header-btn-item">
+                  <button class="header-btn header-btn-shopping-cart"><i class="fas fa-shopping-cart"></i>
+                  </button>
+                </li>
+                <li class="header-btn-item">
+                  <button class="header-btn header-btn-search"><i class="fas fa-search"></i>
+                  </button>
+                </li>
+                <li class="header-btn-item">
+                  <button class="header-btn header-btn-bars"><i class="fas fa-bars"></i>
+                  </button>
+                </li>
               </ul>
         </div>
       </div>
@@ -115,32 +115,32 @@
                     <div class="list-title">size</div>
                     <ul class="size-list"> 
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xs</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xs">
+                        <label class="size-label" for="custom-checkbox_xs">xs</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">s</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_s">
+                        <label class="size-label" for="custom-checkbox_s">s</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">m</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_m">
+                        <label class="size-label" for="custom-checkbox_m">m</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">l</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_l">
+                        <label class="size-label" for="custom-checkbox_l">l</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">sl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_sl">
+                        <label class="size-label" for="custom-checkbox_sl">sl</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xl">
+                        <label class="size-label" for="custom-checkbox_xl">xl</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xxl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xxl">
+                        <label class="size-label" for="custom-checkbox_xxl">xxl</label>
                       </li>
                     </ul>
               </li>
@@ -148,24 +148,24 @@
                     <div class="list-title">color</div>
                     <ul class="color-list"> 
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">black</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_black">
+                        <label class="color-label" for="custom-checkbox_black">black</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">white</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_white">
+                        <label class="color-label" for="custom-checkbox_white">white</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">blue</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_blue">
+                        <label class="color-label" for="custom-checkbox_blue">blue</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">yellow</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_yellow">
+                        <label class="color-label" for="custom-checkbox_yellow">yellow</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">green</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_green">
+                        <label class="color-label" for="custom-checkbox_green">green</label>
                       </li>
                     </ul>
               </li>
@@ -235,32 +235,32 @@
                     <div class="list-title">size</div>
                     <ul class="size-list"> 
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xs</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xs">
+                        <label class="size-label" for="custom-checkbox_xs">xs</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">s</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_s">
+                        <label class="size-label" for="custom-checkbox_s">s</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">m</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_m">
+                        <label class="size-label" for="custom-checkbox_m">m</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">l</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_l">
+                        <label class="size-label" for="custom-checkbox_l">l</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">sl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_sl">
+                        <label class="size-label" for="custom-checkbox_sl">sl</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xl">
+                        <label class="size-label" for="custom-checkbox_xl">xl</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xxl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xxl">
+                        <label class="size-label" for="custom-checkbox_xxl">xxl</label>
                       </li>
                     </ul>
               </li>
@@ -268,24 +268,24 @@
                     <div class="list-title">color</div>
                     <ul class="color-list"> 
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">black</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_black">
+                        <label class="color-label" for="custom-checkbox_black">black</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">white</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_white">
+                        <label class="color-label" for="custom-checkbox_white">white</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">blue</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_blue">
+                        <label class="color-label" for="custom-checkbox_blue">blue</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">yellow</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_yellow">
+                        <label class="color-label" for="custom-checkbox_yellow">yellow</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">green</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_green">
+                        <label class="color-label" for="custom-checkbox_green">green</label>
                       </li>
                     </ul>
               </li>
@@ -419,32 +419,32 @@
                     <div class="list-title">size</div>
                     <ul class="size-list"> 
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xs</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xs">
+                        <label class="size-label" for="custom-checkbox_xs">xs</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">s</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_s">
+                        <label class="size-label" for="custom-checkbox_s">s</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">m</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_m">
+                        <label class="size-label" for="custom-checkbox_m">m</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">l</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_l">
+                        <label class="size-label" for="custom-checkbox_l">l</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">sl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_sl">
+                        <label class="size-label" for="custom-checkbox_sl">sl</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xl">
+                        <label class="size-label" for="custom-checkbox_xl">xl</label>
                       </li>
                       <li class="size-item">
-                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="size" value="yes">
-                        <label class="size-label" for="custom">xxl</label>
+                        <input class="size-custom-checkbox custom-checkbox" type="checkbox" name="size" value="yes" id="custom-checkbox_xxl">
+                        <label class="size-label" for="custom-checkbox_xxl">xxl</label>
                       </li>
                     </ul>
               </li>
@@ -452,24 +452,24 @@
                     <div class="list-title">color</div>
                     <ul class="color-list"> 
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">black</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_black">
+                        <label class="color-label" for="custom-checkbox_black">black</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">white</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_white">
+                        <label class="color-label" for="custom-checkbox_white">white</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">blue</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_blue">
+                        <label class="color-label" for="custom-checkbox_blue">blue</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">yellow</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_yellow">
+                        <label class="color-label" for="custom-checkbox_yellow">yellow</label>
                       </li>
                       <li class="color-item">
-                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" id="custom" name="color" value="yes">
-                        <label class="color-label" for="custom">green</label>
+                        <input class="color-custom-checkbox custom-checkbox" type="checkbox" name="color" value="yes" id="custom-checkbox_green">
+                        <label class="color-label" for="custom-checkbox_green">green</label>
                       </li>
                     </ul>
               </li>
@@ -515,16 +515,25 @@
                   <option class="select-option">Sort by popular</option>
                   <option class="select-option">Sort by categorie</option>
                 </select>
-            <btn class="btn_filter"><i class="fas fa-filter"></i></btn>
+            <button class="btn_icon btn_filter"><i class="fas fa-filter"></i></button>
           </div>
               <ul class="product-list_shop-list">
                 <li class="product-item_shop-list">
                   <div class="product-img-holder_shop-list">
                     <div class="overlay-img-holder"> 
                           <ul class="card-marker-list">
-                            <li class="card-marker-item"><a class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -536,9 +545,18 @@
                     <div class="product__categorie text">bags</div>
                     <div class="product-btn-holder_shop-list">
                           <ul class="card-btn-list">
-                            <li class="card-btn-item"><a class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -547,9 +565,18 @@
                   <div class="product-img-holder_shop-list">
                     <div class="overlay-img-holder"> 
                           <ul class="card-marker-list">
-                            <li class="card-marker-item"><a class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -561,9 +588,18 @@
                     <div class="product__categorie text">bags</div>
                     <div class="product-btn-holder_shop-list">
                           <ul class="card-btn-list">
-                            <li class="card-btn-item"><a class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -572,9 +608,18 @@
                   <div class="product-img-holder_shop-list">
                     <div class="overlay-img-holder"> 
                           <ul class="card-marker-list">
-                            <li class="card-marker-item"><a class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -586,9 +631,18 @@
                     <div class="product__categorie text">bags</div>
                     <div class="product-btn-holder_shop-list">
                           <ul class="card-btn-list">
-                            <li class="card-btn-item"><a class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -597,9 +651,18 @@
                   <div class="product-img-holder_shop-list">
                     <div class="overlay-img-holder"> 
                           <ul class="card-marker-list">
-                            <li class="card-marker-item"><a class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -611,9 +674,18 @@
                     <div class="product__categorie text">bags</div>
                     <div class="product-btn-holder_shop-list">
                           <ul class="card-btn-list">
-                            <li class="card-btn-item"><a class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -622,9 +694,18 @@
                   <div class="product-img-holder_shop-list">
                     <div class="overlay-img-holder"> 
                           <ul class="card-marker-list">
-                            <li class="card-marker-item"><a class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-marker-item"><a class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-shopping-cart"><i class="fas fa-shopping-cart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-marker-item">
+                              <button class="card-marker card-marker-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -636,9 +717,18 @@
                     <div class="product__categorie text">bags</div>
                     <div class="product-btn-holder_shop-list">
                           <ul class="card-btn-list">
-                            <li class="card-btn-item"><a class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-heart"><i class="fas fa-heart"></i></a></li>
-                            <li class="card-btn-item"><a class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i></a></li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-shopping-cart"><i class="fas fa-shopping-cart"></i><span class="card-btn-name">Add to cart</span>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-heart"><i class="fas fa-heart"></i>
+                              </button>
+                            </li>
+                            <li class="card-btn-item">
+                              <button class="card-btn card-btn-retweet"><i class="fas fa-retweet"></i>
+                              </button>
+                            </li>
                           </ul>
                     </div>
                   </div>
@@ -699,21 +789,12 @@
                 <li class="footer-nav-item"><a class="footer-nav__link" href="contact.html">Contact Us</a></li>
                 <li class="footer-nav-item"><a class="footer-nav__link" href="privacy.html">Privacy Policy</a></li>
               </ul>
-              <dl class="footer-contact-list footer-nav-list">
+              <ul class="footer-contact-list footer-nav-list">
                 <li class="footer-nav-item list-title">contact info</li>
-                <li class="footer-nav-item footer-contact-item">
-                  <dt> <i class="fas fa-globe"></i></dt>
-                  <dd> <a class="footer-contact__link" href="https://maps.google.com">1234 Your Address, Country.</a></dd>
-                </li>
-                <li class="footer-nav-item footer-contact-item">
-                  <dt> <i class="fas fa-phone"></i></dt>
-                  <dd> <a class="footer-contact__link" href="tel:+1 234 5678 9999">+1 234 5678 9999</a></dd>
-                </li>
-                <li class="footer-nav-item footer-contact-item">
-                  <dt> <i class="fas fa-envelope"></i></dt>
-                  <dd> <a class="footer-contact__link" href="mailto:mail@domain.com">info@company.com</a></dd>
-                </li>
-              </dl>
+                <li class="footer-nav-item footer-contact-item"><i class="fas fa-globe"></i><a class="footer-contact__link" href="https://maps.google.com">1234 Your Address, Country.</a></li>
+                <li class="footer-nav-item footer-contact-item"><i class="fas fa-phone"></i><a class="footer-contact__link" href="tel:+123456789999">+1 234 5678 9999</a></li>
+                <li class="footer-nav-item footer-contact-item"><i class="fas fa-envelope"></i><a class="footer-contact__link" href="mailto:mail@domain.com">info@company.com</a></li>
+              </ul>
         </div>
       </div>
       <div class="edge_black">

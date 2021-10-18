@@ -11,15 +11,15 @@ block content
                 form.form_custom(action="#") 
                     label.label_cart(for=`input__coupon`) Enter Your coupon code Here
                     .btn-grp
-                        input.input_custom.input_cart#input__coupon(type="code" placeholder=`Enter Your coupon code Here`)
-                        button.btn.btn_cart-code(href="#") apply
+                        input.input_custom.input_cart#input__coupon(type="text" placeholder=`Enter Your coupon code Here`)
+                        button.btn.btn_cart-code apply
             li.cart-item.cart-item_form
                 h6.list-title use gift voucher
                 form.form_custom(action="#") 
                     label.label_cart(for=`input__gift`) Enter Your gift voucher Here
                     .btn-grp
-                        input.input_custom.input_cart#input__gift(type="code" placeholder=`Enter Your gift voucher Here`)
-                        button.btn.btn_cart-code(href="#") apply
+                        input.input_custom.input_cart#input__gift(type="text" placeholder=`Enter Your gift voucher Here`)
+                        button.btn.btn_cart-code apply
             li.cart-item.cart-item_form
                 form.form_custom(action="#") 
                     h6.list-title Shipping Availability
@@ -30,7 +30,7 @@ block content
                             +cartSelect('State', 'TP.HCM')
                         li.cart-shipping-item 
                             label.label_cart Postcode / Zip
-                            input.input_custom.input_cart(type="code" placeholder=`Postcode / Zip`)
+                            input.input_custom.input_cart(type="text" placeholder=`Postcode / Zip`)
                         li.cart-shipping-item 
                             input.btn_transparent.btn_shipping-form(type="submit" value="Update Totals")
             li.cart-item.cart-item_form 

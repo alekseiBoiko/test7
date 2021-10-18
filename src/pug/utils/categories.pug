@@ -66,5 +66,5 @@ mixin filterCategorie (selectClass, list = [])
   ul(class=`${selectClass}-list`) 
     each i in list
       li(class=`${selectClass}-item`)
-        input(class=`${selectClass}-custom-checkbox custom-checkbox` type="checkbox" id="custom" name=`${selectClass}` value="yes")
-        label(class=`${selectClass}-label` for="custom") #{i}
+        input(class=`${selectClass}-custom-checkbox custom-checkbox` type="checkbox" name=`${selectClass}` value="yes" id=`custom-checkbox_${i}`)
+        label(class=`${selectClass}-label` for=`custom-checkbox_${i}`) #{i}

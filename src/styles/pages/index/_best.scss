@@ -4,6 +4,7 @@
     }
 
     &-info-holder {
+        width: 100%;
         margin-bottom: 4rem;
 
         @include flex(unset,column,center,flex-start);

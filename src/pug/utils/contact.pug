@@ -16,7 +16,7 @@
             name:'tel',
             value:'+1 234 5678 9999',
             iconPrefix:'phone',
-            url:'tel:+1 234 5678 9999'
+            url:'tel:+123456789999'
         },
         {
             name:'mail',
@@ -28,24 +28,20 @@
 
 mixin contacts(navClass, contactData = [])
     if navClass=='footer'
-        dl(class=`${navClass}-contact-list ${navClass}-nav-list`)
+        ul(class=`${navClass}-contact-list ${navClass}-nav-list`)
             each i in contactData
                 if i.url==''
                     li(class=`${navClass}-nav-item list-title`) #{i.value}
                 else
                     li(class=`${navClass}-nav-item ${navClass}-contact-item`)
-                        dt 
-                            i(class=`fas fa-${i.iconPrefix}`)
-                        dd  
-                            a(class=`${navClass}-contact__link` href=i.url) #{i.value}
+                        i(class=`fas fa-${i.iconPrefix}`)
+                        a(class=`${navClass}-contact__link` href=i.url) #{i.value}
     else
-        dl(class=`${navClass}-contact-list`)
+        ul(class=`${navClass}-contact-list`)
             each i in contactData
                 if i.url==''
                     li(class=`${navClass}-contact-item list-title`) #{i.value}
                 else
                     li(class=`${navClass}-contact-item`)
-                        dt 
-                            i(class=`fas fa-${i.iconPrefix}`)
-                        dd  
-                            a(class=`${navClass}-contact__link` href=i.url) #{i.value}
+                        i(class=`fas fa-${i.iconPrefix}`)
+                        a(class=`${navClass}-contact__link` href=i.url) #{i.value}

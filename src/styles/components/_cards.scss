@@ -1,4 +1,9 @@
 .overlay-img-holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     opacity: 0;
 
     @include flex(unset,unset,flex-end, flex-start);
@@ -13,10 +18,6 @@
             @extend .product-list;
         }
 
-        &_top {
-            margin-bottom: -1.75rem;
-        }
-
         &_best, &_related {
             height: 100%;
 
@@ -27,8 +28,11 @@
             @include flex(wrap,unset,space-between,unset);
         }
 
+        &_top {
+            margin-bottom: -1.75rem;
+        }
+
         &_featured {
-            margin-bottom: -3.25rem;
             overflow: hidden;
         }
 
@@ -43,10 +47,12 @@
     }
 
     &-item {
-        height: 100%;
+        margin-bottom: 3.25rem;
+
+        @include flex(unset,column,left, flex-start);
 
         &_top {
-            @extend .product-item;
+            height: 100%;
         }
 
         &_top, &_shop-list {
@@ -54,12 +60,10 @@
             margin-bottom: 1.75rem;
         }
 
-        &_best, &_featured {
+        &_short {
             width: 19%;
-        }
 
-        &_featured {
-            margin-bottom: 3.25rem;
+            @extend .product-item;
         }
 
         &_shop-list {
@@ -70,7 +74,8 @@
 
         &_grid {
             width: 23.5%;
-            margin-bottom: 3.25rem;
+
+            @extend .product-item;
         }
 
         &_related {
@@ -128,6 +133,7 @@
         }
 
         &-holder {
+            position: relative;
             background: color(body-color);
 
             @include transition(opacity);
@@ -140,6 +146,20 @@
                 @extend .product-img-holder;
             }
 
+            &_shop, &_short, &_grid, &_related {
+                width: 100%;
+            }
+
+            &_short, &_grid {
+                &:hover .overlay-img-holder {
+                    opacity: 1;
+                }
+            }
+
+            &_grid, &_related {
+                height: 25rem;
+            }
+
             &_small {
                 width: 5rem;
                 height: 6.25rem;
@@ -147,7 +167,6 @@
             }
 
             &_shop {
-                width: 100%;
                 height: 37.5rem;
             }
 
@@ -157,22 +176,10 @@
                 margin-right: 3.125rem;
             }
 
-            &_short, &_grid {
-                width: 100%;
-
-                &:hover .overlay-img-holder {
-                    opacity: 1;
-                }
-            }
-
             &_short {
                 height: 28.125rem;
             }
 
-            &_grid, &_related {
-                width: 100%;
-                height: 25rem;
-            }
 
             &_slider {
                 width: 5.6875rem;
@@ -203,6 +210,7 @@
         }
 
         &_short {
+            width: 100%;
             padding-top: 1.3rem;
         }
 
@@ -214,9 +222,9 @@
             padding: 2rem 0 0.5rem;
         }
 
-        &_grid {
-            width: 100%;
-        }
+        // &_grid {
+        //     width: 100%;
+        // }
     }
 
     &-price-ft-rate-holder {
@@ -321,27 +329,7 @@
     }
 }
 
-.card-marker {
-    &-list {
-        height: 100%;
-    }
 
-    &-item {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin: 0.5rem;
-        color: color(btn-color);
-        background-color: color(btn-bg);
-        border: none;
-
-        @include transition(background-color);
-        @include flex(unset, unset, center, center);
-
-        &:hover {
-            background-color: darken(color(btn-bg), 20%);
-        }
-    }
-}
 
 @media only screen and (max-width: 1200px) {
     .product-img-holder {

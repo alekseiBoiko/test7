@@ -56,26 +56,18 @@
         width: 11.5rem;
     }
 
+    &-btn {
+        &-list {
+            width: 6.625rem;
+
+            @include flex(unset, unset, space-between, center);
+        }
+    }
+
     .main-header-area {
         height: 6.3rem;
 
         @include flex(unset, unset, space-between, center);
-
-        .header-btn {
-            &-list {
-                width: 6.625rem;
-
-                @include flex(unset, unset, space-between, center);
-            }
-
-            &-item {
-                @include transition(color);
-
-                &:hover {
-                    color: $main;
-                }
-            }
-        }
     }
 }
 
